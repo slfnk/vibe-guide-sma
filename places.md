@@ -3,7 +3,7 @@ Title: Vibe Guide to San Miguel De Allende
 Subtitle: My take on the pueblito at a different speed and depth.
 Author: SL FNK
 Updated: August 2026
-More Guides: [JLW](#), [ALEPNK](#)
+More Guides: [APG](#),[JERS](#)
  
 ## Intro
  
