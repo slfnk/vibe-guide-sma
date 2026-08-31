@@ -58,7 +58,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
  
 - Category: Landmark
 - Price: $
-- Location: 20.9235, -100.7340
+- Location: 20.917743189712603, -100.72761388369379
 - Google Maps: https://www.google.com/maps/search/?api=1&query=El+Charco+del+Ingenio+San+Miguel+de+Allende
 - Instagram: https://www.instagram.com/elcharco_sma/
 - Facebook: https://www.facebook.com/ElCharcodelIngenio/
