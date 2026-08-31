@@ -70,7 +70,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.9160, -100.7470
+- Location: 20.915168179799903, -100.75010907349899
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
 Not the artisan market — the actual food market where locals eat on the lower side of town. The stalls on the upper level serve comida corrida for 80 pesos that's better than most sit-down restaurants in the centro. Point at what looks good, sit on a plastic stool, and blast off.
  
