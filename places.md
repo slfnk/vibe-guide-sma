@@ -7,9 +7,9 @@ More Guides: [JLW](#), [ALEPNK](#)
 
 ## Intro
 
-Guadalajara may be where I spend my working weeks, but San Miguel de Allende is the town that taught me how to slow down. After years of splitting time here, I've eaten through most of what the centro has to offer — the tourist spots, the Instagram traps, the places your Airbnb host recommends because they get a kickback.
+I've been living in San Miguel for about decade and I keep my ear to the streets. Sure, folks may like to clown on the city for being a disney experience, but from any location you can walk about 3 blocks and find yourself on the outer rim, looking for deep cuts.
 
-This guide skips all of that. These are the places I actually go back to, the ones where I've run into the same people enough times to know their orders. Some are well-known, some aren't on Google Maps yet. All of them are worth your time.
+I'm all about the pop-ups and cheap eats.
 
 ## Categories
 
