@@ -273,7 +273,7 @@
     color: var(--text-3);
     cursor: pointer;
     font-size: 0.85rem;
-    opacity: 0;
+    opacity: 0.35;
     transition: opacity 0.15s;
     flex-shrink: 0;
     padding: 0.15rem;
@@ -681,6 +681,7 @@ function toggleDark() {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
   document.getElementById('darkToggle').textContent = isDark ? 'Light' : 'Dark';
+  if (window._swapTiles) window._swapTiles(isDark);
   try { localStorage.setItem('vg-dark', isDark ? '1' : '0'); } catch(e) {}
 }
 try {
@@ -1005,10 +1006,20 @@ places.forEach((p, i) => {
 const map = L.map('map', { zoomControl: true, scrollWheelZoom: true })
   .setView([20.9160, -100.7440], 15);
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-  maxZoom: 19
-}).addTo(map);
+const tileUrls = {
+  light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+  dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+};
+const tileAttr = '&copy; <a href="https://openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
+let tileLayer = L.tileLayer(
+  document.body.classList.contains('dark') ? tileUrls.dark : tileUrls.light,
+  { attribution: tileAttr, maxZoom: 19 }
+).addTo(map);
+
+window._swapTiles = function(isDark) {
+  map.removeLayer(tileLayer);
+  tileLayer = L.tileLayer(isDark ? tileUrls.dark : tileUrls.light, { attribution: tileAttr, maxZoom: 19 }).addTo(map);
+};
 
 const markerLayer = L.layerGroup().addTo(map);
 const markerRefs = [];
@@ -1163,6 +1174,20 @@ function updateFilter() {
   // Re-observe only visible entries
   observer.disconnect();
   document.querySelectorAll('.entry:not(.hidden)').forEach(el => observer.observe(el));
+
+  // Re-apply active pin + entry state after marker DOM rebuild
+  if (activeIndex >= 0) {
+    const show = activeFilter === 'all' || places[activeIndex].category === activeFilter;
+    if (show) {
+      const pin = document.getElementById('pin-' + activeIndex);
+      if (pin) pin.classList.add('active');
+      const entry = document.getElementById('entry-' + places[activeIndex].slug);
+      if (entry) {
+        entry.classList.add('active');
+        entry.style.setProperty('--c-active', catColor(places[activeIndex].category));
+      }
+    }
+  }
 
   // Fit map to visible markers
   const vc = places
