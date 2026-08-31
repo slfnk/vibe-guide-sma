@@ -1064,10 +1064,10 @@ function setActive(index, source) {
     if (i === index) el.style.setProperty('--c-active', catColor(places[i].category));
   });
 
-  // Highlight pins
-  document.querySelectorAll('.pin').forEach((el, i) => {
-    el.classList.toggle('active', i === index);
-  });
+  // Highlight pins (by ID, not DOM position — Leaflet reorders DOM on filter)
+  document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
+  const targetPin = document.getElementById('pin-' + index);
+  if (targetPin) targetPin.classList.add('active');
 
   // Fly map
   map.flyTo([places[index].lat, places[index].lng], 16, { duration: 0.7 });
