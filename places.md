@@ -7,9 +7,7 @@ More Guides: [JLW](#), [ALEPNK](#)
 
 ## Intro
 
-I've been living in San Miguel for about decade and I keep my ear to the streets. Sure, folks may like to clown on the city for being a disney experience, but from any location you can walk about 3 blocks and find yourself on the outer rim, looking for deep cuts.
-
-I'm all about the pop-ups and cheap eats.
+I've been living in San Miguel for over decade and my love for the city trends towards the deep cut street food and cantinas, cold lagers over mixology and craft beer. I'll be my plotting my favorite spots here, but SMA is honestly at it's most rewarding when slowly wandering the streets with no destination in mind, logging all the strange details of the city and it's people. The center few blocks may have a reputation as a fresa disney tourist destination, but rest assured that you can walk 5 minutes in any direction and you will be right back into a deep traditional town full of strange riches.
 
 ## Categories
 
@@ -26,7 +24,7 @@ Landmark: #3D6B5E
 - Location: 20.908571768761146, -100.74273314472384
 - Google Maps: https://maps.app.goo.gl/Xx5bvY3ZFYWrrf8f9
 
-Everybody knows the Jardín and the Parroquía, but this is some must-see territory that many often miss. Absolute gem of a city park, with the best folliage in the city. It's one of the lovelier walks in the city from the main city square passing through Aldama street. Make sure to make your way up hill through the mellow winding paths. 
+[Write-up coming soon]
 
 ---
 
@@ -39,7 +37,7 @@ Everybody knows the Jardín and the Parroquía, but this is some must-see territ
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Cafe+Rama+San+Miguel+de+Allende
 - Instagram: https://www.instagram.com/caferama.sma/
 
-The best coffee in the centro, no contest. Third-wave quality without the pretension. Their pour-over with Oaxacan beans is what I order every time. The back patio is a quiet escape from the tourist foot traffic ten meters away. They also do a solid breakfast torta if you're there before 11.
+[Write-up coming soon]
 
 ---
 
@@ -52,7 +50,7 @@ The best coffee in the centro, no contest. Third-wave quality without the preten
 - Google Maps: https://maps.app.goo.gl/mE2e5JuSCbnMCvCd7
 - Instagram: https://www.instagram.com/paninamx/?hl=en
 
-Lovely brunch and bakery, with the best loaves of sourdough in the city, get there to order loaves early before they sell out. Stellar coffee and a chill mellow place to socialize. Dog friendly. Very friendly staff. 
+Lovely brunch and bakery, with the best sourdough in the city — get there early to order a loaf before they sell out, they'll slice it for you on the spot. Stellar coffee, easy to socialize with strangers. Dog friendly. Some of the friendlier staff in town.
 
 ---
 
@@ -64,7 +62,7 @@ Lovely brunch and bakery, with the best loaves of sourdough in the city, get the
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Bichi+Bichi+San+Miguel+de+Allende
 - Instagram: https://www.instagram.com/bichibichi.sma/
 
-Baja-style fish tacos and natural wine in a tiny courtyard. This is where the young Mexican creative crowd eats, not the expat brunch circuit. The tuna tostada is exceptional. Go before 2pm on weekdays or you'll wait. Cash is easier here.
+[Write-up coming soon]
 
 ---
 
@@ -75,7 +73,7 @@ Baja-style fish tacos and natural wine in a tiny courtyard. This is where the yo
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Fabrica+La+Aurora+San+Miguel+de+Allende
 - Facebook: https://www.facebook.com/FabricaLaAurora/
 
-A converted textile factory that's now a sprawling complex of art galleries, design shops, and studios. It sounds like a tourist trap and parts of it are, but the actual galleries showing contemporary Mexican art are genuinely worth your time. Go on a Saturday morning when artists are in their studios. The café inside is overpriced — grab coffee before you arrive.
+[Write-up coming soon]
 
 ---
 
@@ -99,7 +97,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Location: 20.9160, -100.7470
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
 
-Not the artisan market — the actual food market where locals eat. The stalls on the upper level serve comida corrida for 80 pesos that's better than most sit-down restaurants in the centro. Point at what looks good, sit on a plastic stool, and eat. The jugos stand near the entrance does a solid green juice. This is where you eat when you live here.
+Not the artisan market — the actual food market where locals eat on the lower side of town. The stalls on the upper level serve comida corrida for 80 pesos that's better than most sit-down restaurants in the centro. Point at what looks good, sit on a plastic stool, and blast off.
 
 ---
 
@@ -111,7 +109,7 @@ Not the artisan market — the actual food market where locals eat. The stalls o
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Rosewood+San+Miguel+de+Allende
 - Instagram: https://www.instagram.com/rosaboreal.sma/
 
-You don't need to stay at the Rosewood — the rooftop bar is the point. Best panoramic view of the city, period. Go at golden hour, order a mezcal cocktail, and watch the whole town turn pink. It's expensive by SMA standards but not outrageous. Dress slightly better than your dusty walking-around clothes. Reservations help on weekends.
+[Write-up coming soon]
 
 ---
 
@@ -123,4 +121,4 @@ You don't need to stay at the Rosewood — the rooftop bar is the point. Best pa
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Tio+Lucas+San+Miguel+de+Allende
 - Facebook: https://www.facebook.com/tiolucassma/
 
-An underground mezcalería — literally, it's in a basement. The mezcal list is deep and the bartenders know their producers. This is where you go at 10pm after dinner when you want to stay out. Live music some nights, mostly acoustic. The vibe is dark, warm, and unpolished in the best way. Don't expect craft cocktails — drink mezcal straight.
+[Write-up coming soon]
