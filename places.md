@@ -47,7 +47,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 # Fábrica La Aurora
  
 - Category: Landmark
-- Location: 20.9200, -100.7490
+- Location: 20.922950300089514, -100.74061351350049
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Fabrica+La+Aurora+San+Miguel+de+Allende
 - Facebook: https://www.facebook.com/FabricaLaAurora/
 [Write-up coming soon]
