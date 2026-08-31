@@ -1,4 +1,4 @@
-Guide: City Vibe Guide
+Guide: Updated August 2026
 Title: Vibe Guide to San Miguel De Allende
 Subtitle: My take on the pueblito at a different speed and depth.
 Author: SL FNK
