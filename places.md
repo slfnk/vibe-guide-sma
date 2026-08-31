@@ -170,7 +170,7 @@ Not the artisan market — the actual food market where locals eat on the lower 
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.914, -100.745
+- Location: 20.9155325579491, -100.75071612101524
 [Write-up coming soon] · Not on Google Maps
  
 ---
@@ -179,7 +179,7 @@ Not the artisan market — the actual food market where locals eat on the lower 
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.914, -100.744
+- Location: 20.91018230455384, -100.74671931586366
 [Write-up coming soon] · Not on Google Maps
  
 ---
@@ -188,7 +188,7 @@ Not the artisan market — the actual food market where locals eat on the lower 
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.915, -100.745
+- Location: 20.91056248884948, -100.74633440531308
 [Write-up coming soon] · Not on Google Maps
  
 ---
@@ -197,7 +197,7 @@ Not the artisan market — the actual food market where locals eat on the lower 
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.915, -100.743
+- Location: 20.915593577164106, -100.74154839341305
 [Write-up coming soon] · Not on Google Maps
  
 ---
