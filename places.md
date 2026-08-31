@@ -20,13 +20,13 @@ Landmark: #3D6B5E
 
 ===
 
-# La Parroquia de San Miguel Arcángel
+# Parque Benito Juárez
 
 - Category: Landmark
-- Location: 20.9144, -100.7453
-- Google Maps: https://www.google.com/maps/search/?api=1&query=La+Parroquia+San+Miguel+de+Allende
+- Location: 20.908571768761146, -100.74273314472384
+- Google Maps: https://maps.app.goo.gl/Xx5bvY3ZFYWrrf8f9
 
-You already know what this is — the pink neo-Gothic church on every postcard. But go at sunset when the stone turns amber and the plaza fills with balloon vendors and old men on benches. Skip the interior tour groups and just sit outside with an elote from the cart on the corner. The best view is from Cuna de Allende looking up the hill.
+Everybody knows the Jardín and the Parroquía, but this is some must-see territory that many often miss. Absolute gem of a city park, with the best folliage in the city. It's one of the lovelier walks in the city from the main city square passing through Aldama street. Make sure to make your way up hill through the mellow winding paths. 
 
 ---
 
