@@ -653,3 +653,227 @@ Not the artisan market — the actual food market where locals eat on the lower 
 - Location: 20.913365499999998, -100.7452469
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSyUJsLBRK4QRYKIry00gc38
 [Write-up coming soon]
+
+---
+
+# Hotel Aldama Swimming Pool
+
+- Category: Deep Cuts
+- Location: 20.9105209, -100.7436561
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJw37sdbBRK4QRPWQMxWlINvg
+[Write-up coming soon]
+
+---
+
+# La Cruz del Palo Huérfano
+
+- Category: Deep Cuts
+- Location: 20.823899, -100.7387113
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ80ESRuRXK4QRwTqcN20NCwg
+[Write-up coming soon]
+
+---
+
+# Doña Beatriz Jalea
+
+- Category: Deep Cuts
+- Location: 20.8003737, -100.6345698
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJy06NYiNVK4QR4RmAEpT7Zy0
+[Write-up coming soon]
+
+---
+
+# El Xoconostle
+
+- Category: Deep Cuts
+- Location: 20.9244088, -100.7587623
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ1QmmbjRQK4QRsXAiOu8IMcw
+[Write-up coming soon]
+
+---
+
+# La Tóxica
+
+- Category: Deep Cuts
+- Location: 20.9052753, -100.7484232
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJVSq2pY5RK4QRGzM6bAvFSv4
+[Write-up coming soon]
+
+---
+
+# Bola Ocho
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.9182172, -100.7442833
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJIcbDhLdRK4QRKcAKo3nigAc
+[Write-up coming soon]
+
+---
+
+# Benjamin Lara
+
+- Category: Deep Cuts
+- Price: $$
+- Location: 20.9156831, -100.7445771
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJFVONQ7dRK4QRBnyHrz14FaQ
+[Write-up coming soon]
+
+---
+
+# La Cucaracha
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.9128491, -100.7460609
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ8zTXdv5RK4QRMnEegIMZg68
+[Write-up coming soon]
+
+---
+
+# Bar Blu
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.9185446, -100.7454031
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJO8EdY-tRK4QRll74eiZdvmw
+[Write-up coming soon]
+
+---
+
+# Bar San Miguel
+
+- Category: Deep Cuts
+- Location: 20.9150, -100.7440
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+
+---
+
+# El Pulpo
+
+- Category: Deep Cuts
+- Location: 20.9150, -100.7440
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+
+---
+
+# Atotonilco Street Food
+
+- Category: Deep Cuts
+- Location: 21.0094, -100.7962
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+
+---
+
+# Tuesday Market
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.9060211, -100.7249808
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJZ2jDNJpRK4QR86OSsq4BiFY
+[Write-up coming soon]
+
+---
+
+# Presa Allende
+
+- Category: Deep Cuts
+- Location: 20.8483987, -100.8259201
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJMRZ2DyFaK4QRTb9h0wKFrv4
+[Write-up coming soon]
+
+---
+
+# Río Laja Tunnel
+
+- Category: Deep Cuts
+- Location: 20.8373563, -100.8286769
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJeyIJItNZK4QRgEt7lb9crNk
+[Write-up coming soon]
+
+---
+
+# Antigua Presa de Banda
+
+- Category: Deep Cuts
+- Location: 20.9615428, -100.8181196
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJw5Op60FFK4QR5TXhUldURSg
+[Write-up coming soon]
+
+---
+
+# La Esmeralda
+
+- Category: Deep Cuts
+- Location: 20.9464, -100.8337
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+
+---
+
+# Presa Obraje Cañón Run
+
+- Category: Deep Cuts
+- Location: 20.9178677, -100.7372109
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJA88m29xRK4QRXTBiL_UFfrQ
+[Write-up coming soon]
+
+---
+
+# Cruz de la Peña
+
+- Category: Deep Cuts
+- Location: 20.907891, -100.7701411
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJKSgyjZBRK4QRXsH5QG_OOmI
+[Write-up coming soon]
+
+---
+
+# Santuario Escultórico
+
+- Category: Deep Cuts
+- Location: 20.9150, -100.7440
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+
+---
+
+# Quesadillas San Antonio
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.9083, -100.7473
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+
+---
+
+# Trapo Galería
+
+- Category: Deep Cuts
+- Location: 20.9195899, -100.7451357
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJueifArhRK4QRLG-5dqU_eTU
+[Write-up coming soon]
+
+---
+
+# Gorditas Don Ciro
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.9685281, -100.7710741
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ47gPqrlPK4QRZzQZa7tCh0Q
+[Write-up coming soon]
+
+---
+
+# Buy Beer After 9pm
+
+- Category: Deep Cuts
+- Location: 20.9150, -100.7440
+[Write-up coming soon] · Needs manual coordinates
+
+---
+
+# Aldea Park
+
+- Category: Deep Cuts
+- Location: 20.9150, -100.7440
+[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
