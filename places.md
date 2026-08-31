@@ -1,6 +1,6 @@
-Guide: City Vibe Guide
-Title: Where to Eat, Drink, and Wander in San Miguel de Allende
-Subtitle: The taquerias, mezcalerías, and quiet corners that make this town feel like home — not the ones on every tourist blog.
+Guide: Updated August 2026
+Title: Vibe Guide to San Miguel De Allende
+Subtitle: My take on the pueblito at a different speed and depth.
 Author: SL FNK
 Updated: August 2026
 More Guides: [JLW](#), [ALEPNK](#)
