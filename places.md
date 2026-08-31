@@ -29,18 +29,6 @@ Deep Cuts: #2AAA8A
  
 ---
  
-# Café Rama
- 
-- Category: Cheap Eats
-- Price: $
-- Location: 20.9130, -100.7432
-- Image: images/cafe-rama.jpg
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Cafe+Rama+San+Miguel+de+Allende
-- Instagram: https://www.instagram.com/caferama.sma/
-[Write-up coming soon]
- 
----
- 
 # Panina
  
 - Category: Sit Down
@@ -52,17 +40,7 @@ Deep Cuts: #2AAA8A
 Lovely brunch and bakery, with the best sourdough in the city — get there early to order a loaf before they sell out, they'll slice it for you on the spot. Stellar coffee, easy to socialize with strangers. Dog friendly. Some of the friendlier staff in town.
  
 ---
- 
-# Bichi Bichi
- 
-- Category: Sit Down
-- Price: $$
-- Location: 20.9152, -100.7448
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Bichi+Bichi+San+Miguel+de+Allende
-- Instagram: https://www.instagram.com/bichibichi.sma/
-[Write-up coming soon]
- 
----
+
  
 # Fábrica La Aurora
  
@@ -93,28 +71,6 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Location: 20.9160, -100.7470
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
 Not the artisan market — the actual food market where locals eat on the lower side of town. The stalls on the upper level serve comida corrida for 80 pesos that's better than most sit-down restaurants in the centro. Point at what looks good, sit on a plastic stool, and blast off.
- 
----
- 
-# Luna Rooftop at Rosewood
- 
-- Category: Drinks
-- Price: $$$
-- Location: 20.9098, -100.7415
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Rosewood+San+Miguel+de+Allende
-- Instagram: https://www.instagram.com/rosaboreal.sma/
-[Write-up coming soon]
- 
----
- 
-# Tío Lucas
- 
-- Category: Drinks
-- Price: $$
-- Location: 20.9140, -100.7462
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Tio+Lucas+San+Miguel+de+Allende
-- Facebook: https://www.facebook.com/tiolucassma/
-[Write-up coming soon]
  
 ---
  
