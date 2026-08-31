@@ -43,6 +43,19 @@ The best coffee in the centro, no contest. Third-wave quality without the preten
 
 ---
 
+# Panina
+
+- Category: Sit Down
+- Price: $$
+- Location: 20.90645796501039, -100.75014103952735
+- Image: images/cafe-rama.jpg
+- Google Maps: https://maps.app.goo.gl/mE2e5JuSCbnMCvCd7
+- Instagram: https://www.instagram.com/paninamx/?hl=en
+
+Lovely brunch and bakery, with the best loaves of sourdough in the city, get there to order loaves early before they sell out. Stellar coffee and a chill mellow place to socialize. Dog friendly. Very friendly staff. 
+
+---
+
 # Bichi Bichi
 
 - Category: Sit Down
