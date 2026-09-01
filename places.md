@@ -6,10 +6,16 @@ Updated: August 2026
 More Guides: [APG](#),[JERS](#)
  
 ## Intro
- 
-I've been living in San Miguel off and on for over a decade, and my fondness for the city lies in its street food, aging cantinas, cold lagers, owner-operated restaurants, and stranger stuff. I'm less moved by international fare, mixology, craft beer, or luxury experiences. I'll be plotting my favorite spots on here over time for your consideration, but SMA is honestly at its most rewarding when slowly wandering the streets with no destination in mind and phone in pocket, logging all the strange details of the city and its people. Sure, the central blocks may have a reputation as a prissy Disney tourist destination and that bougie investor money continues to pour in. But rest assured that you can walk 5 minutes in any direction and you will be right back into a traditional colonial town with curious riches both high and low.
 
-I’ll admit upfront that there are many gaps in this guide regarding things that don’t personally interest me very much — shopping, retail, coffee, pastries, sweets, fine dining. You can find other guides available online that will have you better covered in those departments.
+SMA is at its most rewarding when slowly wandering the side streets with no destination in mind and phone in pocket, logging all the curious details of the town and its people. 
+
+But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has muddied the online information landscape on sites like TripAdvisor and Google Maps; it feels like shifting to authored guides is necessary moving forward for getting a real grasp as a visitor to a city.
+
+After a decade my fondness for San Miguel lies in its street food, aging cantinas, cold lagers, owner-operated restaurants, old bones, and stranger secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences. 
+
+Some folks deride the boujier tourist infrastructure of the central blocks, but walk 5 minutes in any direction will be right back into a traditional colonial town with interesting riches both high and low.
+
+There are some obvious gaps in this guide regarding things I don't often seek out — shopping, retail, coffee, pastries, sweets, fine dining. You can find other authored guides available online that will have you better covered in those departments.
  
 ## Categories
  
