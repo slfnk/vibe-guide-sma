@@ -114,6 +114,16 @@ This sometimes divisive taco cart pops up in evenings along the row of pharmacie
 This morning cart specializes in breakfast offerings, centered between two other competent carts on the promenade. The real winner is the savory chicharron prensado, which occupies a special pot above the others, get it served with rice or beans if you want them extra filling. Not yet on G.Maps.
  
 ---
+
+# Tacos Fernanda / Tacos La Güera
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.91064816543187, -100.74630035102894
+- Google Maps: https://maps.app.goo.gl/VLKZ4skx7JA3RoBZ6
+Great lunchtime tacos, just a notch more upscale than your average cart for very reasonable prices. Unusually robust vegetarian options, and one of the more elegant street burgers in town.  
+ 
+---
  
 # Antojitos Mexicanos Orizaba
  
