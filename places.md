@@ -841,6 +841,26 @@ Not the artisan market — the actual food market where locals eat on the lower 
 
 ---
 
+# Nave Nieva
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.955616833959816, -100.78669506054344
+- Google Maps: https://maps.app.goo.gl/4eSkCaqgKPjyu2y8A
+[Write-up coming soon] 
+
+---
+
+# Cemetery of Our Lady Guadalupe
+
+- Category: Deep Cuts
+- Price: $
+- Location: 20.903158758053152, -100.7502278098621
+- Google Maps: https://maps.app.goo.gl/dNDwzx1Abjezoy2JA
+[Write-up coming soon] 
+
+---
+
 # Quesadillas Del Refugio
 
 - Category: Deep Cuts
