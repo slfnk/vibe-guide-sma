@@ -156,6 +156,16 @@ Not the artisan market — the actual food market where locals eat on the lower 
  
 ---
  
+# Tacos San Francisco
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.914539906175317, -100.7425240210986
+- Google Maps: https://maps.app.goo.gl/tezDHg8uK5UykVet9
+[Write-up coming soon]
+ 
+---
+ 
 # Los De Cecina
  
 - Category: Cheap Eats
@@ -199,6 +209,17 @@ Not the artisan market — the actual food market where locals eat on the lower 
 - Price: $
 - Location: 20.915593577164106, -100.74154839341305
 [Write-up coming soon] · Not on Google Maps
+ 
+---
+---
+ 
+# TOSMA Saturday Market
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.906587171399128, -100.7485375763332
+- Google Maps: https://maps.app.goo.gl/BhRcasVpb6AW5BN96
+[Write-up coming soon]
  
 ---
  
