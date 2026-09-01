@@ -22,60 +22,6 @@ Deep Cuts: #2AAA8A
  
 ===
  
-# Parque Benito Juárez
- 
-- Category: Landmark
-- Location: 20.908571768761146, -100.74273314472384
-- Google Maps: https://maps.app.goo.gl/Xx5bvY3ZFYWrrf8f9
-Easy to miss, but this is one of the best city parks in Mexico, and a calm counterweight to the often chaotic central square. Surprisingly lush greenery, seductive paths weaving through fountain areas and pollinator gardens. Make sure to walk some laps through the upper portion, and the lower river beds are also accessible for exploring.
- 
----
- 
-# Panina
- 
-- Category: Sit Down
-- Price: $$
-- Location: 20.90645796501039, -100.75014103952735
-- Image: images/cafe-rama.jpg
-- Google Maps: https://maps.app.goo.gl/mE2e5JuSCbnMCvCd7
-- Instagram: https://www.instagram.com/paninamx/?hl=en
-Lovely brunch and bakery, with the best sourdough in the city — get there early to order a loaf before they sell out, they'll slice it for you on the spot. Stellar coffee, easy to socialize with strangers. Dog friendly. Some of the friendlier staff in town.
- 
----
-
- 
-# Fábrica La Aurora
- 
-- Category: Landmark
-- Location: 20.922950300089514, -100.74061351350049
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Fabrica+La+Aurora+San+Miguel+de+Allende
-- Facebook: https://www.facebook.com/FabricaLaAurora/
-Fascinating industrial textile factory converted to a labyrinthine gallery complex with tons of shops. Many can feel more like furniture stores than serious art galleries, but trust your taste and you will find some gems. 
- 
----
- 
-# El Charco del Ingenio
- 
-- Category: Landmark
-- Price: $
-- Location: 20.917743189712603, -100.72761388369379
-- Google Maps: https://www.google.com/maps/search/?api=1&query=El+Charco+del+Ingenio+San+Miguel+de+Allende
-- Instagram: https://www.instagram.com/elcharco_sma/
-- Facebook: https://www.facebook.com/ElCharcodelIngenio/
-A botanical garden and nature preserve on the edge of town that most visitors skip. The cactus collection is world-class, but the real draw is the canyon trail — 30 minutes of quiet desert walking with views back over the city. Bring water and sunscreen. Early morning is best, both for light and heat. The entrance fee is nominal.
- 
----
- 
-# Mercado de San Juan de Dios
- 
-- Category: Cheap Eats
-- Price: $
-- Location: 20.915168179799903, -100.75010907349899
-- Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
-The #2 market in town covering neighborhood downhill of centro, it has many delightful secrets to offer in the budget dining range. At least one meal in a mercado is obligatory for the bustling ambiance, trust your gut and pick one of the busier eateries.
- 
----
- 
 # Andy's Taco Cart
  
 - Category: Cheap Eats
@@ -95,35 +41,15 @@ Many folks consider these the best tacos in town, visitors often claim the best 
 Often overshadowed by the fame of Andy's Tacos on one street over, these are superb tacos that *might* even have an edge on Andy's with their flavorful salsas and unusually lightweight tortillas, which help focus the attention on the succulent fillings.
  
 ---
- 
-# Tienda Naturista Génesis
- 
-- Category: Cheap Eats
-- Price: $
-- Location: 20.9160598, -100.7432216
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJvdbB3blRK4QRLmySn4IevDU
-Grab and go food is tough to find during the day in centro so realheads are hip to these cheap smaller falafel pitas stuffed with greens, available in an odd old-fashioned Mexican health store. Not a life-changing snack, but can be a welcome vegetarian break from the dominant taco/torta street food scene.
- 
----
- 
-# Antojitos Mexicanos Orizaba
+
+# Tacos San Francisco
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.910624, -100.7509188
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJqxRk8ilRK4QR-d36pTp3KcU
-A cult classic plastic table pop-up joint inside a garage, well worth the modest walk outside of centro on weekend evenings. The tacos ahogadas are a popular move, you can scope the long table of guisados and let the kindly owner gal know which ones you'd like to fill which of your 4 tacos before dunking in the fryer. A menacing tub of chicken feet always waits on standby to test your bravery.
- 
----
- 
-# Trakaloso Baguttes Prime
- 
-- Category: Cheap Eats
-- Price: $$
-- Location: 20.9255451, -100.7409838
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSW1WZDpRK4QRe6L90-7QmjI
-Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on the side of the road. Unlike the common tortas in town, this is something like a distant cousin of a po-boy sandwich, with extra emphasis put on the higher grade meat quality — it does test the higher technical limits of 'cheap eats', but the vibes are correct.
- 
+- Location: 20.914539906175317, -100.7425240210986
+- Google Maps: https://maps.app.goo.gl/tezDHg8uK5UykVet9
+These complete the trifecta of famous nighttime taco stands off the town square along with Andy's and Tacos Mesones, each occupying parallel streets. Another great entry, people will split hairs about the best ones, but often the best tacos are the closest tacos without long lines.
+
 ---
  
 # Los Burritos
@@ -143,38 +69,28 @@ Famous local lunch joint, this place comes across as a fast food restaurant in d
 - Location: 20.915622199999998, -100.7426038
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJcc-P7rlRK4QRIP4fVpZ1KgE
 I've never asked why they're named after the first moon landing, but whatever, these are the closest carnitas to the central square and well prepared. Either gesture through the glass or search a guide on how to order your ideal blend to fill tacos or a bun, then head upstairs to one of the cooler hidden terazzas in centro.
- 
+
 ---
  
-# Tacos San Francisco
+# Fish Tacos Plaza Civica
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.914539906175317, -100.7425240210986
-- Google Maps: https://maps.app.goo.gl/tezDHg8uK5UykVet9
-These complete the trifecta of famous nighttime taco stands off the town square along with Andy's and Tacos Mesones, each occupying parallel streets. Another great entry, people will split hairs about the best ones, but often the best tacos are the closest tacos without long lines. 
- 
+- Location: 20.915593577164106, -100.74154839341305
+Newcomer in town that sets up next to the taxis along the Plaza Cívica, these are some rare and welcome daytime tacos in centro. The steamed costilla is tasty, but the real story are the generous battered shrimp and fish tacos which are much better than they should be at a cheap price from a street cart. They might even beat the namesake tacos from nearby Baja Fish Taquito, which is still a fine option if you want a terrace experience with beers and a wider mariscos menu. Not yet on Google Maps.
+
 ---
  
-# Los De Cecina
+# Tienda Naturista Génesis
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.915316999999998, -100.7594373
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJQfZYPuhRK4QRGtns5OxKFQo
-An interesting entry in town serving dishes from Toluca, like you would see driving west through the pines from CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is an exciting visit if you can time it correctly.
+- Location: 20.9160598, -100.7432216
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJvdbB3blRK4QRLmySn4IevDU
+Grab and go food is tough to find during the day in centro so realheads are hip to these cheap smaller falafel pitas stuffed with greens, available in an odd old-fashioned Mexican health store. Not a life-changing snack, but can be a welcome vegetarian break from the dominant taco/torta street food scene.
  
 ---
- 
-# Tacos Niño de Atocha
- 
-- Category: Cheap Eats
-- Price: $
-- Location: 20.9155325579491, -100.75071612101524
-Tucked inside the Pasillo 1 entrance of the arched arcade near Mercado San Juan De Díos, the real move here is ordering their burritos, which are closer in spirit to CA mission style burritos with rice/cheese/veggies, but not as big. Make sure to snag a bucket of their creamy avocado salsa to ladle on between bites. Not currently on G.Maps.
- 
----
- 
+
 # Tacos Farmacia Guadalajara
  
 - Category: Cheap Eats
@@ -193,12 +109,32 @@ This morning cart specializes in breakfast offerings, centered between two other
  
 ---
  
-# Fish Tacos Plaza Civica
+# Antojitos Mexicanos Orizaba
  
 - Category: Cheap Eats
 - Price: $
-- Location: 20.915593577164106, -100.74154839341305
-Newcomer in town that sets up next to the taxis along the Plaza Cívica, these are some rare and welcome daytime tacos in centro. The steamed costilla is tasty, but the real story are the generous battered shrimp and fish tacos which are much better than they should be at a cheap price from a street cart. They might even beat the namesake tacos from nearby Baja Fish Taquito, which is still a fine option if you want a terrace experience with beers and a wider mariscos menu. Not yet on Google Maps.
+- Location: 20.910624, -100.7509188
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJqxRk8ilRK4QR-d36pTp3KcU
+A cult classic plastic table pop-up joint inside a garage, well worth the modest walk outside of centro on weekend evenings. The tacos ahogadas are a popular move, you can scope the long table of guisados and let the kindly owner gal know which ones you'd like to fill which of your 4 tacos before dunking in the fryer. A menacing tub of chicken feet always waits on standby to test your bravery.
+ 
+---
+
+# Mercado de San Juan de Dios
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.915168179799903, -100.75010907349899
+- Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
+The #2 market in town covering neighborhood downhill of centro, it has many delightful secrets to offer in the budget dining range. At least one meal in a mercado is obligatory for the bustling ambiance, trust your gut and pick one of the busier eateries.
+ 
+---
+ 
+# Tacos Niño de Atocha
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.9155325579491, -100.75071612101524
+Tucked inside the Pasillo 1 entrance of the arched arcade near Mercado San Juan De Díos, the real move here is ordering their burritos, which are closer in spirit to CA mission style burritos with rice/cheese/veggies, but not as big. Make sure to snag a bucket of their creamy avocado salsa to ladle on between bites. Not currently on G.Maps.
  
 ---
  
@@ -209,6 +145,26 @@ Newcomer in town that sets up next to the taxis along the Plaza Cívica, these a
 - Location: 20.906587171399128, -100.7485375763332
 - Google Maps: https://maps.app.goo.gl/BhRcasVpb6AW5BN96
 [Write-up coming soon]
+ 
+---
+
+# Trakaloso Baguttes Prime
+ 
+- Category: Cheap Eats
+- Price: $$
+- Location: 20.9255451, -100.7409838
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSW1WZDpRK4QRe6L90-7QmjI
+Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on the side of the road. Unlike the common tortas in town, this is something like a distant cousin of a po-boy sandwich, with extra emphasis put on the higher grade meat quality — it does test the higher technical limits of 'cheap eats', but the vibes are correct.
+ 
+---
+
+# Los De Cecina
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.915316999999998, -100.7594373
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJQfZYPuhRK4QRGtns5OxKFQo
+An interesting entry in town serving dishes from Toluca, like you would see driving west through the pines from CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is an exciting visit if you can time it correctly.
  
 ---
  
@@ -402,6 +358,18 @@ There is no shortage of solid barbacoa in town, and many spots are run by member
  
 ---
  
+# Panina
+ 
+- Category: Sit Down
+- Price: $$
+- Location: 20.90645796501039, -100.75014103952735
+- Image: images/cafe-rama.jpg
+- Google Maps: https://maps.app.goo.gl/mE2e5JuSCbnMCvCd7
+- Instagram: https://www.instagram.com/paninamx/?hl=en
+Lovely brunch and bakery, with the best sourdough in the city — get there early to order a loaf before they sell out, they'll slice it for you on the spot. Stellar coffee, easy to socialize with strangers. Dog friendly. Some of the friendlier staff in town.
+ 
+---
+ 
 # Café Quería
  
 - Category: Sit Down
@@ -539,6 +507,37 @@ There is no shortage of solid barbacoa in town, and many spots are run by member
 - Location: 20.9179225, -100.7423211
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJWxT8wLBRK4QRlzsBVLb_oGc
 [Write-up coming soon]
+ 
+---
+
+# Parque Benito Juárez
+ 
+- Category: Landmark
+- Location: 20.908571768761146, -100.74273314472384
+- Google Maps: https://maps.app.goo.gl/Xx5bvY3ZFYWrrf8f9
+Easy to miss, but this is one of the best city parks in Mexico, and a calm counterweight to the often chaotic central square. Surprisingly lush greenery, seductive paths weaving through fountain areas and pollinator gardens. Make sure to walk some laps through the upper portion, and the lower river beds are also accessible for exploring.
+ 
+---
+ 
+# Fábrica La Aurora
+ 
+- Category: Landmark
+- Location: 20.922950300089514, -100.74061351350049
+- Google Maps: https://www.google.com/maps/search/?api=1&query=Fabrica+La+Aurora+San+Miguel+de+Allende
+- Facebook: https://www.facebook.com/FabricaLaAurora/
+Fascinating industrial textile factory converted to a labyrinthine gallery complex with tons of shops. Many can feel more like furniture stores than serious art galleries, but trust your taste and you will find some gems. 
+ 
+---
+ 
+# El Charco del Ingenio
+ 
+- Category: Landmark
+- Price: $
+- Location: 20.917743189712603, -100.72761388369379
+- Google Maps: https://www.google.com/maps/search/?api=1&query=El+Charco+del+Ingenio+San+Miguel+de+Allende
+- Instagram: https://www.instagram.com/elcharco_sma/
+- Facebook: https://www.facebook.com/ElCharcodelIngenio/
+A botanical garden and nature preserve on the edge of town that most visitors skip. The cactus collection is world-class, but the real draw is the canyon trail — 30 minutes of quiet desert walking with views back over the city. Bring water and sunscreen. Early morning is best, both for light and heat. The entrance fee is nominal.
  
 ---
  
