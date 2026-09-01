@@ -145,6 +145,16 @@ This sleeper hit is good motivation to trek up the hill to see the town from abo
  
 ---
 
+# ¡Qué Torta!
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.91932738448029, -100.74427740721845
+- Google Maps: https://maps.app.goo.gl/53ratkF2TJp6AVZt5
+A curious thing with tortas is there are tons of solid options, but none that stand out as obvious or unanimous winners in town. So instead of rolling the dice on 10+ spots I could pin here, I'm opt for an underrepresented neighborhood on this list. Enjoy your torta + a juice and then go wander around the sleepier Guadalupe neighborhood just bordering the North end of centro. Or feel free to try your luck at discovering the next sneaky torta winner in the Mercado Ignacio Ramírez.
+
+---
+
 # Taqueria la fogata
  
 - Category: Cheap Eats
