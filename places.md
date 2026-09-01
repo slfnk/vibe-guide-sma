@@ -327,7 +327,7 @@ If exploring mezcal is your mission, then this spot has one of the more impressi
 # Hank's
  
 - Category: Drinks
-- Price: $$
+- Price: $ if you're strategic
 - Location: 20.9152214, -100.7444563
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJHfMOULdRK4QR69OCeqGUHhM
 I really debated inclusion on this list, but for better or worse Hank's is a boomer institution in town and part of the cultural fabric. They actually have the cheapest 2x1 corona deal in the city during their daily 5-8pm happy hour. San Miguel whiteheads love feeling young again listening to CCR and Jimmy Buffett on the speakers, a visit can be a field day for younger ironic anthropologists. Berlin Bar a few blocks away is the alternative for the retirees who think themselves too cool and sophisticated for Hank's.
