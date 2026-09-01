@@ -9,11 +9,11 @@ More Guides: [APG](#),[JERS](#)
 
 SMA is at its most rewarding when slowly wandering the side streets with no destination in mind and phone in pocket, logging all the curious details of the town and its people. 
 
-But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has muddied the online information landscape on sites like TripAdvisor and Google Maps; it feels like shifting to authored guides is necessary moving forward for getting a real grasp as a visitor to a city.
+But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has muddied the online information landscape on sites like TripAdvisor and Google Maps. It feels like shifting to authored guides is necessary moving forward for getting a proper grasp on a city as a visitor.
 
-After a decade my fondness for San Miguel lies in its street food, aging cantinas, cold lagers, owner-operated restaurants, old bones, and stranger secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences. 
+After a decade in San Miguel, my fondness lies in its street food, aging cantinas, cold lagers, owner-operated restaurants, old bones, and stranger secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences. 
 
-Some folks deride the boujier tourist infrastructure of the central blocks, but walk 5 minutes in any direction will be right back into a traditional colonial town with interesting riches both high and low.
+Some folks deride the boujier tourist infrastructure of the central blocks, but walk 5 minutes in any direction and you'll be right back into a traditional colonial town with interesting riches both high and low. Anthropology Always!
 
 There are some obvious gaps in this guide regarding things I don't often seek out — shopping, retail, coffee, pastries, sweets, fine dining. You can find other authored guides available online that will have you better covered in those departments.
  
@@ -170,7 +170,7 @@ Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on t
 - Price: $
 - Location: 20.915316999999998, -100.7594373
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJQfZYPuhRK4QRGtns5OxKFQo
-An interesting entry in town serving dishes from Toluca, like you would see driving west through the pines from CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is an exciting visit if you can time it correctly.
+An interesting entry on the working class entry road to town, serving regional delights from Toluca, a city to the west of CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is a killer visit if you can time it correctly.
  
 ---
  
