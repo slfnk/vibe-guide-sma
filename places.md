@@ -13,7 +13,7 @@ But it always helps to have some local intel, and paid bot manipulation of ratin
 
 After a decade in San Miguel, my fondness lies in its street food, aging cantinas, cold lagers, old bones, owner-operated restaurants, and strange secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences as the town earns more and more high praise in Condé Nast magazines.
 
-Some folks deride the boujier tourist infrastructure of the central blocks, but walk 5 minutes in any direction and you'll be right back into a traditional colonial town with interesting riches both high and low. Anthropology Always!
+Some folks condemn the town for its American retirees and boujier tourist infrastructure of the central blocks, but walk 5 minutes in any direction and you'll be right back into a traditional-ass Mexican colonial town with interesting riches both high and low. Anthropology Always!
 
 There are some obvious gaps in this guide regarding things I don't often seek out — shopping, retail, coffee, pastries, sweets, fine dining. You can find other authored guides available online that will have you better covered in those departments.
  
