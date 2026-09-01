@@ -50,7 +50,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Location: 20.922950300089514, -100.74061351350049
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Fabrica+La+Aurora+San+Miguel+de+Allende
 - Facebook: https://www.facebook.com/FabricaLaAurora/
-[Write-up coming soon]
+Fascinating industrial textile factory converted to art gallery complex with dozens of shops. Many can feel more like furniture stores than serious galleries, but trust your taste and you will find some gems. 
  
 ---
  
@@ -72,7 +72,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Price: $
 - Location: 20.915168179799903, -100.75010907349899
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
-Not the artisan market — the actual food market where locals eat on the lower side of town. The stalls on the upper level serve comida corrida for 80 pesos that's better than most sit-down restaurants in the centro. Point at what looks good, sit on a plastic stool, and blast off.
+The #2 market in town covering the lower areas... has many secrets to offer in the budget dining range. Trust your gut and pick one of the busier eateries.
  
 ---
  
@@ -92,7 +92,7 @@ Many people would say these are the best tacos in town, or even the best tacos o
 - Price: $
 - Location: 20.9155949, -100.7424595
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJXa2Cs0xRK4QR9jMYt8pKHRg
-[Write-up coming soon]
+Often overshadowed by the fame of Andy's Tacos, these are superb tacos that might even get the edge in the salsa and (featherweight) tortilla departments.
  
 ---
  
@@ -102,7 +102,7 @@ Many people would say these are the best tacos in town, or even the best tacos o
 - Price: $
 - Location: 20.9160598, -100.7432216
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJvdbB3blRK4QRLmySn4IevDU
-[Write-up coming soon]
+Cheap falafel pitas stuffed with greens, in an old fashioned mexican health store. Maybe not life changing but can be a welcome change from the meat dominant street scene.
  
 ---
  
@@ -112,7 +112,7 @@ Many people would say these are the best tacos in town, or even the best tacos o
 - Price: $
 - Location: 20.910624, -100.7509188
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJqxRk8ilRK4QR-d36pTp3KcU
-[Write-up coming soon]
+A cult classic worth the modest walk outside of centro on weekends.
  
 ---
  
