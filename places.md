@@ -50,7 +50,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Location: 20.922950300089514, -100.74061351350049
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Fabrica+La+Aurora+San+Miguel+de+Allende
 - Facebook: https://www.facebook.com/FabricaLaAurora/
-Fascinating industrial textile factory converted to art gallery complex with dozens of shops. Many can feel more like furniture stores than serious galleries, but trust your taste and you will find some gems. 
+Fascinating industrial textile factory converted to a labyrinthine gallery complex with tons of shops. Many can feel more like furniture stores than serious art galleries, but trust your taste and you will find some gems. 
  
 ---
  
@@ -72,7 +72,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Price: $
 - Location: 20.915168179799903, -100.75010907349899
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Mercado+San+Juan+de+Dios+San+Miguel+de+Allende
-The #2 market in town covering the lower areas... has many secrets to offer in the budget dining range. Trust your gut and pick one of the busier eateries.
+The #2 market in town covering neighborhood downhill of centro, it has many delightful secrets to offer in the budget dining range. At least one meal in a mercado is obligatory for the bustling ambiance, trust your gut and pick one of the busier eateries.
  
 ---
  
@@ -82,7 +82,7 @@ The #2 market in town covering the lower areas... has many secrets to offer in t
 - Price: $
 - Location: 20.9166858, -100.7440804
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJezGOBrdRK4QRXoh0VMBluJI
-Many people would say these are the best tacos in town, or even the best tacos of their lives. Hard to go wrong with any order, this place is open very late on weekends but can get absolutely slammed with drunks after the bars start shutting down.  
+Many folks consider these the best tacos in town, visitors often claim the best tacos of their lives. Soupy and bursting with savory flavors, it's hard to go wrong with any order. Open very late on weekends but can get absolutely slammed with drunks after the bars start shutting down, make your move if you ever see a less busy window. Like any taco cart, they can have still occasional off nights, especially if the A-team isn't working.
  
 ---
  
@@ -92,7 +92,7 @@ Many people would say these are the best tacos in town, or even the best tacos o
 - Price: $
 - Location: 20.9155949, -100.7424595
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJXa2Cs0xRK4QR9jMYt8pKHRg
-Often overshadowed by the fame of Andy's Tacos, these are superb tacos that might even get the edge in the salsa and (featherweight) tortilla departments.
+Often overshadowed by the fame of Andy's Tacos on one street over, these are superb tacos that *might* even have an edge on Andy's with their flavorful salsas and unusually lightweight tortillas, which help focus the attention on the succulent fillings.
  
 ---
  
@@ -102,7 +102,7 @@ Often overshadowed by the fame of Andy's Tacos, these are superb tacos that migh
 - Price: $
 - Location: 20.9160598, -100.7432216
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJvdbB3blRK4QRLmySn4IevDU
-Cheap falafel pitas stuffed with greens, in an old fashioned mexican health store. Maybe not life changing but can be a welcome change from the meat dominant street scene.
+Grab and go food is tough to find during the day in centro so realheads are hip to these cheap smaller falafel pitas stuffed with greens, available in an odd old-fashioned Mexican health store. Not a life-changing snack, but can be a welcome vegetarian break from the dominant taco/torta street food scene.
  
 ---
  
@@ -112,27 +112,17 @@ Cheap falafel pitas stuffed with greens, in an old fashioned mexican health stor
 - Price: $
 - Location: 20.910624, -100.7509188
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJqxRk8ilRK4QR-d36pTp3KcU
-A cult classic worth the modest walk outside of centro on weekends.
+A cult classic plastic table pop-up joint inside a garage, well worth the modest walk outside of centro on weekend evenings. The tacos ahogadas are a popular move, you can scope the long table of guisados and let the kindly owner gal know which ones you'd like to fill which of your 4 tacos before dunking in the fryer. A menacing tub of chicken feet always waits on standby to test your bravery.
  
 ---
  
 # Trakaloso Baguttes Prime
  
 - Category: Cheap Eats
-- Price: $
+- Price: $$
 - Location: 20.9255451, -100.7409838
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSW1WZDpRK4QRe6L90-7QmjI
-[Write-up coming soon]
- 
----
- 
-# Barbacoa Fam. Rodríguez
- 
-- Category: Cheap Eats
-- Price: $
-- Location: 20.897457799999998, -100.750434
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJXSPPJJtRK4QReFmX2gbzRlY
-[Write-up coming soon]
+Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on the side of the road. Unlike the common tortas in town, this is something like a distant cousin of a po-boy sandwich, with extra emphasis put on the higher grade meat quality — it does test the higher technical limits of 'cheap eats', but the vibes are correct.
  
 ---
  
@@ -142,7 +132,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Price: $
 - Location: 20.916275199999998, -100.744148
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ55NxXbdRK4QRdd-W02Sb6ZQ
-[Write-up coming soon]
+Famous local lunch joint, this place comes across as a fast food restaurant in design and spirit, but at its core it's serving great traditional guisados out of clay pots; take a peek at the offerings, pick your fillings and take your tray to the table. One of the few spots in town that focuses on handmade flour tortillas, absolutely worth bringing a bundle= home with you.
  
 ---
  
@@ -152,7 +142,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Price: $
 - Location: 20.915622199999998, -100.7426038
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJcc-P7rlRK4QRIP4fVpZ1KgE
-[Write-up coming soon]
+I've never asked why they're named after the first moon landing, but whatever, these are the closest carnitas to the central square and well prepared. Either gesture through the glass or search a guide on how to order your ideal blend to fill tacos or a bun, then head upstairs to one of the cooler hidden terazzas in centro.
  
 ---
  
@@ -162,7 +152,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Price: $
 - Location: 20.914539906175317, -100.7425240210986
 - Google Maps: https://maps.app.goo.gl/tezDHg8uK5UykVet9
-[Write-up coming soon]
+These complete the trifecta of famous nighttime taco stands off the town square along with Andy's and Tacos Mesones, each occupying parallel streets. Another great entry, people will split hairs about the best ones, but often the best tacos are the closest tacos without long lines. 
  
 ---
  
@@ -172,7 +162,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Price: $
 - Location: 20.915316999999998, -100.7594373
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJQfZYPuhRK4QRGtns5OxKFQo
-[Write-up coming soon]
+An interesting entry in town serving dishes from Toluca, like you would see driving west through the pines from CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is an exciting visit if you can time it correctly.
  
 ---
  
@@ -181,7 +171,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Category: Cheap Eats
 - Price: $
 - Location: 20.9155325579491, -100.75071612101524
-[Write-up coming soon] · Not on Google Maps
+Tucked inside the Pasillo 1 entrance of the arched arcade near Mercado San Juan De Díos, the real move here is ordering their burritos, which are closer in spirit to CA mission style burritos with rice/cheese/veggies, but not as big. Make sure to snag a bucket of their creamy avocado salsa to ladle on between bites. Not currently on G.Maps.
  
 ---
  
@@ -190,7 +180,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Category: Cheap Eats
 - Price: $
 - Location: 20.91018230455384, -100.74671931586366
-[Write-up coming soon] · Not on Google Maps
+This sometimes divisive taco cart pops up in evenings along the row of pharmacies wherever they can find a parking spot. The oil cooked meats can be hit or miss later at night, trust your eyes, but the costilla and cabeza steaming from under the saran wrap is reliable, and the salsa bar is top-tier. Not currently on Google Maps.
  
 ---
  
@@ -199,7 +189,7 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Category: Cheap Eats
 - Price: $
 - Location: 20.91056248884948, -100.74633440531308
-[Write-up coming soon] · Not on Google Maps
+This morning cart specializes in breakfast offerings, centered between two other competent carts on the promenade. The real winner is the savory chicharron prensado, which occupies a special pot above the others, get it served with rice or beans if you want them extra filling. Not yet on G.Maps.
  
 ---
  
@@ -208,9 +198,8 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Category: Cheap Eats
 - Price: $
 - Location: 20.915593577164106, -100.74154839341305
-[Write-up coming soon] · Not on Google Maps
+Newcomer in town that sets up next to the taxis along the Plaza Cívica, these are some rare and welcome daytime tacos in centro. The steamed costilla is tasty, but the real story are the generous battered shrimp and fish tacos which are much better than they should be at a cheap price from a street cart. They might even beat the namesake tacos from nearby Baja Fish Taquito, which is still a fine option if you want a terrace experience with beers and a wider mariscos menu. Not yet on Google Maps.
  
----
 ---
  
 # TOSMA Saturday Market
@@ -380,7 +369,17 @@ A cult classic worth the modest walk outside of centro on weekends.
 - Location: 20.9182015, -100.74315969999999
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ6ZwNKLhRK4QRXW0c4jzmxII
 [Write-up coming soon]
+
+---
  
+# Barbacoa Fam. Rodríguez
+ 
+- Category: Sit Down
+- Price: $$
+- Location: 20.897457799999998, -100.750434
+- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJXSPPJJtRK4QReFmX2gbzRlY
+There is no shortage of solid barbacoa in town, and many spots are run by members of the famous Rodriguez family all serving their classic recipes. This particular location is a modest dining hall that is bursting with joyful family energy on a Sunday, easily one of the best ambiance experiences in SMA.
+
 ---
  
 # Raíces
