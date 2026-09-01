@@ -27,7 +27,7 @@ Deep Cuts: #2AAA8A
 - Category: Landmark
 - Location: 20.908571768761146, -100.74273314472384
 - Google Maps: https://maps.app.goo.gl/Xx5bvY3ZFYWrrf8f9
-[Write-up coming soon]
+Easy to miss, but this is one of the best city parks in Mexico, and a calm counterweight to the often chaotic central square. Surprisingly lush greenery, seductive paths weaving through fountain areas and pollinator gardens. Make sure to walk some laps through the upper portion, and the lower river beds are also accessible for exploring.
  
 ---
  
@@ -82,7 +82,7 @@ Not the artisan market — the actual food market where locals eat on the lower 
 - Price: $
 - Location: 20.9166858, -100.7440804
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJezGOBrdRK4QRXoh0VMBluJI
-[Write-up coming soon]
+Many people would say these are the best tacos in town, or even the best tacos of their lives. Hard to go wrong with any order, this place is open very late on weekends but can get absolutely slammed with drunks after the bars start shutting down.  
  
 ---
  
