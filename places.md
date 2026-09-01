@@ -131,7 +131,7 @@ Great lunchtime tacos, just a notch more upscale than your average cart for very
 - Price: $
 - Location: 20.910624, -100.7509188
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJqxRk8ilRK4QR-d36pTp3KcU
-A cult classic plastic table pop-up joint inside a garage, well worth the modest walk outside of centro on weekend evenings. The tacos ahogadas are a popular move, you can scope the long table of guisados and let the kindly owner gal know which ones you'd like to fill which of your 4 tacos before dunking in the fryer. A menacing tub of chicken feet always waits on standby to test your bravery.
+A cult classic plastic table pop-up joint inside a garage, well worth the modest walk outside of centro on weekend evenings. The tacos ahogadas are a popular move, you can scope the long table of guisados and let the sweet owner gal know which ones you'd like to fill which of your 4 tacos before dunking in the fryer. A menacing tub of chicken feet always waits on standby to test your bravery.
  
 ---
 
@@ -151,7 +151,7 @@ This sleeper hit is good motivation to trek up the hill to see the town from abo
 - Price: $
 - Location: 20.91932738448029, -100.74427740721845
 - Google Maps: https://maps.app.goo.gl/53ratkF2TJp6AVZt5
-A curious thing with tortas is there are tons of solid options, but none that stand out as obvious or unanimous winners in town. So instead of rolling the dice on 10+ spots I could pin here, I'm opt for an underrepresented neighborhood on this list. Enjoy your torta + a juice and then go wander around the sleepier Guadalupe neighborhood just bordering the North end of centro. Or feel free to try your luck at discovering the next sneaky torta winner in the Mercado Ignacio Ramírez.
+A curious thing with tortas is there are tons of solid options, but none that stand out as obvious or unanimous winners in town. So instead of rolling the dice on 10+ spots I could pin here, I'll opt for an underrepresented neighborhood on this list. Enjoy your torta + a juice and then go wander around the sleepier Guadalupe neighborhood just bordering the North end of centro. Or feel free to try your luck at discovering the next sneaky torta winner in the Mercado Ignacio Ramírez.
 
 ---
 
@@ -220,7 +220,7 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $
 - Location: 20.912558, -100.746133
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJkTp74bBRK4QRreTxFDD8ofw
-[Write-up coming soon]
+Cheapest beers in centro, can also stretch your mxn even further ordering larger caguamas to share. There are about 5 distinct seating areas beyond the front bar room, the place can get buzzing but easy to find enough space for yourself if you please. Wander all the way back and up and you'll find a sneaky mellow terrace with a view of the street below.
  
 ---
  
@@ -230,17 +230,17 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $$
 - Location: 20.9085078, -100.7475711
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJDWO3OYFRK4QRsbf19fCssNs
-[Write-up coming soon]
+Closest thing to a beach bar in San Miguel, and perhaps its most stoner friendly. Pretty vibey outdoor alley with lots of plants, but uncovered so keep an eye on the rain forecast. 
  
 ---
  
 # The Room Mezcalería
  
 - Category: Drinks
-- Price: $$
+- Price: $$-$$$
 - Location: 20.9144126, -100.7447565
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJZ-oZtkRRK4QRol4nSjravb8
-[Write-up coming soon]
+Not technically a speakeasy, but this small discreet bar can be tough to find upon entering the building. Very popular with SMA's local hipcat 20/30-somethings, they have a DJ booth and throw cool parties — check their IG to scout possible events.
  
 ---
  
@@ -250,17 +250,17 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $$
 - Location: 20.914117299999997, -100.7453244
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ0XEKl7dRK4QR-DTOf17Bysg
-[Write-up coming soon]
+Hip bar/restuarant spot one block down from the main square. Superior margaritas + killer Mexican vegan plates. Great owner and staff make it super popular for locals, can be hard to get a seat during lunch and dinner rushes. 
  
 ---
  
 # Cantina El Cucú
  
 - Category: Drinks
-- Price: $
+- Price: $-$$
 - Location: 20.9167709, -100.7442641
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJCWkfcLdRK4QRmbUHslKgs08
-[Write-up coming soon]
+Classic ass swinging-door cantina with yellowing decor that has hardly been updated in decades, which is the way it should be. Tunes likely to be coming from the jukebox and good chance of somebody singing loudly along. Easy to burn a whole evening inside here buying rounds of mezcal and coronas, so be sure to keep good track of your tab along the way.
  
 ---
  
@@ -270,37 +270,37 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $
 - Location: 20.918638299999998, -100.746009
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJp9D5_rZRK4QR3aZGiItW9OU
-[Write-up coming soon]
+An unpretentious terrace bar with amiable social energy, favored by local musicians on their days off or before gigs. Some cheap novel bar snacks on the menu.
  
 ---
  
 # Restaurant Bar Bacco
  
 - Category: Drinks
-- Price: $$
+- Price: $$-$$$
 - Location: 20.915913099999997, -100.745404
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ57nQybpRK4QR2tRF7A4oZ80
-[Write-up coming soon]
+You'll often have this tiny unscouted place entirely to yourself — for better or worse — but it's probably one of the most beautiful old school bars in town. Enter passing through the Bacco hotel + Italian restuarant and head to the right.
  
 ---
  
 # El Manantial
  
 - Category: Drinks
-- Price: $$
+- Price: $$-$$$
 - Location: 20.91125, -100.740448
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJU9hxA7tRK4QRkJix5i9xyDo
-[Write-up coming soon]
+An older cantina up on the hill that's gone a little modern with full coverage interior black and white mural. Good lighting, date friendly, delicious seafood on the menu. Can be hard to get a table in the popular/superior front room, especially on Tuesdays with their 2x1 tostadas.
  
 ---
  
-# The Restaurant
+# The Bar at the R
  
 - Category: Drinks
 - Price: $$
 - Location: 20.9131139, -100.7428056
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJMQJcbbpRK4QRbutdM6GcpQs
-[Write-up coming soon]
+Tucked inside upscale 'The Restaurant', this is San Miguel's first vinyl bar with an impressive build out and moody lighting. More space than most spots on the list to bring a crowd of people. Not uncommon to find owner Donnie Masterton or other local DJs spinning hip hop or soul records on the decks.
  
 ---
  
@@ -310,7 +310,7 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $$
 - Location: 20.903306699999998, -100.7497696
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJPb_jTwBRK4QRGjgLw4LwECQ
-[Write-up coming soon]
+This newer joint is a welcome hipcat outpost on the southern edge of town that throws some lively parties with their built-in DJ booth. They also have a menu of ramen and other Asian fare.  
  
 ---
  
@@ -320,7 +320,7 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $$
 - Location: 20.909880400000002, -100.74177499999999
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJk-VEXAtRK4QRS0nUQFfztoY
-[Write-up coming soon]
+If exploring mezcal is your mission, then this spot has one of the more impressive collections in town. Darker cave energy close to the upper side of Parque Juarez. 
  
 ---
  
@@ -330,7 +330,7 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $$
 - Location: 20.9152214, -100.7444563
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJHfMOULdRK4QR69OCeqGUHhM
-[Write-up coming soon]
+I really debated inclusion on this list, but for better or worse Hank's is a boomer institution in town and part of the cultural fabric. They actually have the cheapest 2x1 corona deal in the city during their daily 5-8pm happy hour. San Miguel whiteheads love feeling young again listening to CCR and Jimmy Buffett on the speakers, a visit can be a field day for younger ironic anthropologists. Berlin Bar a few blocks away is the alternative for the retirees who think themselves too cool and sophisticated for Hank's.
  
 ---
  
@@ -340,7 +340,7 @@ An interesting entry on the working class entry road to town, serving regional d
 - Price: $
 - Location: 20.915490400000003, -100.74081609999999
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJzWaygrlRK4QRaU1Kn70q4sY
-[Write-up coming soon]
+Another of San Miguel's timeless old school cantinas, not a lot of seating. Open surprisingly early, and closes surprisingly early as well. 
  
 ---
  
