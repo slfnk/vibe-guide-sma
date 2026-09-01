@@ -656,11 +656,11 @@ Not the artisan market — the actual food market where locals eat on the lower 
 
 ---
 
-# Hotel Aldama Swimming Pool
+# Posada De La Aldea Swimming Pool
 
 - Category: Deep Cuts
-- Location: 20.9105209, -100.7436561
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJw37sdbBRK4QRPWQMxWlINvg
+- Location: 20.91052682086707, -100.7472336750102
+- Google Maps: https://maps.app.goo.gl/7Cvxa3mPoHDGKudm8
 [Write-up coming soon]
 
 ---
@@ -674,7 +674,7 @@ Not the artisan market — the actual food market where locals eat on the lower 
 
 ---
 
-# Doña Beatriz Jalea
+# Doña Beatriz
 
 - Category: Deep Cuts
 - Location: 20.8003737, -100.6345698
@@ -695,8 +695,8 @@ Not the artisan market — the actual food market where locals eat on the lower 
 # La Tóxica
 
 - Category: Deep Cuts
-- Location: 20.9052753, -100.7484232
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJVSq2pY5RK4QRGzM6bAvFSv4
+- Location: 20.881199855540018, -100.77224617219153
+- Google Maps: https://maps.app.goo.gl/bLHZ5V19fZoRPrX66
 [Write-up coming soon]
 
 ---
@@ -731,20 +731,21 @@ Not the artisan market — the actual food market where locals eat on the lower 
 
 ---
 
-# Bar Blu
+# Bar Blue
 
 - Category: Deep Cuts
 - Price: $
-- Location: 20.9185446, -100.7454031
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJO8EdY-tRK4QRll74eiZdvmw
+- Location: 20.918537350032267, -100.74538556261719
+- Google Maps: https://maps.app.goo.gl/m7HYtF7TadrD8XLw7
 [Write-up coming soon]
 
 ---
 
-# Bar San Miguel
+# Bar San Miguel Cantina
 
 - Category: Deep Cuts
-- Location: 20.9150, -100.7440
+- Location: 20.916889471997315, -100.74480707532798
+- Google Maps: https://maps.app.goo.gl/NnUZBFWzDshGSuEb8
 [Write-up coming soon] · Not on Google Maps · Needs manual coordinates
 
 ---
@@ -752,20 +753,22 @@ Not the artisan market — the actual food market where locals eat on the lower 
 # El Pulpo
 
 - Category: Deep Cuts
-- Location: 20.9150, -100.7440
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+- Location: 20.92299068275061, -100.74178273192344
+- Google Maps: https://maps.app.goo.gl/Whwj6xRWgtBPU6xK7
+[Write-up coming soon]
 
 ---
 
 # Atotonilco Street Food
 
 - Category: Deep Cuts
-- Location: 21.0094, -100.7962
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+- Location: 21.005053057349034, -100.79491105942316
+- Google Maps: https://maps.app.goo.gl/tjZ9rMMXbmmXpQqU6
+[Write-up coming soon]
 
 ---
 
-# Tuesday Market
+# Tuesday Market Tianguis
 
 - Category: Deep Cuts
 - Price: $
@@ -778,13 +781,13 @@ Not the artisan market — the actual food market where locals eat on the lower 
 # Presa Allende
 
 - Category: Deep Cuts
-- Location: 20.8483987, -100.8259201
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJMRZ2DyFaK4QRTb9h0wKFrv4
+- Location: 20.885231978626322, -100.78281800103338
+- Google Maps: https://maps.app.goo.gl/t6Hv4FLjyfD6b7gb7
 [Write-up coming soon]
 
 ---
 
-# Río Laja Tunnel
+# Túnel la Huerta
 
 - Category: Deep Cuts
 - Location: 20.8373563, -100.8286769
@@ -806,15 +809,16 @@ Not the artisan market — the actual food market where locals eat on the lower 
 
 - Category: Deep Cuts
 - Location: 20.9464, -100.8337
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+- Google Maps: https://maps.app.goo.gl/3qQmTi8pyfi9DyCk9
+[Write-up coming soon]
 
 ---
 
-# Presa Obraje Cañón Run
+# Presa Obraje Canyon Run
 
 - Category: Deep Cuts
-- Location: 20.9178677, -100.7372109
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJA88m29xRK4QRXTBiL_UFfrQ
+- Location: 20.91968811670819, -100.73725703963585
+- Google Maps: https://maps.app.goo.gl/FcRjxv8zYPp8MCby8
 [Write-up coming soon]
 
 ---
@@ -831,17 +835,19 @@ Not the artisan market — the actual food market where locals eat on the lower 
 # Santuario Escultórico
 
 - Category: Deep Cuts
-- Location: 20.9150, -100.7440
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+- Location: 20.911320831677756, -100.7772935129086
+- Google Maps: https://maps.app.goo.gl/gkjo1RCRLBdSu3jk9
+[Write-up coming soon] 
 
 ---
 
-# Quesadillas San Antonio
+# Quesadillas Del Refugio
 
 - Category: Deep Cuts
 - Price: $
-- Location: 20.9083, -100.7473
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+- Location: 20.911147640223444, -100.75124227099624
+- Google Maps: https://maps.app.goo.gl/yyTdNtqYacvidoUa6
+[Write-up coming soon] 
 
 ---
 
@@ -867,13 +873,15 @@ Not the artisan market — the actual food market where locals eat on the lower 
 # Buy Beer After 9pm
 
 - Category: Deep Cuts
-- Location: 20.9150, -100.7440
-[Write-up coming soon] · Needs manual coordinates
+- Location: 20.909646127379443, -100.75245736878199
+- Google Maps: https://maps.app.goo.gl/MceCEmLPo9cssuoK9
+[Write-up coming soon]
 
 ---
 
 # Aldea Park
 
 - Category: Deep Cuts
-- Location: 20.9150, -100.7440
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+- Location: 20.911635303541967, -100.74902890736936
+- Google Maps: https://maps.app.goo.gl/sdb6z1dzkd5EzK6y5
+[Write-up coming soon]
