@@ -150,7 +150,7 @@ Tucked inside the Pasillo 1 entrance of the arched arcade near Mercado San Juan 
 - Price: $
 - Location: 20.906587171399128, -100.7485375763332
 - Google Maps: https://maps.app.goo.gl/BhRcasVpb6AW5BN96
-Every Saturday morning, you can find a bustling organic market next to the hippie headquarters of Mercado Sano. It's a pretty serious social happening for locals, with music, crafts, and a wide variety of stalls serving healthier mexican cuisine at fair prices. 
+Every Saturday morning, you can find a bustling organic market next to the hippie headquarters of Mercado Sano (also worth a look). It's a pretty serious social happening for locals, with music, handcrafts, and a number of variety of stalls serving healthier mexican cuisine at fair prices. 
  
 ---
 
