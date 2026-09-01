@@ -9,7 +9,7 @@ More Guides: [APG](#),[JERS](#)
 
 SMA is at its most rewarding when slowly wandering the side streets with no destination in mind and phone in pocket, logging all the curious details of the town and its people. 
 
-But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has muddied the online information landscape on sites like TripAdvisor and Google Maps. It feels like shifting to authored guides is necessary moving forward for getting a proper grasp on a city as a visitor.
+But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has poisoned the online information landscape on sites like TripAdvisor and Google Maps. It feels like shifting to authored guides is necessary moving forward for getting a proper grasp on a city as a visitor.
 
 After a decade in San Miguel, my fondness lies in its street food, aging cantinas, cold lagers, owner-operated restaurants, old bones, and stranger secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences. 
 
@@ -150,7 +150,7 @@ Tucked inside the Pasillo 1 entrance of the arched arcade near Mercado San Juan 
 - Price: $
 - Location: 20.906587171399128, -100.7485375763332
 - Google Maps: https://maps.app.goo.gl/BhRcasVpb6AW5BN96
-[Write-up coming soon]
+Every Saturday morning, you can find a bustling organic market next to the hippie headquarters of Mercado Sano. It's a pretty serious social happening for locals, with music, crafts, and a wide variety of stalls serving healthier mexican cuisine at fair prices. 
  
 ---
 
