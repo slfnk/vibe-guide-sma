@@ -64,7 +64,7 @@ These complete the trifecta of famous nighttime taco stands off the town square 
 - Price: $
 - Location: 20.916275199999998, -100.744148
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ55NxXbdRK4QRdd-W02Sb6ZQ
-Famous local lunch joint, this place comes across as a fast food restaurant in design and spirit, but at its core it's serving great traditional guisados out of clay pots; take a peek at the offerings, pick your fillings and take your tray to the table. One of the few spots in town that focuses on handmade flour tortillas, absolutely worth bringing a bundle= home with you.
+Famous local lunch joint, this place comes across as a fast food restaurant in design and spirit, but at its core it's serving great traditional guisados out of clay pots; take a peek at the offerings, pick your fillings and take your tray to the table. One of the few spots in town that focuses on handmade flour tortillas, absolutely worth bringing a bundle home with you.
  
 ---
  
