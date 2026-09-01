@@ -340,7 +340,7 @@ I really debated inclusion on this list, but for better or worse Hank's is a boo
 - Price: $
 - Location: 20.915490400000003, -100.74081609999999
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJzWaygrlRK4QRaU1Kn70q4sY
-Another of San Miguel's timeless old school cantinas, not a lot of seating. Open surprisingly early, and closes surprisingly early as well. 
+Another of San Miguel's timeless old school cantinas, a smaller than average room. Open surprisingly early, and closes surprisingly early as well. 
  
 ---
  
@@ -350,7 +350,7 @@ Another of San Miguel's timeless old school cantinas, not a lot of seating. Open
 - Price: $
 - Location: 20.9165054, -100.7434045
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJF6Qr2blRK4QRqkTjlfil4UM
-[Write-up coming soon]
+The original brunch institution in town that spawned waves of imitators. Owned and operated by a gregarious young couple, they make perhaps the best chilaquiles in all of Mexico and their roster of grilled cheeses is revered far and wide. Dark horse menu move is El Sexy Breakfast. In the evenings they also switch to an adventurous mx/asian fusion menu, and will host regular natural wine pop-up events. 
  
 ---
  
