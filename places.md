@@ -135,6 +135,16 @@ This sleeper hit is good motivation to trek up the hill to see the town from abo
  
 ---
 
+# Taqueria la fogata
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.904069177984372, -100.74935028696258
+- Google Maps: https://maps.app.goo.gl/9zRAPTwaHhh1e8357
+There are a handful of sit-down taquerias with table service out along this restaurant row, and this is the slept-on option compared with the better known Brasimix just a block away (which some argue is in decline as prices rise). I think it's the more interesting interior seating area, and better bang for your mxn.
+ 
+---
+
 # Mercado de San Juan de Dios
  
 - Category: Cheap Eats
