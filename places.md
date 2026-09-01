@@ -11,7 +11,7 @@ SMA is at its most rewarding when slowly wandering the side streets with no dest
 
 But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has poisoned the online information landscape on sites like TripAdvisor and Google Maps. It feels like shifting to authored guides is necessary moving forward for getting a proper grasp on a city as a visitor.
 
-After a decade in San Miguel, my fondness lies in its street food, aging cantinas, cold lagers, owner-operated restaurants, old bones, and stranger secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences. 
+After a decade in San Miguel, my fondness lies in its street food, aging cantinas, cold lagers, old bones, owner-operated restaurants, and strange secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences as the town earns more and more high praise in Condé Nast magazines.
 
 Some folks deride the boujier tourist infrastructure of the central blocks, but walk 5 minutes in any direction and you'll be right back into a traditional colonial town with interesting riches both high and low. Anthropology Always!
 
