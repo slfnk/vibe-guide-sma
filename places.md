@@ -125,6 +125,16 @@ A cult classic plastic table pop-up joint inside a garage, well worth the modest
  
 ---
 
+# Carnitas El Guero
+ 
+- Category: Cheap Eats
+- Price: $
+- Location: 20.909361204346773, -100.73867863927983
+- Google Maps: https://maps.app.goo.gl/aPLk8dvb5j8kMtK69
+Good carnitas and good motivation to trek up the hill to see the town from above, next to a popular lookout plaza. Funky homestyle ambiance and dirt floor, very sweet owners and staff to handle your needs. Consider sampling a lesser known regional sandwich, the crunchy Guacamaya (with carnitas, of course).
+ 
+---
+
 # Mercado de San Juan de Dios
  
 - Category: Cheap Eats
