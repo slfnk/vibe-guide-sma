@@ -32,7 +32,7 @@ Deep Cuts: #4A7FB5
 
 ## Cheap Eats
 
-The taco carts, market stalls, and no-frills joints where the food speaks louder than the decor.
+The good stuff, the real motivating heart of this list. Tacos and markets and beers, oh my! Cash only, bring smaller bills, 200mxn and under.
 
 ---
  
@@ -224,7 +224,7 @@ An interesting entry on the working class entry road to town, serving regional d
 
 ## Drinks
 
-Cantinas with jukebox soul, mezcal caves, terrace hangs, and a vinyl bar for good measure.
+Trying to avoid the tourist traps. Cantinas are king. Cash is queen.
 
 ---
  
@@ -360,7 +360,7 @@ Another of San Miguel's timeless old school cantinas, a smaller than average roo
 
 ## Sit Down
 
-The spots worth a proper sit — from chilaquiles champions to inventive Mexican kitchens and Sunday barbacoa halls.
+The spots worth a proper sit for a meal. Nothing too fancy. Cards typically accepted. 
 
 ---
  
