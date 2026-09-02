@@ -360,7 +360,7 @@ The original brunch institution in town that spawned waves of imitators. Owned a
 - Price: $$
 - Location: 20.915108099999998, -100.7431908
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJM-V6_LlRK4QR637OfCc5NHw
-[Write-up coming soon]
+It would be dumb not to include at least one classic local family-style eatery in centro, and I think this is probably the most memorable? The sizzling molcajete towers are the crown jewel here. There’s another sister location parked above the city near the mirador which has perhaps the best dining view of town from above.
  
 ---
  
@@ -370,7 +370,7 @@ The original brunch institution in town that spawned waves of imitators. Owned a
 - Price: $$
 - Location: 20.9182015, -100.74315969999999
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ6ZwNKLhRK4QRXW0c4jzmxII
-[Write-up coming soon]
+Just barely escaping the noisy bustle of centro and tucked away on a cute-ass lil street, the terrace is a very nice refuge. A well executed, millenial-friendly menu is nice enough to break my editorial rule for no-international cuisine (since you can get that back home in LA -_-). The basil limonada also totally rips.
 
 ---
  
@@ -390,7 +390,7 @@ There is no shortage of solid barbacoa in town, and many spots are run by member
 - Price: $$
 - Location: 20.904625499999998, -100.7490033
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ9YUKz_NRK4QRP1bAlfzzHw0
-[Write-up coming soon]
+This is a standout joint out on the dusty Southern restaurant row, with perhaps the most inventive Mexican menu in town, full of killer technicolor dishes. Subtle nods to pre-Hispanic cuisine. The agua de aguacate has  achieved cult status among many. Street noise and exhaust might bother some folks.
  
 ---
  
@@ -400,7 +400,7 @@ There is no shortage of solid barbacoa in town, and many spots are run by member
 - Price: $$
 - Location: 20.9115344, -100.7458169
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJR0njDItRK4QR7dMmriA6Lc8
-[Write-up coming soon]
+Beloved spot that nails all the details in ways that most SMA joints do not, this place  straight up schools all the fancier restaurants. Modern Mexican menu with winners top to bottom. Super limited seating requires extra effort for booking strategy, or timing your visit for off-hours.
  
 ---
  
@@ -422,7 +422,8 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Price: $
 - Location: 20.9008829, -100.7511267
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJyzHJG99RK4QRjFutMAIRp18
-[Write-up coming soon]
+Almost to the southern edge of town before the highway, this is the spot to come if you want to sample some fancier charcoal grilled tacos from an open air kitchen, with a more exotic selection of premium meats (and bone marrow!). Front room is sorta deco-styled coffee shop, tacos are on a rustic gravel patio out back. 
+
  
 ---
  
@@ -432,7 +433,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Price: $$
 - Location: 20.902340199999998, -100.7524986
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJBR9wG6xRK4QRqc6kndVY6EU
-[Write-up coming soon]
+Long time locals favorite in a newer architect-designed location with lots of parking, always solid food, plenty of space to stretch out for bigger groups. A bit of a longer stroll from centro. Thoughtful gourmet shop with local cheeses in the front.
  
 ---
  
@@ -442,7 +443,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Price: $$
 - Location: 20.9155272, -100.7609972
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJaSQrThlRK4QRzHkqwKmz-dA
-[Write-up coming soon]
+Lively spacious patio on weekends with a fun mix of clientele. Quesabirria really not all that common in central Mexico, but they’ve got you covered here. Hands down my favorite broth in town is from their carne en su jugo, try to order a cup on the side. Also has Tejuino, a curious fermented corn bev from Guadalajara.
  
 ---
  
@@ -452,7 +453,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Price: $$
 - Location: 20.903375399999998, -100.7492585
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJgQGLDNZRK4QRvR5pNi4JMmQ
-[Write-up coming soon]
+Solid menu at fair prices. Back garden area is just really lovely for a meal. Lines can get me a lil grumpy, but kudos to them for regularly hitting maximum occupancy. Luna de Queso is close by if you don’t wanna wait.
  
 ---
  
@@ -462,7 +463,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Price: $$
 - Location: 20.9063877, -100.75065239999999
 - Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ9w-kvK5RK4QRqLamy1SX4E8
-[Write-up coming soon]
+If you’re just visiting town, maybe prioritize eating Mexican fare over great barbecue? But I do have to put it on record that they serve the absolute best restaurant burger in San Miguel — street burgers are a separate culinary category entirely, worthy of parallel debate.
  
 ---
  
