@@ -3,7 +3,7 @@ Title: Vibe Guide to San Miguel De Allende
 Subtitle: My take on the pueblito at a different speed
 Author: SL FNK
 Updated: September 2026
-More Guides: 
+More Guides: [APG](#),[JERS](#)
  
 ## Intro
 
@@ -27,6 +27,14 @@ Events: #C4A035
 Deep Cuts: #4A7FB5
  
 ===
+
+---
+
+## Cheap Eats
+
+The taco carts, market stalls, and no-frills joints where the food speaks louder than the decor.
+
+---
  
 # Andy's Taco Cart
  
@@ -213,6 +221,12 @@ Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on t
 An interesting entry on the working class entry road to town, serving regional delights from Toluca, a city to the west of CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is a killer visit if you can time it correctly.
  
 ---
+
+## Drinks
+
+Cantinas with jukebox soul, mezcal caves, terrace hangs, and a vinyl bar for good measure.
+
+---
  
 # La Canti
  
@@ -342,6 +356,12 @@ I really debated inclusion on this list, but for better or worse Hank's is a boo
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.915490400000003,-100.74081609999999
 Another of San Miguel's timeless old school cantinas, a smaller than average room. Open surprisingly early, and closes surprisingly early as well. 
  
+---
+
+## Sit Down
+
+The spots worth a proper sit — from chilaquiles champions to inventive Mexican kitchens and Sunday barbacoa halls.
+
 ---
  
 # Inside Cafe
@@ -557,6 +577,12 @@ If you're just visiting town, maybe prioritize eating Mexican fare over great ba
  
 ---
 
+## Landmarks
+
+The parks, markets, galleries, and old bones that give San Miguel its texture.
+
+---
+
 # Parque Benito Juárez
  
 - Category: Landmark
@@ -640,6 +666,12 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9145965,-100.74206199999999
 [Write-up coming soon]
  
+---
+
+## Events
+
+Venues with live music, DJ nights, and the kinds of parties worth checking IG for.
+
 ---
  
 # Amapola
