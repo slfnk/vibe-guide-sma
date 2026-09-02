@@ -90,7 +90,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2.5rem;
-    border-bottom: 1px solid var(--border);
   }
   .top-bar .updated {
     font-size: 0.68rem;
@@ -142,17 +141,14 @@
     color: var(--text);
     font-weight: 600;
   }
-  .intro-section .more-guides {
-    margin-top: 0.5rem;
-    font-size: 0.78rem;
-    color: var(--text-3);
-  }
-  .intro-section .more-guides a {
-    color: var(--text-2);
+  .intro-section .updated-inline {
+    font-size: 0.68rem;
     font-weight: 600;
-    text-decoration: none;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--progress);
+    margin-bottom: 0.6rem;
   }
-  .intro-section .more-guides a:hover { text-decoration: underline; }
 
   .intro-body {
     padding: 1.5rem 2.5rem 2rem;
@@ -367,6 +363,28 @@
   }
   .entry-links svg { width: 12px; height: 12px; }
 
+  /* =================== SECTION BREAKS =================== */
+  .section-break {
+    padding: 2rem 2.5rem 1.5rem;
+    border-top: 2px solid var(--border);
+    text-align: center;
+  }
+  .section-break h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .section-break p {
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--text-2);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
   /* =================== MAP PINS =================== */
   .pin-wrap { position: relative; }
   .pin {
@@ -495,6 +513,24 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    transition: all 0.2s;
+  }
+  .card.expanded { flex: 0 0 88vw; min-height: auto; }
+  .card.expanded .card-desc {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+  .card-expand-btn {
+    background: none;
+    border: none;
+    color: var(--progress);
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.3rem 0;
+    cursor: pointer;
+    display: block;
   }
   .card-thumb {
     width: 68px;
@@ -510,45 +546,6 @@
     font-weight: 600;
     color: var(--progress);
     text-decoration: none;
-  }
-
-  /* Read-all overlay (mobile) */
-  .read-all-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 55;
-    background: var(--bg);
-    overflow-y: auto;
-    padding: 0 0 5rem;
-  }
-  .read-all-overlay.open { display: block; }
-  .read-all-close {
-    position: sticky;
-    top: 0;
-    z-index: 56;
-    background: var(--bg);
-    padding: 0.75rem 1.25rem;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .read-all-close span {
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-  .read-all-close button {
-    font-family: var(--sans);
-    font-size: 0.75rem;
-    font-weight: 600;
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0.3rem 0.75rem;
-    cursor: pointer;
-    color: var(--text);
   }
 
   /* =================== MOBILE RESPONSIVE =================== */
@@ -573,6 +570,8 @@
     .entry { padding: 1.25rem 1.5rem; }
     .entry h2 { font-size: 1.15rem; }
     .entry-thumb-wrap { width: 100px; margin-left: 1rem; }
+    .section-break { padding: 1.5rem 1.5rem 1rem; }
+    .section-break h3 { font-size: 1.15rem; }
     .filter-bar { padding: 0.55rem 1rem; top: 0; gap: 0.35rem; }
     .filter-btn { font-size: 0.65rem; padding: 0.3rem 0.7rem; }
 
@@ -640,15 +639,6 @@
 <!-- Mobile card carousel -->
 <div class="card-carousel" id="cardCarousel"></div>
 
-<!-- Mobile read-all overlay -->
-<div class="read-all-overlay" id="readAllOverlay">
-  <div class="read-all-close">
-    <span>All Spots</span>
-    <button onclick="closeReadAll()">✕ Close</button>
-  </div>
-  <div id="readAllEntries"></div>
-</div>
-
 <!-- Mobile bottom toggle -->
 <div class="mobile-toggle" id="mobileToggle">
   <button id="btnList" class="active" onclick="window.setView('list')">
@@ -666,13 +656,6 @@
       <path d="M12 13 L12 17"/>
     </svg>
     Map
-  </button>
-  <button id="btnReadAll" onclick="openReadAll()" style="display:none">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
-      <path d="M4 19.5V5a2 2 0 012-2h14v14H6.5A2.5 2.5 0 004 19.5z"/>
-    </svg>
-    Read
   </button>
 </div>
 
@@ -693,16 +676,6 @@ try {
     document.getElementById('darkToggle').textContent = 'Light';
   }
 } catch(e) {}
-
-// ============================================
-// READ ALL (mobile overlay)
-// ============================================
-function openReadAll() {
-  document.getElementById('readAllOverlay').classList.add('open');
-}
-function closeReadAll() {
-  document.getElementById('readAllOverlay').classList.remove('open');
-}
 
 // ============================================
 // MARKDOWN PARSER
@@ -747,8 +720,29 @@ function parsePlacesMd(text) {
   guide.intro = introLines.join('\n').split(/\n\n+/).map(p => p.trim()).filter(Boolean);
 
   const entriesRaw = entryBlocks.join('===').split(/^---$/m).filter(b => b.trim());
-  const places = entriesRaw.map(block => {
+  const places = [];
+  const sectionBreaks = []; // { beforeIndex, title, content }
+
+  entriesRaw.forEach(block => {
     const lines = block.split('\n');
+    // Detect section break: ## Title (double hash)
+    const sectionLine = lines.find(l => l.trim().match(/^## (.+)$/));
+    if (sectionLine) {
+      const title = sectionLine.trim().replace(/^##\s*/, '');
+      const contentLines = [];
+      let pastTitle = false;
+      lines.forEach(l => {
+        if (l.trim() === sectionLine.trim()) { pastTitle = true; return; }
+        if (pastTitle && l.trim()) contentLines.push(l.trim());
+      });
+      sectionBreaks.push({
+        beforeIndex: places.length,
+        title: title,
+        content: contentLines.join(' ')
+      });
+      return;
+    }
+
     const place = { gmaps: null, instagram: null, facebook: null, image: null, price: null };
     const descLines = [];
     let foundName = false;
@@ -787,10 +781,10 @@ function parsePlacesMd(text) {
 
     place.description = descLines.join('\n').split(/\n\n+/)
       .map(p => p.trim()).filter(Boolean).join(' ');
-    return place;
-  }).filter(p => p.name && p.lat);
+    if (place.name && place.lat) places.push(place);
+  });
 
-  return { guide, categories, places };
+  return { guide, categories, places, sectionBreaks };
 }
 
 // ============================================
@@ -813,24 +807,24 @@ Object.entries(data.categories).forEach(([k, v]) => {
 });
 function catColor(cat) { return CATEGORIES[cat]?.color || '#888'; }
 const places = data.places;
+const sectionBreaks = data.sectionBreaks || [];
+
+// Build a map of beforeIndex → section break for quick lookup
+const sectionMap = {};
+sectionBreaks.forEach(sb => { sectionMap[sb.beforeIndex] = sb; });
 
 // ============================================
 // RENDER INTRO
 // ============================================
-document.getElementById('updatedText').textContent = 'Updated ' + guide.updated;
+document.getElementById('updatedText').textContent = '';
 
 const introSection = document.getElementById('introSection');
-const mgHtml = guide.moreGuides?.length
-  ? '<p class="more-guides">Read Other SMA Guides authored by ' +
-    guide.moreGuides.map(g => '<a href="' + g.url + '">' + g.name + '</a>').join(' and ') +
-    '</p>'
-  : '';
 
 introSection.innerHTML =
+  '<p class="updated-inline">' + 'Updated ' + guide.updated + '</p>' +
   '<h1>' + guide.title + '</h1>' +
   '<p class="deck">' + guide.deck + '</p>' +
-  '<p class="byline">By <strong>' + guide.byline + '</strong></p>' +
-  mgHtml;
+  '<p class="byline">By <strong>' + guide.byline + '</strong></p>';
 
 document.title = guide.title;
 
@@ -937,10 +931,19 @@ filterBar.querySelector('.filter-btn.active').style.borderColor = 'var(--text)';
 // ============================================
 const entriesEl = document.getElementById('entries');
 const carousel = document.getElementById('cardCarousel');
-const readAllEl = document.getElementById('readAllEntries');
 
 places.forEach((p, i) => {
   const col = catColor(p.category);
+
+  // Insert section break if one exists before this index
+  if (sectionMap[i]) {
+    const sb = sectionMap[i];
+    const sbDiv = document.createElement('div');
+    sbDiv.className = 'section-break';
+    sbDiv.innerHTML = '<h3>' + sb.title + '</h3>' +
+      (sb.content ? '<p>' + sb.content + '</p>' : '');
+    entriesEl.appendChild(sbDiv);
+  }
 
   // Desktop entry
   const entry = document.createElement('div');
@@ -968,18 +971,6 @@ places.forEach((p, i) => {
 
   entriesEl.appendChild(entry);
 
-  // Read-all overlay entry (simplified)
-  const clone = document.createElement('div');
-  clone.style.cssText = 'padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)';
-  clone.dataset.cat = p.category;
-  clone.className = 'read-all-entry';
-  clone.innerHTML =
-    '<div style="display:flex;align-items:center;gap:.4rem;margin-bottom:.15rem">' +
-    '<span class="entry-tag" style="background:' + col + '">' + p.category + '</span>' + price + '</div>' +
-    '<h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:600;margin-bottom:.4rem">' + p.name + '</h3>' +
-    '<p style="font-family:var(--serif);font-size:.88rem;line-height:1.7;color:var(--text-2)">' + p.description + '</p>';
-  readAllEl.appendChild(clone);
-
   // Mobile card
   const card = document.createElement('div');
   card.className = 'card';
@@ -994,10 +985,16 @@ places.forEach((p, i) => {
     '<div class="card-cat">' + p.category + (p.price ? ' &middot; ' + p.price : '') + '</div>' +
     '<h3>' + p.name + '</h3>' +
     '<p class="card-desc">' + p.description + '</p>' +
+    '<button class="card-expand-btn">Read more ▾</button>' +
     cardLinks(p) + '</div>' + thumb;
 
   card.addEventListener('click', e => {
     if (e.target.tagName === 'A') return;
+    if (e.target.classList.contains('card-expand-btn')) {
+      card.classList.toggle('expanded');
+      e.target.textContent = card.classList.contains('expanded') ? 'Less ▴' : 'Read more ▾';
+      return;
+    }
     setActive(i, 'card');
   });
   carousel.appendChild(card);
@@ -1079,7 +1076,7 @@ function setActive(index, source) {
   if (source === 'map') {
     acquireLock('map', 1200);
     const el = document.getElementById('entry-' + places[index].slug);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   // Scroll carousel
@@ -1167,11 +1164,6 @@ function updateFilter() {
     if (show) visible++;
   });
 
-  // Filter read-all overlay entries too
-  document.querySelectorAll('.read-all-entry').forEach(el => {
-    el.style.display = (activeFilter === 'all' || el.dataset.cat === activeFilter) ? '' : 'none';
-  });
-
   filterCount.textContent = visible + ' spot' + (visible !== 1 ? 's' : '');
 
   // Re-observe only visible entries
@@ -1211,7 +1203,6 @@ window.setView = function(mode) {
   document.body.className = (isDark ? 'dark ' : '') + 'view-' + mode;
   document.getElementById('btnList').classList.toggle('active', mode === 'list');
   document.getElementById('btnMap').classList.toggle('active', mode === 'map');
-  document.getElementById('btnReadAll').style.display = mode === 'map' ? 'inline-flex' : 'none';
   if (mode === 'map') {
     setTimeout(() => {
       map.invalidateSize();
@@ -1234,8 +1225,16 @@ function handleHash() {
       return;
     }
   }
-  const first = document.querySelector('.entry:not(.hidden)');
-  if (first) setTimeout(() => setActive(parseInt(first.dataset.index), 'scroll'), 300);
+  // Default to ~50% entry so the featured view starts mid-list
+  const visibleEntries = document.querySelectorAll('.entry:not(.hidden)');
+  if (visibleEntries.length) {
+    const midEl = visibleEntries[Math.floor(visibleEntries.length / 2)];
+    setTimeout(() => {
+      const idx = parseInt(midEl.dataset.index);
+      setActive(idx, 'scroll');
+      midEl.scrollIntoView({ behavior: 'auto', block: 'center' });
+    }, 300);
+  }
 }
 
 handleHash();
