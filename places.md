@@ -756,7 +756,7 @@ The standard circuit for live music n DJs n parties n stuff.
 
 ## Deep Cuts
 
-The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, destinations far outside of town. Gonna need wheels for a good portion of these.
+The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, destinations far outside of town. Gonna need wheels for lots of these.
 
 ---
 
