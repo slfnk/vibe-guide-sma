@@ -218,7 +218,7 @@
     position: relative;
     transition: background 0.2s;
   }
-  .entry:hover { background: var(--hover); }
+  .entry:hover { background: var(--hover); cursor: pointer; }
   .entry.active { background: var(--hover); }
   .entry.active::before {
     content: '';
@@ -367,6 +367,7 @@
   .section-break {
     padding: 2rem 2.5rem 1.5rem;
     border-top: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
     text-align: center;
   }
   .section-break h3 {
@@ -970,6 +971,12 @@ places.forEach((p, i) => {
     linkRow(p);
 
   entriesEl.appendChild(entry);
+
+  // Click entry → fly to pin
+  entry.addEventListener('click', e => {
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('button') || e.target.closest('a')) return;
+    setActive(i, 'map');
+  });
 
   // Mobile card
   const card = document.createElement('div');
