@@ -1,8 +1,8 @@
-Guide: Updated August 2026
+Guide: Updated September 2026
 Title: Vibe Guide to San Miguel De Allende
 Subtitle: My take on the pueblito at a different speed
 Author: SL FNK
-Updated: August 2026
+Updated: September 2026
 More Guides: [APG](#),[JERS](#)
  
 ## Intro
@@ -24,7 +24,7 @@ Sit Down: #D95B43
 Drinks: #8B5DAD
 Landmark: #3D6B5E
 Events: #C4A035
-Deep Cuts: #2AAA8A
+Deep Cuts: #4A7FB5
  
 ===
  
@@ -33,7 +33,7 @@ Deep Cuts: #2AAA8A
 - Category: Cheap Eats
 - Price: $
 - Location: 20.9166858, -100.7440804
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJezGOBrdRK4QRXoh0VMBluJI
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9166858,-100.7440804
 Many folks consider these the best tacos in town, visitors often claim the best tacos of their lives. Soupy and bursting with savory flavors, it's hard to go wrong with any order. Open very late on weekends but can get absolutely slammed with drunks after the bars start shutting down, make your move if you ever see a less busy window. Like any taco cart, they can have still occasional off nights, especially if the A-team isn't working.
  
 ---
@@ -43,7 +43,7 @@ Many folks consider these the best tacos in town, visitors often claim the best 
 - Category: Cheap Eats
 - Price: $
 - Location: 20.9155949, -100.7424595
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJXa2Cs0xRK4QR9jMYt8pKHRg
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9155949,-100.7424595
 Often overshadowed by the fame of Andy's Tacos on one street over, these are superb tacos that *might* even have an edge on Andy's with their flavorful salsas and unusually lightweight tortillas, which help focus the attention on the succulent fillings.
  
 ---
@@ -63,7 +63,7 @@ These complete the trifecta of famous nighttime taco stands off the town square 
 - Category: Cheap Eats
 - Price: $
 - Location: 20.916275199999998, -100.744148
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ55NxXbdRK4QRdd-W02Sb6ZQ
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.916275199999998,-100.744148
 Famous local lunch joint, this place comes across as a fast food restaurant in design and spirit, but at its core it's serving great traditional guisados out of clay pots; take a peek at the offerings, pick your fillings and take your tray to the table. One of the few spots in town that focuses on handmade flour tortillas, absolutely worth bringing a bundle home with you.
  
 ---
@@ -73,7 +73,7 @@ Famous local lunch joint, this place comes across as a fast food restaurant in d
 - Category: Cheap Eats
 - Price: $
 - Location: 20.915622199999998, -100.7426038
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJcc-P7rlRK4QRIP4fVpZ1KgE
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.915622199999998,-100.7426038
 I've never asked why they're named after the first moon landing, but whatever, these are the closest carnitas to the central square and well prepared. Either gesture through the glass or search a guide on how to order your ideal blend to fill tacos or a bun, then head upstairs to one of the cooler hidden terazzas in centro.
 
 ---
@@ -92,7 +92,7 @@ Newcomer in town that sets up next to the taxis along the Plaza Cívica, these a
 - Category: Cheap Eats
 - Price: $
 - Location: 20.9160598, -100.7432216
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJvdbB3blRK4QRLmySn4IevDU
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9160598,-100.7432216
 Grab and go food is tough to find during the day in centro so realheads are hip to these cheap smaller falafel pitas stuffed with greens, available in an odd old-fashioned Mexican health store. Not a life-changing snack, but can be a welcome vegetarian break from the dominant taco/torta street food scene.
  
 ---
@@ -130,7 +130,7 @@ Great lunchtime tacos, just a notch more upscale than your average cart for very
 - Category: Cheap Eats
 - Price: $
 - Location: 20.910624, -100.7509188
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJqxRk8ilRK4QR-d36pTp3KcU
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.910624,-100.7509188
 A cult classic plastic table pop-up joint inside a garage, well worth the modest walk outside of centro on weekend evenings. The tacos ahogadas are a popular move, you can scope the long table of guisados and let the sweet owner gal know which ones you'd like to fill which of your 4 tacos before dunking in the fryer. A menacing tub of chicken feet always waits on standby to test your bravery.
  
 ---
@@ -199,7 +199,7 @@ Every Saturday morning, you can find a bustling organic market next to the hippi
 - Category: Cheap Eats
 - Price: $$
 - Location: 20.9255451, -100.7409838
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSW1WZDpRK4QRe6L90-7QmjI
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9255451,-100.7409838
 Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on the side of the road. Unlike the common tortas in town, this is something like a distant cousin of a po-boy sandwich, with extra emphasis put on the higher grade meat quality — it does test the higher technical limits of 'cheap eats', but the vibes are correct.
  
 ---
@@ -209,7 +209,7 @@ Off the radar tent about a 5-minute power walk north from Fabrica La Aurora on t
 - Category: Cheap Eats
 - Price: $
 - Location: 20.915316999999998, -100.7594373
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJQfZYPuhRK4QRGtns5OxKFQo
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.915316999999998,-100.7594373
 An interesting entry on the working class entry road to town, serving regional delights from Toluca, a city to the west of CDMX. The electric green chorizo looks alarming at first, but is actually colored from a stellar blend of greens and bright herbs. You can also find them serving chorizo at the Tuesday/Sunday Tianguis up above town, which is a killer visit if you can time it correctly.
  
 ---
@@ -219,7 +219,7 @@ An interesting entry on the working class entry road to town, serving regional d
 - Category: Drinks
 - Price: $
 - Location: 20.912558, -100.746133
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJkTp74bBRK4QRreTxFDD8ofw
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.912558,-100.746133
 Cheapest beers in centro, can also stretch your mxn even further ordering larger caguamas to share. There are about 5 distinct seating areas beyond the front bar room, the place can get buzzing but easy to find enough space for yourself if you please. Wander all the way back and up and you'll find a sneaky mellow terrace with a view of the street below.
  
 ---
@@ -229,7 +229,7 @@ Cheapest beers in centro, can also stretch your mxn even further ordering larger
 - Category: Drinks
 - Price: $$
 - Location: 20.9085078, -100.7475711
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJDWO3OYFRK4QRsbf19fCssNs
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9085078,-100.7475711
 Closest thing to a beach bar in San Miguel, and perhaps its most stoner friendly. Pretty vibey outdoor alley with lots of plants, but uncovered so keep an eye on the rain forecast. 
  
 ---
@@ -239,7 +239,7 @@ Closest thing to a beach bar in San Miguel, and perhaps its most stoner friendly
 - Category: Drinks
 - Price: $$-$$$
 - Location: 20.9144126, -100.7447565
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJZ-oZtkRRK4QRol4nSjravb8
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9144126,-100.7447565
 Not technically a speakeasy, but this small discreet bar can be tough to find upon entering the building. Very popular with SMA's local hipcat 20/30-somethings, they have a DJ booth and throw cool parties — check their IG to scout possible events.
  
 ---
@@ -249,7 +249,7 @@ Not technically a speakeasy, but this small discreet bar can be tough to find up
 - Category: Drinks
 - Price: $$
 - Location: 20.914117299999997, -100.7453244
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ0XEKl7dRK4QR-DTOf17Bysg
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.914117299999997,-100.7453244
 Hip bar/restuarant spot one block down from the main square. Superior margaritas + killer Mexican vegan plates. Great owner and staff make it super popular for locals, can be hard to get a seat during lunch and dinner rushes. 
  
 ---
@@ -259,7 +259,7 @@ Hip bar/restuarant spot one block down from the main square. Superior margaritas
 - Category: Drinks
 - Price: $-$$
 - Location: 20.9167709, -100.7442641
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJCWkfcLdRK4QRmbUHslKgs08
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9167709,-100.7442641
 Classic ass swinging-door cantina with yellowing decor that has hardly been updated in decades, which is the way it should be. Tunes likely to be coming from the jukebox and good chance of somebody singing loudly along. Easy to burn a whole evening inside here buying rounds of mezcal and coronas, so be sure to keep good track of your tab along the way.
  
 ---
@@ -269,7 +269,7 @@ Classic ass swinging-door cantina with yellowing decor that has hardly been upda
 - Category: Drinks
 - Price: $
 - Location: 20.918638299999998, -100.746009
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJp9D5_rZRK4QR3aZGiItW9OU
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.918638299999998,-100.746009
 An unpretentious terrace bar with amiable social energy, favored by local musicians on their days off or before gigs. Some cheap novel bar snacks on the menu.
  
 ---
@@ -279,7 +279,7 @@ An unpretentious terrace bar with amiable social energy, favored by local musici
 - Category: Drinks
 - Price: $$-$$$
 - Location: 20.915913099999997, -100.745404
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ57nQybpRK4QR2tRF7A4oZ80
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.915913099999997,-100.745404
 You'll often have this tiny unscouted place entirely to yourself — for better or worse — but it's probably one of the most beautiful old school bars in town. Enter passing through the Bacco hotel + Italian restuarant and head to the right.
  
 ---
@@ -289,7 +289,7 @@ You'll often have this tiny unscouted place entirely to yourself — for better 
 - Category: Drinks
 - Price: $$-$$$
 - Location: 20.91125, -100.740448
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJU9hxA7tRK4QRkJix5i9xyDo
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.91125,-100.740448
 An older cantina up on the hill that's gone a little modern with full coverage interior black and white mural. Good lighting, date friendly, delicious seafood on the menu. Can be hard to get a table in the popular/superior front room, especially on Tuesdays with their 2x1 tostadas.
  
 ---
@@ -299,7 +299,7 @@ An older cantina up on the hill that's gone a little modern with full coverage i
 - Category: Drinks
 - Price: $$
 - Location: 20.9131139, -100.7428056
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJMQJcbbpRK4QRbutdM6GcpQs
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9131139,-100.7428056
 Tucked inside upscale 'The Restaurant', this is San Miguel's first vinyl bar with an impressive build out and moody lighting. More space than most spots on the list to bring a crowd of people. Not uncommon to find owner Donnie Masterton or other local DJs spinning hip hop or soul records on the decks.
  
 ---
@@ -309,7 +309,7 @@ Tucked inside upscale 'The Restaurant', this is San Miguel's first vinyl bar wit
 - Category: Drinks
 - Price: $$
 - Location: 20.903306699999998, -100.7497696
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJPb_jTwBRK4QRGjgLw4LwECQ
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.903306699999998,-100.7497696
 This newer joint is a welcome hipcat outpost on the southern edge of town that throws some lively parties with their built-in DJ booth. They also have a menu of ramen and other Asian fare.  
  
 ---
@@ -319,7 +319,7 @@ This newer joint is a welcome hipcat outpost on the southern edge of town that t
 - Category: Drinks
 - Price: $$
 - Location: 20.909880400000002, -100.74177499999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJk-VEXAtRK4QRS0nUQFfztoY
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.909880400000002,-100.74177499999999
 If exploring mezcal is your mission, then this spot has one of the more impressive collections in town. Darker cave energy close to the upper side of Parque Juarez. 
  
 ---
@@ -329,7 +329,7 @@ If exploring mezcal is your mission, then this spot has one of the more impressi
 - Category: Drinks
 - Price: $ if you're strategic
 - Location: 20.9152214, -100.7444563
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJHfMOULdRK4QR69OCeqGUHhM
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9152214,-100.7444563
 I really debated inclusion on this list, but for better or worse Hank's is a boomer institution in town and part of the cultural fabric. They actually have the cheapest 2x1 corona deal in the city during their daily 5-8pm happy hour. San Miguel whiteheads love feeling young again listening to CCR and Jimmy Buffett on the speakers, a visit can be a field day for younger ironic anthropologists. Berlin Bar a few blocks away is the alternative for the retirees who think themselves too cool and sophisticated for Hank's.
  
 ---
@@ -339,7 +339,7 @@ I really debated inclusion on this list, but for better or worse Hank's is a boo
 - Category: Drinks
 - Price: $
 - Location: 20.915490400000003, -100.74081609999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJzWaygrlRK4QRaU1Kn70q4sY
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.915490400000003,-100.74081609999999
 Another of San Miguel's timeless old school cantinas, a smaller than average room. Open surprisingly early, and closes surprisingly early as well. 
  
 ---
@@ -349,7 +349,7 @@ Another of San Miguel's timeless old school cantinas, a smaller than average roo
 - Category: Sit Down
 - Price: $
 - Location: 20.9165054, -100.7434045
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJF6Qr2blRK4QRqkTjlfil4UM
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9165054,-100.7434045
 The original brunch institution in town that spawned waves of imitators. Owned and operated by a gregarious young couple, they make perhaps the best chilaquiles verdes in all of Mexico and their roster of grilled cheeses is revered far and wide. Dark horse menu move is El Sexy Breakfast. In the evenings they switch to an adventurous mx/asian fusion menu under the name Xam Xam, and will host regular natural wine pop-up events as Wainba. 
  
 ---
@@ -359,8 +359,8 @@ The original brunch institution in town that spawned waves of imitators. Owned a
 - Category: Sit Down
 - Price: $$
 - Location: 20.915108099999998, -100.7431908
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJM-V6_LlRK4QR637OfCc5NHw
-It would be dumb not to include at least one classic local family-style eatery in centro, and I think this is probably the most memorable? The sizzling molcajete towers are the crown jewel here. There’s another sister location parked above the city near the mirador which has perhaps the best dining view of town from above.
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.915108099999998,-100.7431908
+It would be dumb not to include at least one classic local family-style eatery in centro, and I think this is probably the most memorable? The sizzling molcajete towers are the crown jewel here. There's another sister location parked above the city near the mirador which has perhaps the best dining view of town from above.
  
 ---
  
@@ -369,7 +369,7 @@ It would be dumb not to include at least one classic local family-style eatery i
 - Category: Sit Down
 - Price: $$
 - Location: 20.9182015, -100.74315969999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ6ZwNKLhRK4QRXW0c4jzmxII
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9182015,-100.74315969999999
 Just barely escaping the noisy bustle of centro and tucked away on a cute-ass lil street, the terrace is a very nice refuge. A well executed, millenial-friendly menu is nice enough to break my editorial rule for no-international cuisine (since you can get that back home in LA -_-). The basil limonada also totally rips.
 
 ---
@@ -379,7 +379,7 @@ Just barely escaping the noisy bustle of centro and tucked away on a cute-ass li
 - Category: Sit Down
 - Price: $$
 - Location: 20.897457799999998, -100.750434
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJXSPPJJtRK4QReFmX2gbzRlY
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.897457799999998,-100.750434
 There is no shortage of solid barbacoa in town, and many spots are run by members of the famous Rodriguez family all serving their classic recipes. This particular location is a modest dining hall that is bursting with joyful family energy on a Sunday, easily one of the best ambiance experiences in SMA.
 
 ---
@@ -389,7 +389,7 @@ There is no shortage of solid barbacoa in town, and many spots are run by member
 - Category: Sit Down
 - Price: $$
 - Location: 20.904625499999998, -100.7490033
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ9YUKz_NRK4QRP1bAlfzzHw0
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.904625499999998,-100.7490033
 This is a standout joint out on the dusty Southern restaurant row, with perhaps the most inventive Mexican menu in town, full of killer technicolor dishes. Subtle nods to pre-Hispanic cuisine. The agua de aguacate has  achieved cult status among many. Street noise and exhaust might bother some folks.
  
 ---
@@ -399,7 +399,7 @@ This is a standout joint out on the dusty Southern restaurant row, with perhaps 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9115344, -100.7458169
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJR0njDItRK4QR7dMmriA6Lc8
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9115344,-100.7458169
 Beloved spot that nails all the details in ways that most SMA joints do not, this place  straight up schools all the fancier restaurants. Modern Mexican menu with winners top to bottom. Super limited seating requires extra effort for booking strategy, or timing your visit for off-hours.
  
 ---
@@ -421,7 +421,7 @@ Lovely brunch and bakery, with the best sourdough in the city — get there earl
 - Category: Sit Down
 - Price: $
 - Location: 20.9008829, -100.7511267
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJyzHJG99RK4QRjFutMAIRp18
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9008829,-100.7511267
 Almost to the southern edge of town before the highway, this is the spot to come if you want to sample some fancier charcoal grilled tacos from an open air kitchen, with a more exotic selection of premium meats (and bone marrow!). Front room is sorta deco-styled coffee shop, tacos are on a rustic gravel patio out back. 
 
  
@@ -432,7 +432,7 @@ Almost to the southern edge of town before the highway, this is the spot to come
 - Category: Sit Down
 - Price: $$
 - Location: 20.902340199999998, -100.7524986
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJBR9wG6xRK4QRqc6kndVY6EU
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.902340199999998,-100.7524986
 Long time locals favorite in a newer architect-designed location with lots of parking, always solid food, plenty of space to stretch out for bigger groups. A bit of a longer stroll from centro. Thoughtful gourmet shop with local cheeses in the front.
  
 ---
@@ -442,8 +442,8 @@ Long time locals favorite in a newer architect-designed location with lots of pa
 - Category: Sit Down
 - Price: $$
 - Location: 20.9155272, -100.7609972
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJaSQrThlRK4QRzHkqwKmz-dA
-Lively spacious patio on weekends with a fun mix of clientele. Quesabirria really not all that common in central Mexico, but they’ve got you covered here. Hands down my favorite broth in town is from their carne en su jugo, try to order a cup on the side. Also has Tejuino, a curious fermented corn bev from Guadalajara.
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9155272,-100.7609972
+Lively spacious patio on weekends with a fun mix of clientele. Quesabirria really not all that common in central Mexico, but they've got you covered here. Hands down my favorite broth in town is from their carne en su jugo, try to order a cup on the side. Also has Tejuino, a curious fermented corn bev from Guadalajara.
  
 ---
  
@@ -452,8 +452,8 @@ Lively spacious patio on weekends with a fun mix of clientele. Quesabirria reall
 - Category: Sit Down
 - Price: $$
 - Location: 20.903375399999998, -100.7492585
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJgQGLDNZRK4QRvR5pNi4JMmQ
-Solid menu at fair prices. Back garden area is just really lovely for a meal. Lines can get me a lil grumpy, but kudos to them for regularly hitting maximum occupancy. Luna de Queso is close by if you don’t wanna wait.
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.903375399999998,-100.7492585
+Solid menu at fair prices. Back garden area is just really lovely for a meal. Lines can get me a lil grumpy, but kudos to them for regularly hitting maximum occupancy. Luna de Queso is close by if you don't wanna wait.
  
 ---
  
@@ -462,8 +462,8 @@ Solid menu at fair prices. Back garden area is just really lovely for a meal. Li
 - Category: Sit Down
 - Price: $$
 - Location: 20.9063877, -100.75065239999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ9w-kvK5RK4QRqLamy1SX4E8
-If you’re just visiting town, maybe prioritize eating Mexican fare over great barbecue? But I do have to put it on record that they serve the absolute best restaurant burger in San Miguel — street burgers are a separate culinary category entirely, worthy of parallel debate.
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9063877,-100.75065239999999
+If you're just visiting town, maybe prioritize eating Mexican fare over great barbecue? But I do have to put it on record that they serve the absolute best restaurant burger in San Miguel — street burgers are a separate culinary category entirely, worthy of parallel debate.
  
 ---
  
@@ -472,7 +472,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9102034, -100.7465594
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJjUEP0LFRK4QRxgW1xbMCvFU
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9102034,-100.7465594
 [Write-up coming soon]
  
 ---
@@ -482,7 +482,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9127673, -100.7445554
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJyUYdK6lRK4QRjIvGPU2T4CQ
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9127673,-100.7445554
 [Write-up coming soon]
  
 ---
@@ -492,7 +492,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9158123, -100.7464863
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJJcKLK0dRK4QR3BN7ssaNofE
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9158123,-100.7464863
 [Write-up coming soon]
  
 ---
@@ -502,7 +502,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9216058, -100.75218459999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSy2q9cpRK4QRcY61iZkX3jk
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9216058,-100.75218459999999
 [Write-up coming soon]
  
 ---
@@ -512,7 +512,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.922684699999998, -100.75203649999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJW7-nY1xRK4QR-qxiGeYh5xo
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.922684699999998,-100.75203649999999
 [Write-up coming soon]
  
 ---
@@ -522,7 +522,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.912043399999998, -100.7451897
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJzfrvVzxRK4QR0vYJHT9Acgw
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.912043399999998,-100.7451897
 [Write-up coming soon]
  
 ---
@@ -532,7 +532,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9139221, -100.74446739999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJIbkfGrtRK4QRmHeBdlu0WXA
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9139221,-100.74446739999999
 [Write-up coming soon]
  
 ---
@@ -542,7 +542,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9199491, -100.74544879999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJRw51Ca1RK4QRQRcY7HJI1js
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9199491,-100.74544879999999
 [Write-up coming soon]
  
 ---
@@ -552,7 +552,7 @@ If you’re just visiting town, maybe prioritize eating Mexican fare over great 
 - Category: Sit Down
 - Price: $$
 - Location: 20.9179225, -100.7423211
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJWxT8wLBRK4QRlzsBVLb_oGc
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9179225,-100.7423211
 [Write-up coming soon]
  
 ---
@@ -592,7 +592,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Landmark
 - Location: 20.9183493, -100.74274989999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJK8potLlRK4QRW0eJA8PS63E
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9183493,-100.74274989999999
 [Write-up coming soon]
  
 ---
@@ -601,7 +601,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Landmark
 - Location: 20.909566599999998, -100.74686
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJnaXB405RK4QRoJ8SkWIn6Cw
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.909566599999998,-100.74686
 [Write-up coming soon]
  
 ---
@@ -610,7 +610,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Landmark
 - Location: 20.914983199999998, -100.74582269999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJtQwPNLdRK4QRHM6waj1rKNk
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.914983199999998,-100.74582269999999
 [Write-up coming soon]
  
 ---
@@ -619,7 +619,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Landmark
 - Location: 20.9086457, -100.7395908
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJx-3XyqRRK4QRkl_JJUbGPx4
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9086457,-100.7395908
 [Write-up coming soon]
  
 ---
@@ -628,7 +628,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Landmark
 - Location: 20.9156486, -100.7485482
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJe35mmLZRK4QRUn_Mee4us-s
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9156486,-100.7485482
 [Write-up coming soon]
  
 ---
@@ -637,7 +637,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
  
 - Category: Landmark
 - Location: 20.9145965, -100.74206199999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJq3yScgBRK4QRy7kdvPx66Qw
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9145965,-100.74206199999999
 [Write-up coming soon]
  
 ---
@@ -647,7 +647,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $$
 - Location: 20.911915800000003, -100.7452022
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ1Y0bmxNRK4QRw4I4s_X8ul0
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.911915800000003,-100.7452022
 [Write-up coming soon]
  
 ---
@@ -657,7 +657,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $$
 - Location: 20.9158446, -100.74415529999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ2wkmCCNRK4QRu542N4azq38
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9158446,-100.74415529999999
 [Write-up coming soon]
  
 ---
@@ -667,7 +667,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $
 - Location: 20.9191635, -100.7497842
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJEcFSjrtRK4QRt3KU30k58io
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9191635,-100.7497842
 [Write-up coming soon]
  
 ---
@@ -677,7 +677,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $$
 - Location: 20.9127661, -100.74623
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJKesRYJpRK4QRzcOBi6b-NoA
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9127661,-100.74623
 [Write-up coming soon]
  
 ---
@@ -687,7 +687,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $$
 - Location: 20.915146, -100.74330739999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJKSgOSQBRK4QRyhi_VDOBMyA
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.915146,-100.74330739999999
 [Write-up coming soon]
  
 ---
@@ -697,7 +697,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $
 - Location: 20.9152855, -100.74407670000001
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJGb5-OwBRK4QR7s_ZvkQyTeY
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9152855,-100.74407670000001
 [Write-up coming soon]
  
 ---
@@ -707,7 +707,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $$
 - Location: 20.9140373, -100.74266569999999
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJy7g3rPtRK4QRzbS1AH2jxP0
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9140373,-100.74266569999999
 [Write-up coming soon]
  
 ---
@@ -717,8 +717,14 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Events
 - Price: $$
 - Location: 20.913365499999998, -100.7452469
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJSyUJsLBRK4QRYKIry00gc38
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.913365499999998,-100.7452469
 [Write-up coming soon]
+
+---
+
+## Deep Cuts
+
+The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spots, unmarked cantinas, and other places that probably won't end up in a guidebook anytime soon.
 
 ---
 
@@ -735,7 +741,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.823899, -100.7387113
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ80ESRuRXK4QRwTqcN20NCwg
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.823899,-100.7387113
 [Write-up coming soon]
 
 ---
@@ -744,7 +750,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.8003737, -100.6345698
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJy06NYiNVK4QR4RmAEpT7Zy0
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.8003737,-100.6345698
 [Write-up coming soon]
 
 ---
@@ -753,7 +759,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.9244088, -100.7587623
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ1QmmbjRQK4QRsXAiOu8IMcw
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9244088,-100.7587623
 [Write-up coming soon]
 
 ---
@@ -772,7 +778,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Deep Cuts
 - Price: $
 - Location: 20.9182172, -100.7442833
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJIcbDhLdRK4QRKcAKo3nigAc
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9182172,-100.7442833
 [Write-up coming soon]
 
 ---
@@ -782,7 +788,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Deep Cuts
 - Price: $$
 - Location: 20.9156831, -100.7445771
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJFVONQ7dRK4QRBnyHrz14FaQ
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9156831,-100.7445771
 [Write-up coming soon]
 
 ---
@@ -792,7 +798,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Deep Cuts
 - Price: $
 - Location: 20.9128491, -100.7460609
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ8zTXdv5RK4QRMnEegIMZg68
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9128491,-100.7460609
 [Write-up coming soon]
 
 ---
@@ -812,7 +818,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Deep Cuts
 - Location: 20.916889471997315, -100.74480707532798
 - Google Maps: https://maps.app.goo.gl/NnUZBFWzDshGSuEb8
-[Write-up coming soon] · Not on Google Maps · Needs manual coordinates
+[Write-up coming soon]
 
 ---
 
@@ -839,7 +845,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Deep Cuts
 - Price: $
 - Location: 20.9060211, -100.7249808
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJZ2jDNJpRK4QR86OSsq4BiFY
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9060211,-100.7249808
 [Write-up coming soon]
 
 ---
@@ -857,7 +863,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.8373563, -100.8286769
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJeyIJItNZK4QRgEt7lb9crNk
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.8373563,-100.8286769
 [Write-up coming soon]
 
 ---
@@ -866,7 +872,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.9615428, -100.8181196
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJw5Op60FFK4QR5TXhUldURSg
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9615428,-100.8181196
 [Write-up coming soon]
 
 ---
@@ -893,7 +899,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.907891, -100.7701411
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJKSgyjZBRK4QRXsH5QG_OOmI
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.907891,-100.7701411
 [Write-up coming soon]
 
 ---
@@ -941,7 +947,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 - Category: Deep Cuts
 - Location: 20.9195899, -100.7451357
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJueifArhRK4QRLG-5dqU_eTU
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9195899,-100.7451357
 [Write-up coming soon]
 
 ---
@@ -951,7 +957,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Deep Cuts
 - Price: $
 - Location: 20.9685281, -100.7710741
-- Google Maps: https://www.google.com/maps/place/?q=place_id:ChIJ47gPqrlPK4QRZzQZa7tCh0Q
+- Google Maps: https://www.google.com/maps/search/?api=1&query=20.9685281,-100.7710741
 [Write-up coming soon]
 
 ---
