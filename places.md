@@ -360,7 +360,7 @@ Another of San Miguel's timeless old school cantinas, a smaller than average roo
 
 ## Sit Down
 
-The spots worth a proper sit for a meal. Nothing too fancy. Cards typically accepted. 
+The locals joints worth a proper sit for a meal. Nothing too fancy. Cards typically accepted. 
 
 ---
  
@@ -579,7 +579,7 @@ If you're just visiting town, maybe prioritize eating Mexican fare over great ba
 
 ## Landmarks
 
-The parks, markets, galleries, and old bones that give San Miguel its texture.
+Parks, cool alleys, third spaces, urban delights, etc. 
 
 ---
 
@@ -670,7 +670,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 ## Events
 
-Venues with live music, DJ nights, and the kinds of parties worth checking IG for.
+The standard circuit for live music n DJs n parties n stuff.
 
 ---
  
@@ -756,7 +756,7 @@ Venues with live music, DJ nights, and the kinds of parties worth checking IG fo
 
 ## Deep Cuts
 
-The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spots, unmarked cantinas, and other places that probably won't end up in a guidebook anytime soon.
+The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, destinations far outside of town. Gonna need wheels for a good portion of these.
 
 ---
 
