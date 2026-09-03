@@ -389,7 +389,7 @@
   /* =================== LOCATE ME =================== */
   .locate-btn {
     position: absolute;
-    bottom: 1.5rem;
+    top: 0.75rem;
     right: 0.75rem;
     z-index: 1000;
     width: 36px;
@@ -414,10 +414,6 @@
     border: 3px solid #fff;
     border-radius: 50%;
     box-shadow: 0 0 0 2px rgba(66,133,244,0.3), 0 2px 6px rgba(0,0,0,0.3);
-  }
-
-  @media (max-width: 768px) {
-    .locate-btn { bottom: 5.5rem; right: 0.75rem; }
   }
 
   /* =================== MAP PINS =================== */
@@ -550,11 +546,16 @@
     overflow: hidden;
     transition: all 0.2s;
   }
-  .card.expanded { flex: 0 0 88vw; min-height: auto; }
   .card.expanded .card-desc {
     display: block;
     -webkit-line-clamp: unset;
     overflow: visible;
+  }
+  .card-action-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.3rem;
   }
   .card-expand-btn {
     background: none;
@@ -563,9 +564,18 @@
     font-family: var(--sans);
     font-size: 0.7rem;
     font-weight: 600;
-    padding: 0.3rem 0;
+    padding: 0.2rem 0;
     cursor: pointer;
-    display: block;
+  }
+  .card-action-links {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .card-action-links a {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--progress);
+    text-decoration: none;
   }
   .card-thumb {
     width: 68px;
@@ -575,14 +585,6 @@
     flex-shrink: 0;
     background: #333;
   }
-  .card-links { margin-top: 0.5rem; display: flex; gap: 0.5rem; }
-  .card-links a {
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: var(--progress);
-    text-decoration: none;
-  }
-
   /* =================== MOBILE RESPONSIVE =================== */
   @media (max-width: 768px) {
     body { overflow: auto; height: auto; }
@@ -897,7 +899,7 @@ function cardLinks(p) {
   if (p.gmaps)     a.push('<a href="' + p.gmaps + '" target="_blank">G.Maps</a>');
   if (p.instagram) a.push('<a href="' + p.instagram + '" target="_blank">IG</a>');
   if (p.facebook)  a.push('<a href="' + p.facebook + '" target="_blank">FB</a>');
-  return a.length ? '<div class="card-links">' + a.join(' &middot; ') + '</div>' : '';
+  return a.length ? '<div class="card-action-links">' + a.join(' &middot; ') + '</div>' : '';
 }
 
 // Copy share link to clipboard
@@ -1034,8 +1036,8 @@ places.forEach((p, i) => {
     '<div class="card-cat">' + p.category + (p.price ? ' &middot; ' + p.price : '') + '</div>' +
     '<h3>' + p.name + '</h3>' +
     '<p class="card-desc">' + p.description + '</p>' +
-    '<button class="card-expand-btn">Read more ▾</button>' +
-    cardLinks(p) + '</div>' + thumb;
+    '<div class="card-action-row"><button class="card-expand-btn">Read more ▾</button>' +
+    cardLinks(p) + '</div></div>' + thumb;
 
   card.addEventListener('click', e => {
     if (e.target.tagName === 'A') return;
@@ -1225,8 +1227,16 @@ function updateFilter() {
   observer.disconnect();
   document.querySelectorAll('.entry:not(.hidden)').forEach(el => observer.observe(el));
 
-  // Scroll to ~50% of visible entries for a centered default view
+  // Scroll behavior: category filter → scroll to its section break at top;
+  // "All" → scroll to 50% of entries
   const visibleEntries = document.querySelectorAll('.entry:not(.hidden)');
+
+  if (activeFilter !== 'all') {
+    // Find the matching section break and scroll it to top
+    const sb = document.querySelector('.section-break[data-cat="' + activeFilter + '"]');
+    if (sb) setTimeout(() => sb.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  }
+
   if (visibleEntries.length) {
     const midEl = visibleEntries[Math.floor(visibleEntries.length / 2)];
     const midIdx = parseInt(midEl.dataset.index);
@@ -1240,7 +1250,10 @@ function updateFilter() {
     const pin = document.getElementById('pin-' + midIdx);
     if (pin) pin.classList.add('active');
 
-    setTimeout(() => midEl.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
+    // Only auto-scroll to mid-entry for "All" filter
+    if (activeFilter === 'all') {
+      setTimeout(() => midEl.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
+    }
   }
 
   // Fit map to visible markers
