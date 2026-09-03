@@ -655,7 +655,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Landmark
 - Location: 20.9156486, -100.7485482
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9156486,-100.7485482
-[Write-up coming soon]
+A chill plaza downhill from centro that many visitors never visit, it's much less trafficked than the upper public spaces, and a personal favorite of my beloved mother! It's also a short hop away from a large permanent daily market sharing the same name. 
  
 ---
  
@@ -687,11 +687,11 @@ The standard circuit for live music n DJs n parties n stuff.
 # La Cabra Iluminada
  
 - Category: Events
-- Price: $$
+- Price: $$-$$$
 - Location: 20.9158446, -100.74415529999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9158446,-100.74415529999999
-[Write-up coming soon]
- 
+Recently reopening as a bar and event space, this is emerging as a prime spot for local millenials to gather at night. Livesets, vinyl listening, art exhibitions. A cousin of Don Taco Tequila, they've got a fully fleshed out vegan menu
+
 ---
  
 # Pulquería La Otomí
@@ -700,7 +700,7 @@ The standard circuit for live music n DJs n parties n stuff.
 - Price: $
 - Location: 20.9191635, -100.7497842
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9191635,-100.7497842
-[Write-up coming soon]
+This is the humble bohemian music club in town, one of the few spots here where you can regularly hear original music and smaller bands from outside of town, will often charge a modest cover fee. Feels a bit like an Oakland bar in spirit. Also one of your rare chances to try pulque and aguamiel if you fancy a ferment.
  
 ---
  
@@ -710,17 +710,17 @@ The standard circuit for live music n DJs n parties n stuff.
 - Price: $$
 - Location: 20.9127661, -100.74623
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9127661,-100.74623
-[Write-up coming soon]
+This is actually one of four neighboring joints that feature live music that are all within throwing distance — 2 Raindog stages, Pila Seca Social Club, Silveyra's. Easy to walk between them and pick your poison, a bit like sampling the entertainment options on different decks on a cruise ship. Weekends can get pretty raucus with cover bands playing competing cumbia sets. 
  
 ---
  
 # Altar
  
 - Category: Events
-- Price: $$
+- Price: $$$-$$$$
 - Location: 20.915146, -100.74330739999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.915146,-100.74330739999999
-[Write-up coming soon]
+One of the few places that will bring prominent DJs to play in town, they have events on most weekends. A decked out magazine ready rooftop terrace, pretty pricey, I think of this like a glamorous millenial-friendly answer to the boomer-loved Rosewood rooftop. Both have spectactular views.
  
 ---
  
@@ -1010,4 +1010,4 @@ In a move to appease the large community of bar and restaurant owners, retail sa
 - Category: Deep Cuts
 - Location: 20.925078793627378, -100.7475965896033
 - Google Maps: https://maps.app.goo.gl/hJGNB4CdfRY1oTs77
-You can catch locals playing soccer here across a number of fields on Saturday mornings, as their families cheer them on from the sidelines, sharing snacks and refrescos. Shade is limited, and the UV rays can be a lot higher up at this altitude. Nearby Mexiquito neighborhood is less visited by many, but full of it's own interesting details.
+You can catch locals playing soccer here across a number of fields on Saturday mornings, as their families cheer them on from the sidelines, sharing snacks and refrescos. Shade is limited, and the UV rays can be a lot higher up at this altitude. Nearby sleepy Mexiquito neighborhood is less visited, but worth a stroll to hunt for details.
