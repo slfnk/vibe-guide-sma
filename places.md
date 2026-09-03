@@ -114,12 +114,12 @@ This sometimes divisive taco cart pops up in evenings along the row of pharmacie
  
 ---
  
-# Tacos Prensados
+# Tacos Lucy
  
 - Category: Cheap Eats
 - Price: $
 - Location: 20.91056248884948, -100.74633440531308
-This morning cart specializes in breakfast offerings, centered between two other competent carts on the promenade. The real winner is the savory chicharron prensado, which occupies a special pot above the others, get it served with rice or beans if you want them extra filling. Not yet on G.Maps.
+This unmarked morning cart specializes in breakfast offerings, centered between two other competent carts on the promenade. The real winner is the ultra-savory chicharron prensado, which occupies a special pot above the others, it can sell out quickly. Get it served with rice or beans if you want an extra filling meal. Not yet on G.Maps.
  
 ---
 
