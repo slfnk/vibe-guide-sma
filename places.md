@@ -905,7 +905,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.9615428, -100.8181196
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9615428,-100.8181196
-[Write-up coming soon]
+A towering dam ancient structure with surprisingly little history available. Popular watering hole for locals to set up picnics. Take the precarious stone steps up to the top to check out more action from above. Assuming you're not blocked by water in the rainy season, the road continuing west to La Cruz del Palmar is a compelling rural drive before connecting back to the paved highway.
 
 ---
 
@@ -914,7 +914,8 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.9464, -100.8337
 - Google Maps: https://maps.app.goo.gl/3qQmTi8pyfi9DyCk9
-[Write-up coming soon]
+- Facebook: https://www.facebook.com/LaEsmeraldaSMA/
+Unlike all other experiences on this list. A mysterious isolated housing development way outside of town without a guarded gate, it feels like entering another world entirely, a planned city island outside San Miguel. Identical cookie cutter houses, streets all named after common European cheeses. Some day I hope to map out the emergent small businesses and food offerings, it feels like it's guarding secrets.
 
 ---
 
@@ -932,7 +933,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.907891, -100.7701411
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.907891,-100.7701411
-[Write-up coming soon]
+A killer view showing off a different side of the city + landscape that many residents haven't even seen. The road towards the top gets pretty tough for sedans, better to visit in groups in case you run across a pack of barrio dogs.
 
 ---
 
@@ -951,7 +952,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Price: $
 - Location: 20.955616833959816, -100.78669506054344
 - Google Maps: https://maps.app.goo.gl/4eSkCaqgKPjyu2y8A
-[Write-up coming soon] 
+This designer collective has converted a big warehouse into arguably San Miguel's most happening event space. It is, however, a very long drive outside of town down some bumpy rural roads. But if you're able to arrange a pilgrimage, check their IG for upcoming events. Bands, DJs, ping pong, art exhibitions.
 
 ---
 
@@ -961,17 +962,17 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Price: $
 - Location: 20.903158758053152, -100.7502278098621
 - Google Maps: https://maps.app.goo.gl/dNDwzx1Abjezoy2JA
-[Write-up coming soon] 
+Mexican cemeteries are bursting with unregulated personality and inspiration. A beautiful one in centro is almost always locked up, but this one is accessible to the public and easy to get lost in for an hour or two. Just treat a visit with the same kind of respectful manner you might with visiting a cathedral, not everybody is fond of tourists entering these sacred spaces. 
 
 ---
 
-# Quesadillas Del Refugio
+# Fried Quesadillas Del Refugio
 
 - Category: Deep Cuts
 - Price: $
 - Location: 20.911147640223444, -100.75124227099624
 - Google Maps: https://maps.app.goo.gl/yyTdNtqYacvidoUa6
-[Write-up coming soon] 
+The owner runs her solitary table in front of her house in the evenings, calmly hand pressing tortillas and adding your choice of fillings before deep-frying them in the oil jacuzzi. The place has a quiet reverence to it, very different than other street food experiences in town. Wait times can be long and the quesadillas will come out scalding hot before you pile on your toppings, but this is a special meal. 
 
 ---
 
@@ -980,7 +981,8 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.9195899, -100.7451357
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9195899,-100.7451357
-[Write-up coming soon]
+- Instagram: https://www.instagram.com/trapogaleria/
+One of the few 'gallery' galleries in a town full of spaces selling art, they host a rotation of proper art exhibitions from artists local and abroad, the approach is spiritually different from what you might see in La Fábrica Aurora. Run by a hip couple, you can also grab a bite at their restaurant that shares the space. Check IG for latest info on exhibitions. 
 
 ---
 
@@ -990,7 +992,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Price: $
 - Location: 20.9685281, -100.7710741
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9685281,-100.7710741
-[Write-up coming soon]
+If you've got wheels, these gorditas are some of the best in town. Or rather, outside town. Don't sleep on their volcanes either, which is another great corn-based platform for guisados and other toppings.
 
 ---
 
@@ -999,13 +1001,4 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.909646127379443, -100.75245736878199
 - Google Maps: https://maps.app.goo.gl/MceCEmLPo9cssuoK9
-[Write-up coming soon]
-
----
-
-# Aldea Park
-
-- Category: Deep Cuts
-- Location: 20.911635303541967, -100.74902890736936
-- Google Maps: https://maps.app.goo.gl/sdb6z1dzkd5EzK6y5
-[Write-up coming soon]
+In a move to appease the large community of bar and restaurant owners, retail sales of alcohol get cut off surprisingly early in town. So if you didn't know or didn't plan well, your only chance is charming a store into selling you a sixer, which can be easier on the outskirts of town. Just be extra courteous and discreet, make it extra easy on them to sneak them out in a backpack or something.
