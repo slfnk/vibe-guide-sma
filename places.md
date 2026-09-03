@@ -1,4 +1,4 @@
-Guide: Updated September 2026
+Guide: Under Construction - Updated September 2026
 Title: Vibe Guide to San Miguel De Allende
 Subtitle: My take on the pueblito at a different speed
 Author: SL FNK
