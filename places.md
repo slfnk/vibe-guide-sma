@@ -756,7 +756,7 @@ The standard circuit for live music n DJs n parties n stuff.
 
 ## Deep Cuts
 
-The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, destinations far outside of town. Gonna need wheels for lots of these.
+The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, destinations far outside of town. You're gonna need wheels for a good portion of these.
 
 ---
 
@@ -765,7 +765,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.91052682086707, -100.7472336750102
 - Google Maps: https://maps.app.goo.gl/7Cvxa3mPoHDGKudm8
-[Write-up coming soon]
+There are number of hotels in centro that will charge you a day pass to hang poolside with no time limit, and while all the others have exploded in price, this one is still affordable. The hotel + grounds haven't been updated much over the years, feel very much to me like 1980s/90s Mexican hospitality experiences. Bring your own towel and optionally bring your own food and beverages if you aren't interested in the onsite restaurant.
 
 ---
 
@@ -792,7 +792,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Category: Deep Cuts
 - Location: 20.9244088, -100.7587623
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9244088,-100.7587623
-[Write-up coming soon]
+Occasionally described as the funky aspirational Applebee's of San Miguel, this place is a hoot. Chock full of aging pictures of old movie stars and other strange kitschy curios. The food isn't bad either, leaning slightly in the direction of Tex Mex. Also a popular pitstop for folks to pick up some micheladas in big to-go cups. 
 
 ---
 
@@ -811,7 +811,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raising, obscure art spaces, des
 - Price: $
 - Location: 20.9182172, -100.7442833
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9182172,-100.7442833
-[Write-up coming soon]
+
 
 ---
 
@@ -933,7 +933,7 @@ Unlike all other experiences on this list. A mysterious isolated housing develop
 - Category: Deep Cuts
 - Location: 20.907891, -100.7701411
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.907891,-100.7701411
-A killer view showing off a different side of the city + landscape that many residents haven't even seen. The road towards the top gets pretty tough for sedans, better to visit in groups in case you run across a pack of barrio dogs.
+A cool cross with killer view showing off a different side of the city + landscape that many residents haven't even seen. The road towards the top gets pretty tough for sedans, better to visit in groups in case you run across a pack of hungry barrio dogs.
 
 ---
 
@@ -942,7 +942,7 @@ A killer view showing off a different side of the city + landscape that many res
 - Category: Deep Cuts
 - Location: 20.911320831677756, -100.7772935129086
 - Google Maps: https://maps.app.goo.gl/gkjo1RCRLBdSu3jk9
-[Write-up coming soon] 
+Take this walk on the footpath heading west towards San Miguel Viejo, which borders big bewildering fields, you'll see plenty of strange metal installations of the closed museum grounds along the way. It's technically private property, but if you were to venture off the path deep into the trees or agave fields I won't tell anybody. Just stay out of view of any distant groundskeepers, but easy to claim ignorance if they were to approach and ask you to head back to the trail. 
 
 ---
 
@@ -1002,3 +1002,12 @@ If you've got wheels, these gorditas are some of the best in town. Or rather, ou
 - Location: 20.909646127379443, -100.75245736878199
 - Google Maps: https://maps.app.goo.gl/MceCEmLPo9cssuoK9
 In a move to appease the large community of bar and restaurant owners, retail sales of alcohol get cut off surprisingly early in town. So if you didn't know or didn't plan well, your only chance is charming a store into selling you a sixer, which can be easier on the outskirts of town. Just be extra courteous and discreet, make it extra easy on them to sneak them out in a backpack or something.
+
+---
+
+# Campos de Fútbol Mexiquito
+
+- Category: Deep Cuts
+- Location: 20.925078793627378, -100.7475965896033
+- Google Maps: https://maps.app.goo.gl/hJGNB4CdfRY1oTs77
+You can catch locals playing soccer here across a number of fields on Saturday mornings, as their families cheer them on from the sidelines, sharing snacks and refrescos. Shade is limited, and the UV rays can be a lot higher up at this altitude. Nearby Mexiquito neighborhood is less visited by many, but full of it's own interesting details.
