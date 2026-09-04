@@ -32,7 +32,7 @@ Deep Cuts: #4A7FB5
 
 ## Cheap Eats
 
-The taco carts, market stalls, and no-frills joints where the food speaks louder than the decor.
+The good stuff, the real motivating heart of this list. Tacos and markets and beers, oh my! Cash only, bring smaller bills, 200mxn and under.
 
 ---
  
@@ -360,7 +360,7 @@ Another of San Miguel's timeless old school cantinas, a smaller than average roo
 
 ## Sit Down
 
-The spots worth a proper sit — from chilaquiles champions to inventive Mexican kitchens and Sunday barbacoa halls.
+The locals joints worth a proper sit for a meal. Nothing too fancy. Cards typically accepted.
 
 ---
  
@@ -579,7 +579,7 @@ If you're just visiting town, maybe prioritize eating Mexican fare over great ba
 
 ## Landmarks
 
-The parks, markets, galleries, and old bones that give San Miguel its texture.
+Parks, cool alleys, third spaces, urban delights, etc.
 
 ---
 
@@ -670,7 +670,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 ## Events
 
-Venues with live music, DJ nights, and the kinds of parties worth checking IG for.
+The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, destinations far outside of town. You're gonna need wheels for a good portion of these.
 
 ---
  
