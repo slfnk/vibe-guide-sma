@@ -520,20 +520,21 @@ If you're just visiting town, maybe prioritize eating Mexican fare over great ba
 # Tacos Don Felix
  
 - Category: Sit Down
-- Price: $$
+- Price: $$-$$$
 - Location: 20.9216058, -100.75218459999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.9216058,-100.75218459999999
-[Write-up coming soon]
+Famous hearty enchiladas, the primary reason anybody visits the Independencia neighborhood. Feels like you're eating inside a classic Mexican family house, it certainly used to be one. Dangerous giant margaritas can get you into trouble. Cash only, weekends only. 
  
 ---
  
 # Napoli 39
  
 - Category: Sit Down
-- Price: $$
+- Price: $$-$$$
 - Location: 20.922684699999998, -100.75203649999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=20.922684699999998,-100.75203649999999
-[Write-up coming soon]
+Maybe the second reason folks trek to Independencia lately, spectacular pizzas, my favorites in town. Run by a young married couple, the chef studied under Sicilian-focused pizza masters. The place itself has a very modest interior that feels less like a restaurant than it does a personal dining room. 
+
  
 ---
  
