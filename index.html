@@ -32,7 +32,7 @@
     --border: #333;
     --hover: #252525;
   }
-  body.dark .card { background: rgba(37, 37, 37, 0.75); }
+  body.dark .card { background: rgba(37, 37, 37, 0.55); }
   body.dark .card-body .card-desc { color: #999; }
   body.dark .card-body .card-cat { color: #777; }
   body.dark .card-thumb-float { background: #333; }
@@ -175,7 +175,7 @@
 
   /* Intro collapse/expand */
   .intro-body.collapsed {
-    max-height: 11rem;
+    max-height: 16rem;
     overflow: hidden;
     position: relative;
   }
@@ -205,6 +205,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.15rem;
+    margin: 0 auto;
     background: none;
     border: none;
     font-family: var(--sans);
@@ -569,7 +570,7 @@
   .card {
     scroll-snap-align: center;
     flex: 0 0 82vw;
-    background: rgba(28, 28, 30, 0.72);
+    background: rgba(28, 28, 30, 0.55);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
     backdrop-filter: blur(20px) saturate(1.4);
     color: #fff;
@@ -633,7 +634,7 @@
   .card-expand-btn {
     background: none;
     border: none;
-    color: var(--progress);
+    color: #F0A08A;
     font-family: var(--sans);
     font-size: 0.7rem;
     font-weight: 600;
@@ -651,7 +652,7 @@
   .card-action-links a {
     font-size: 0.68rem;
     font-weight: 600;
-    color: var(--progress);
+    color: #F0A08A;
     text-decoration: none;
     white-space: nowrap;
   }
@@ -1381,9 +1382,28 @@ window.setView = function(mode) {
     setTimeout(() => {
       map.invalidateSize();
       if (activeIndex >= 0) {
-        map.flyTo([places[activeIndex].lat, places[activeIndex].lng], 16, { duration: 0.5 });
+        // Fly map to active pin
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+          const targetZoom = 16;
+          const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
+          targetPoint.y += window.innerHeight * 0.18;
+          const offsetLatLng = map.unproject(targetPoint, targetZoom);
+          map.flyTo(offsetLatLng, targetZoom, { duration: 0.5 });
+        } else {
+          map.flyTo([places[activeIndex].lat, places[activeIndex].lng], 16, { duration: 0.5 });
+        }
+        // Sync carousel to active card
+        const card = document.getElementById('card-' + activeIndex);
+        if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
       }
     }, 100);
+  }
+  if (mode === 'list' && activeIndex >= 0) {
+    setTimeout(() => {
+      const el = document.getElementById('entry-' + places[activeIndex].slug);
+      if (el) el.scrollIntoView({ behavior: 'auto', block: 'center' });
+    }, 50);
   }
 };
 
