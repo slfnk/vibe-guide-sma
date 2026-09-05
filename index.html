@@ -264,6 +264,20 @@
   }
   .filter-btn:hover { border-color: var(--text-3); background: var(--hover); }
   .filter-btn.active { color: #fff; border-color: transparent; }
+
+  /* Tag-style filter variant */
+  body.tag-filters .filter-btn {
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.62rem;
+    padding: 0.25rem 0.55rem;
+    border: none;
+    color: var(--text-2);
+    background: var(--hover);
+  }
+  body.tag-filters .filter-btn:hover { background: var(--border); }
+  body.tag-filters .filter-btn.active { color: #fff; }
   .filter-count {
     font-size: 0.72rem;
     color: var(--text-3);
@@ -429,6 +443,7 @@
     border-top: 2px solid var(--border);
     border-bottom: 2px solid var(--border);
     text-align: center;
+    scroll-margin-top: 3.5rem;
   }
   .section-break h3 {
     font-family: var(--serif);
@@ -722,7 +737,10 @@
 
     <div class="top-bar">
       <span class="updated" id="updatedText"></span>
-      <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">Dark</button>
+      <div style="display:flex;gap:0.4rem">
+        <button class="dark-toggle" id="tagToggle" onclick="toggleTags()">Tags</button>
+        <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">Dark</button>
+      </div>
     </div>
 
     <div id="introSection" class="intro-section"></div>
@@ -801,10 +819,21 @@ function toggleIntro() {
   body.classList.toggle('collapsed');
   label.textContent = body.classList.contains('collapsed') ? 'Read more' : 'Less';
 }
+
+function toggleTags() {
+  document.body.classList.toggle('tag-filters');
+  const isTag = document.body.classList.contains('tag-filters');
+  document.getElementById('tagToggle').textContent = isTag ? 'Pills' : 'Tags';
+  try { localStorage.setItem('vg-tags', isTag ? '1' : '0'); } catch(e) {}
+}
 try {
   if (localStorage.getItem('vg-dark') === '1') {
     document.body.classList.add('dark');
     document.getElementById('darkToggle').textContent = 'Light';
+  }
+  if (localStorage.getItem('vg-tags') === '1') {
+    document.body.classList.add('tag-filters');
+    document.getElementById('tagToggle').textContent = 'Pills';
   }
 } catch(e) {}
 
