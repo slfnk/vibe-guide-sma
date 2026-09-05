@@ -12,6 +12,7 @@
   /* =================== THEME VARIABLES =================== */
   :root {
     --bg: #FAF9F6;
+    --bg-rgb: 250,249,246;
     --text: #1A1A1A;
     --text-2: #5C5C5C;
     --text-3: #8A8A8A;
@@ -31,7 +32,7 @@
     --border: #333;
     --hover: #252525;
   }
-  body.dark .card { background: #252525; }
+  body.dark .card { background: rgba(37, 37, 37, 0.75); }
   body.dark .card-body .card-desc { color: #999; }
   body.dark .card-body .card-cat { color: #777; }
   body.dark .card-thumb-float { background: #333; }
@@ -174,7 +175,7 @@
 
   /* Intro collapse/expand */
   .intro-body.collapsed {
-    max-height: 12rem;
+    max-height: 11rem;
     overflow: hidden;
     position: relative;
   }
@@ -182,28 +183,52 @@
     content: '';
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 5rem;
-    background: linear-gradient(transparent, var(--bg));
+    height: 9rem;
+    background: linear-gradient(
+      rgba(var(--bg-rgb, 247,244,239), 0) 0%,
+      rgba(var(--bg-rgb, 247,244,239), 0.4) 35%,
+      rgba(var(--bg-rgb, 247,244,239), 0.8) 65%,
+      rgba(var(--bg-rgb, 247,244,239), 1) 100%
+    );
     pointer-events: none;
   }
+  body.dark .intro-body.collapsed::after {
+    background: linear-gradient(
+      rgba(30, 30, 30, 0) 0%,
+      rgba(30, 30, 30, 0.4) 35%,
+      rgba(30, 30, 30, 0.8) 65%,
+      rgba(30, 30, 30, 1) 100%
+    );
+  }
   .intro-toggle {
-    display: block;
-    margin: 0 auto;
-    padding: 0.3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
     background: none;
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    border: none;
     font-family: var(--sans);
     font-size: 0.72rem;
     font-weight: 600;
-    color: var(--text-2);
+    letter-spacing: 0.04em;
+    color: var(--text-3);
     cursor: pointer;
-    transition: all 0.2s;
+    padding: 0;
+    transition: color 0.2s;
   }
-  .intro-toggle:hover { border-color: var(--text-3); }
+  .intro-toggle:hover { color: var(--text); }
+  .intro-toggle svg {
+    width: 22px;
+    height: 12px;
+    stroke: currentColor;
+    transition: transform 0.3s;
+  }
+  .intro-body:not(.collapsed) + .intro-toggle-wrap .intro-toggle svg {
+    transform: rotate(180deg);
+  }
   .intro-toggle-wrap {
     text-align: center;
-    padding: 0.5rem 2.5rem 1.5rem;
+    padding: 0.2rem 2.5rem 1.5rem;
     border-bottom: 1px solid var(--border);
   }
 
@@ -544,12 +569,15 @@
   .card {
     scroll-snap-align: center;
     flex: 0 0 82vw;
-    background: var(--text);
+    background: rgba(28, 28, 30, 0.72);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    backdrop-filter: blur(20px) saturate(1.4);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 1rem 1.1rem;
     min-height: 110px;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
   .card.hidden { display: none; }
   .card-body { }
@@ -699,7 +727,12 @@
     <div id="introSection" class="intro-section"></div>
     <div id="introBody" class="intro-body collapsed"></div>
     <div class="intro-toggle-wrap" id="introToggleWrap">
-      <button class="intro-toggle" id="introToggle" onclick="toggleIntro()">Read more ▾</button>
+      <button class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+        <span>Read more</span>
+        <svg viewBox="0 0 22 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 2 L11 10 L20 2"/>
+        </svg>
+      </button>
     </div>
 
     <div class="filter-bar" id="filterBar">
@@ -763,8 +796,9 @@ function toggleDark() {
 function toggleIntro() {
   const body = document.getElementById('introBody');
   const btn = document.getElementById('introToggle');
+  const label = btn.querySelector('span');
   body.classList.toggle('collapsed');
-  btn.textContent = body.classList.contains('collapsed') ? 'Read more ▾' : 'Less ▴';
+  label.textContent = body.classList.contains('collapsed') ? 'Read more' : 'Less';
 }
 try {
   if (localStorage.getItem('vg-dark') === '1') {
