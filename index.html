@@ -33,7 +33,7 @@
     --hover: #252525;
   }
   body.dark .card { background: rgba(37, 37, 37, 0.55); }
-  body.dark .card-body .card-desc { color: #999; }
+  body.dark .card-body .card-desc { color: #ddd; }
   body.dark .card-body .card-cat { color: #777; }
   body.dark .card-thumb-float { background: #333; }
   body.dark .entry-thumb-placeholder { background: #333; }
@@ -605,13 +605,13 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #aaa;
+    color: #d4d4d4;
     margin-bottom: 0.35rem;
   }
   .card-body .card-desc {
     font-size: 0.78rem;
     line-height: 1.5;
-    color: #ccc;
+    color: #e2e2e2;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -1236,8 +1236,10 @@ function setActive(index, source) {
     }
   }
 
-  // Update hash
-  history.replaceState(null, '', '#' + places[index].slug);
+  // Update hash only on intentional actions, not passive scroll
+  if (source !== 'scroll') {
+    history.replaceState(null, '', '#' + places[index].slug);
+  }
 }
 
 // ============================================
@@ -1247,7 +1249,7 @@ const colLeft = document.getElementById('colLeft');
 const progressFill = document.getElementById('progressFill');
 
 const observer = new IntersectionObserver(entries => {
-  if (lockSource === 'map' || lockSource === 'carousel') return;
+  if (lockSource === 'map' || lockSource === 'carousel' || lockSource === 'view-switch') return;
   let best = null;
   entries.forEach(e => {
     if (e.isIntersecting && e.intersectionRatio >= 0.45) {
@@ -1400,9 +1402,18 @@ window.setView = function(mode) {
     }, 100);
   }
   if (mode === 'list' && activeIndex >= 0) {
+    const savedIdx = activeIndex;
+    acquireLock('view-switch', 600);
     setTimeout(() => {
-      const el = document.getElementById('entry-' + places[activeIndex].slug);
-      if (el) el.scrollIntoView({ behavior: 'auto', block: 'center' });
+      activeIndex = savedIdx;
+      const el = document.getElementById('entry-' + places[savedIdx].slug);
+      if (el) {
+        el.scrollIntoView({ behavior: 'auto', block: 'center' });
+        // Re-apply active styling
+        document.querySelectorAll('.entry.active').forEach(e => e.classList.remove('active'));
+        el.classList.add('active');
+        el.style.setProperty('--c-active', catColor(places[savedIdx].category));
+      }
     }, 50);
   }
 };
