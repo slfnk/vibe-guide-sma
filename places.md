@@ -1012,3 +1012,8 @@ In a move to appease the large community of bar and restaurant owners, retail sa
 - Location: 20.925078793627378, -100.7475965896033
 - Google Maps: https://maps.app.goo.gl/hJGNB4CdfRY1oTs77
 You can catch locals playing soccer here across a number of fields on Saturday mornings, as their families cheer them on from the sidelines, sharing snacks and refrescos. Shade is limited, and the UV rays can be a lot higher up at this altitude. Nearby sleepy Mexiquito neighborhood is less visited, but worth a stroll to hunt for details.
+
+# Taller 30
+
+- Category: Deep Cuts
+- Google maps: https://maps.app.goo.gl/1kvwzF9C12TcvY4A9?g_st=ic
