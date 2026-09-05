@@ -34,7 +34,7 @@
   body.dark .card { background: #252525; }
   body.dark .card-body .card-desc { color: #999; }
   body.dark .card-body .card-cat { color: #777; }
-  body.dark .card-thumb { background: #333; }
+  body.dark .card-thumb-float { background: #333; }
   body.dark .entry-thumb-placeholder { background: #333; }
   body.dark .mobile-toggle { background: #333; }
   body.dark .map-filter-bar { background: #1A1A1A; border-color: #333; }
@@ -151,8 +151,7 @@
   }
 
   .intro-body {
-    padding: 1.5rem 2.5rem 2rem;
-    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2.5rem 1rem;
     text-align: left;
   }
   .intro-body p {
@@ -162,7 +161,7 @@
     color: var(--text-2);
     margin-bottom: 1rem;
   }
-  .intro-body p:last-child { margin-bottom: 0; }
+  .intro-body p:last-of-type { margin-bottom: 0; }
   .intro-body .drop-cap::first-letter {
     font-family: var(--serif);
     font-size: 3.8rem;
@@ -171,6 +170,41 @@
     line-height: 0.8;
     margin: 0.05em 0.12em 0 0;
     color: var(--progress);
+  }
+
+  /* Intro collapse/expand */
+  .intro-body.collapsed {
+    max-height: 12rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .intro-body.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 5rem;
+    background: linear-gradient(transparent, var(--bg));
+    pointer-events: none;
+  }
+  .intro-toggle {
+    display: block;
+    margin: 0 auto;
+    padding: 0.3rem 1rem;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-2);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .intro-toggle:hover { border-color: var(--text-3); }
+  .intro-toggle-wrap {
+    text-align: center;
+    padding: 0.5rem 2.5rem 1.5rem;
+    border-bottom: 1px solid var(--border);
   }
 
   /* =================== FILTER BAR =================== */
@@ -514,13 +548,20 @@
     color: #fff;
     border-radius: 10px;
     padding: 1rem 1.1rem;
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
     min-height: 110px;
+    overflow: hidden;
   }
   .card.hidden { display: none; }
-  .card-body { flex: 1; min-width: 0; }
+  .card-body { }
+  .card-thumb-float {
+    float: right;
+    width: 68px;
+    height: 68px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin: 0 0 0.5rem 0.75rem;
+    background: #444;
+  }
   .card-body h3 {
     font-family: var(--serif);
     font-size: 1rem;
@@ -585,14 +626,6 @@
     color: var(--progress);
     text-decoration: none;
     white-space: nowrap;
-  }
-  .card-thumb {
-    width: 68px;
-    height: 68px;
-    border-radius: 6px;
-    object-fit: cover;
-    flex-shrink: 0;
-    background: #333;
   }
   /* =================== MOBILE RESPONSIVE =================== */
   @media (max-width: 768px) {
@@ -664,7 +697,10 @@
     </div>
 
     <div id="introSection" class="intro-section"></div>
-    <div id="introBody" class="intro-body"></div>
+    <div id="introBody" class="intro-body collapsed"></div>
+    <div class="intro-toggle-wrap" id="introToggleWrap">
+      <button class="intro-toggle" id="introToggle" onclick="toggleIntro()">Read more ▾</button>
+    </div>
 
     <div class="filter-bar" id="filterBar">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -722,6 +758,13 @@ function toggleDark() {
   document.getElementById('darkToggle').textContent = isDark ? 'Light' : 'Dark';
   if (window._swapTiles) window._swapTiles(isDark);
   try { localStorage.setItem('vg-dark', isDark ? '1' : '0'); } catch(e) {}
+}
+
+function toggleIntro() {
+  const body = document.getElementById('introBody');
+  const btn = document.getElementById('introToggle');
+  body.classList.toggle('collapsed');
+  btn.textContent = body.classList.contains('collapsed') ? 'Read more ▾' : 'Less ▴';
 }
 try {
   if (localStorage.getItem('vg-dark') === '1') {
@@ -1038,15 +1081,16 @@ places.forEach((p, i) => {
   card.dataset.index = i;
   card.dataset.cat = p.category;
   const thumb = p.image
-    ? '<img class="card-thumb" src="' + p.image + '" alt="' + p.name + '"/>'
-    : '<div class="card-thumb"></div>';
+    ? '<img class="card-thumb-float" src="' + p.image + '" alt="' + p.name + '"/>'
+    : '';
   card.innerHTML =
     '<div class="card-body">' +
+    thumb +
     '<div class="card-cat">' + p.category + (p.price ? ' &middot; ' + p.price : '') + '</div>' +
     '<h3>' + p.name + '</h3>' +
     '<p class="card-desc">' + p.description + '</p>' +
     '<div class="card-action-row"><button class="card-expand-btn">Read more ▾</button>' +
-    cardLinks(p) + '</div></div>' + thumb;
+    cardLinks(p) + '</div></div>';
 
   card.addEventListener('click', e => {
     if (e.target.tagName === 'A') return;
@@ -1129,8 +1173,17 @@ function setActive(index, source) {
   const targetPin = document.getElementById('pin-' + index);
   if (targetPin) targetPin.classList.add('active');
 
-  // Fly map
-  map.flyTo([places[index].lat, places[index].lng], 16, { duration: 0.7 });
+  // Fly map — on mobile map view, offset southward so pin sits above card carousel
+  const isMobileMap = window.innerWidth <= 768 && document.body.classList.contains('view-map');
+  if (isMobileMap) {
+    const targetZoom = map.getZoom() < 14 ? 16 : map.getZoom();
+    const targetPoint = map.project([places[index].lat, places[index].lng], targetZoom);
+    targetPoint.y += window.innerHeight * 0.18; // push center south so pin rises
+    const offsetLatLng = map.unproject(targetPoint, targetZoom);
+    map.flyTo(offsetLatLng, targetZoom, { duration: 0.7 });
+  } else {
+    map.flyTo([places[index].lat, places[index].lng], 16, { duration: 0.7 });
+  }
 
   // Scroll list on marker click
   if (source === 'map') {
@@ -1187,6 +1240,12 @@ carousel.addEventListener('scroll', () => {
   if (lockSource === 'carousel') return;
   clearTimeout(carouselTimer);
   carouselTimer = setTimeout(() => {
+    // Collapse any expanded cards when swiping
+    carousel.querySelectorAll('.card.expanded').forEach(c => {
+      c.classList.remove('expanded');
+      const btn = c.querySelector('.card-expand-btn');
+      if (btn) btn.textContent = 'Read more ▾';
+    });
     const cx = carousel.scrollLeft + carousel.clientWidth / 2;
     let closest = 0, dist = Infinity;
     carousel.querySelectorAll('.card:not(.hidden)').forEach(card => {
