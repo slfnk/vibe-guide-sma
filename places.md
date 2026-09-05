@@ -1,4 +1,4 @@
-Guide: Under Construction — Updated September 2026 
+Guide: Under Construction - Updated September 2026
 Title: Vibe Guide to San Miguel De Allende
 Subtitle: My take on the pueblito at a different speed
 Author: SL FNK
@@ -7,7 +7,9 @@ More Guides: [APG](#),[JERS](#)
  
 ## Intro
 
-San Miguel is at its most rewarding when slowly wandering the side streets with no destination in mind and phone in pocket, logging all the curious details of the town and its people. But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has poisoned the online information landscape on sites like TripAdvisor and Google Maps. It feels like shifting to authored guides is necessary moving forward for getting a proper grasp on a city as a visitor.
+San Miguel is at its most rewarding when slowly wandering the side streets with no destination in mind and phone in pocket, logging all the curious details of the town and its people. 
+
+But it always helps to have some local intel, and paid bot manipulation of ratings and reviews has poisoned the online information landscape on sites like TripAdvisor and Google Maps. It feels like shifting to authored guides is necessary moving forward for getting a proper grasp on a city as a visitor.
 
 After a decade in San Miguel, my fondness lies in its street food, aging cantinas, cold lagers, old bones, owner-operated restaurants, and strange secrets. I'm less moved by international fare, mixology, craft beer, fashion, or luxury experiences as the town earns more and more high praise in Condé Nast magazines.
 
@@ -112,12 +114,12 @@ This sometimes divisive taco cart pops up in evenings along the row of pharmacie
  
 ---
  
-# Tacos Prensados
+# Tacos Lucy
  
 - Category: Cheap Eats
 - Price: $
 - Location: 20.91056248884948, -100.74633440531308
-This morning cart specializes in breakfast offerings, centered between two other competent carts on the promenade. The real winner is the savory chicharron prensado, which occupies a special pot above the others, get it served with rice or beans if you want them extra filling. Not yet on G.Maps.
+This unmarked morning cart specializes in breakfast offerings, centered between two other competent carts on the promenade. The real winner is the ultra-savory chicharron prensado, which occupies a special pot above the others, it can sell out quickly. Get it served with rice or beans if you want an extra filling meal. Not yet on G.Maps.
  
 ---
 
@@ -222,7 +224,7 @@ An interesting entry on the working class entry road to town, serving regional d
 
 ## Drinks
 
-Cantinas with jukebox soul, mezcal caves, terrace hangs, and a vinyl bar for good measure.
+Trying to avoid the tourist traps. Cantinas are king. Cash is queen.
 
 ---
  
@@ -358,7 +360,7 @@ Another of San Miguel's timeless old school cantinas, a smaller than average roo
 
 ## Sit Down
 
-The locals joints worth a proper sit for a meal. Nothing too fancy. Cards typically accepted.
+The locals joints worth a proper sit for a meal. Nothing too fancy. Cards typically accepted. 
 
 ---
  
@@ -518,20 +520,21 @@ If you're just visiting town, maybe prioritize eating Mexican fare over great ba
 # Tacos Don Felix
  
 - Category: Sit Down
-- Price: $$
+- Price: $$-$$$
 - Location: 20.9216058, -100.75218459999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Tacos+Don+Felix+San+Miguel+de+Allende
-[Write-up coming soon]
+Famous hearty enchiladas, the primary reason anybody visits the Independencia neighborhood. Feels like you're eating inside a classic Mexican family house, it certainly used to be one. Dangerous giant margaritas can get you into trouble. Cash only, weekends only. 
  
 ---
  
 # Napoli 39
  
 - Category: Sit Down
-- Price: $$
+- Price: $$-$$$
 - Location: 20.922684699999998, -100.75203649999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Napoli+39+San+Miguel+de+Allende
-[Write-up coming soon]
+Maybe the second reason folks trek to Independencia lately, spectacular pizzas, my favorites in town. Run by a young married couple, the chef studied under Sicilian-focused pizza masters. The place itself has a very modest interior that feels less like a restaurant than it does a personal dining room. 
+
  
 ---
  
@@ -577,7 +580,7 @@ If you're just visiting town, maybe prioritize eating Mexican fare over great ba
 
 ## Landmarks
 
-Parks, cool alleys, third spaces, urban delights, etc.
+Parks, cool alleys, third spaces, urban delights, etc. 
 
 ---
 
@@ -653,7 +656,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 - Category: Landmark
 - Location: 20.9156486, -100.7485482
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Templo+San+Juan+de+Dios+San+Miguel+de+Allende
-[Write-up coming soon]
+A chill plaza downhill from centro that many visitors never visit, it's much less trafficked than the upper public spaces, and a personal favorite of my beloved mother! It's also a short hop away from a large permanent daily market sharing the same name. 
  
 ---
  
@@ -668,7 +671,7 @@ A botanical garden and nature preserve on the edge of town that most visitors sk
 
 ## Events
 
-The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, destinations far outside of town. You're gonna need wheels for a good portion of these.
+The standard circuit for live music n DJs n parties n stuff.
 
 ---
  
@@ -685,11 +688,11 @@ The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, des
 # La Cabra Iluminada
  
 - Category: Events
-- Price: $$
+- Price: $$-$$$
 - Location: 20.9158446, -100.74415529999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=La+Cabra+Iluminada+San+Miguel+de+Allende
-[Write-up coming soon]
- 
+Recently reopening as a bar and event space, this is emerging as a prime spot for local millenials to gather at night. Livesets, vinyl listening, art exhibitions. A cousin of Don Taco Tequila, they've got a fully fleshed out vegan menu
+
 ---
  
 # Pulquería La Otomí
@@ -698,7 +701,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, des
 - Price: $
 - Location: 20.9191635, -100.7497842
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Pulquería+La+Otomí+San+Miguel+de+Allende
-[Write-up coming soon]
+This is the humble bohemian music club in town, one of the few spots here where you can regularly hear original music and smaller bands from outside of town, will often charge a modest cover fee. Feels a bit like an Oakland bar in spirit. Also one of your rare chances to try pulque and aguamiel if you fancy a ferment.
  
 ---
  
@@ -708,17 +711,17 @@ The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, des
 - Price: $$
 - Location: 20.9127661, -100.74623
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Rain+Dog+Cantina+San+Miguel+de+Allende
-[Write-up coming soon]
+This is actually one of four neighboring joints that feature live music that are all within throwing distance — 2 Raindog stages, Pila Seca Social Club, Silveyra's. Easy to walk between them and pick your poison, a bit like sampling the entertainment options on different decks on a cruise ship. Weekends can get pretty raucus with cover bands playing competing cumbia sets. 
  
 ---
  
 # Altar
  
 - Category: Events
-- Price: $$
+- Price: $$$-$$$$
 - Location: 20.915146, -100.74330739999999
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Altar+San+Miguel+de+Allende
-[Write-up coming soon]
+One of the few places that will bring prominent DJs to play in town, they have events on most weekends. A decked out magazine ready rooftop terrace, pretty pricey, I think of this like a glamorous millenial-friendly answer to the boomer-loved Rosewood rooftop. Both have spectactular views.
  
 ---
  
@@ -754,7 +757,7 @@ The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, des
 
 ## Deep Cuts
 
-The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spots, unmarked cantinas, and other places that probably won't end up in a guidebook anytime soon.
+The fun shit! Weird tips, sketchy bars, eyebrow raisers, obscure art spaces, destinations far outside of town. You're gonna need wheels for a good portion of these.
 
 ---
 
@@ -763,7 +766,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.91052682086707, -100.7472336750102
 - Google Maps: https://maps.app.goo.gl/7Cvxa3mPoHDGKudm8
-[Write-up coming soon]
+There are number of hotels in centro that will charge you a day pass to hang poolside with no time limit, and while all the others have exploded in price, this one is still affordable. The hotel + grounds haven't been updated much over the years, feel very much to me like 1980s/90s Mexican hospitality experiences. Bring your own towel and optionally bring your own food and beverages if you aren't interested in the onsite restaurant.
 
 ---
 
@@ -790,7 +793,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.9244088, -100.7587623
 - Google Maps: https://www.google.com/maps/search/?api=1&query=El+Xoconostle+San+Miguel+de+Allende
-[Write-up coming soon]
+Occasionally described as the funky aspirational Applebee's of San Miguel, this place is a hoot. Chock full of aging pictures of old movie stars and other strange kitschy curios. The food isn't bad either, leaning slightly in the direction of Tex Mex. Also a popular pitstop for folks to pick up some micheladas in big to-go cups. 
 
 ---
 
@@ -809,7 +812,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Price: $
 - Location: 20.9182172, -100.7442833
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Bola+Ocho+San+Miguel+de+Allende
-[Write-up coming soon]
+
 
 ---
 
@@ -903,7 +906,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.9615428, -100.8181196
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Antigua+Presa+de+Banda+San+Miguel+de+Allende
-[Write-up coming soon]
+A towering dam ancient structure with surprisingly little history available. Popular watering hole for locals to set up picnics. Take the precarious stone steps up to the top to check out more action from above. Assuming you're not blocked by water in the rainy season, the road continuing west to La Cruz del Palmar is a compelling rural drive before connecting back to the paved highway.
 
 ---
 
@@ -912,7 +915,8 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.9464, -100.8337
 - Google Maps: https://maps.app.goo.gl/3qQmTi8pyfi9DyCk9
-[Write-up coming soon]
+- Facebook: https://www.facebook.com/LaEsmeraldaSMA/
+Unlike all other experiences on this list. A mysterious isolated housing development way outside of town without a guarded gate, it feels like entering another world entirely, a planned city island outside San Miguel. Identical cookie cutter houses, streets all named after common European cheeses. Some day I hope to map out the emergent small businesses and food offerings, it feels like it's guarding secrets.
 
 ---
 
@@ -930,7 +934,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.907891, -100.7701411
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Cruz+de+la+Peña+San+Miguel+de+Allende
-[Write-up coming soon]
+A cool cross with killer view showing off a different side of the city + landscape that many residents haven't even seen. The road towards the top gets pretty tough for sedans, better to visit in groups in case you run across a pack of hungry barrio dogs.
 
 ---
 
@@ -939,7 +943,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.911320831677756, -100.7772935129086
 - Google Maps: https://maps.app.goo.gl/gkjo1RCRLBdSu3jk9
-[Write-up coming soon] 
+Take this walk on the footpath heading west towards San Miguel Viejo, which borders big bewildering fields, you'll see plenty of strange metal installations of the closed museum grounds along the way. It's technically private property, but if you were to venture off the path deep into the trees or agave fields I won't tell anybody. Just stay out of view of any distant groundskeepers, but easy to claim ignorance if they were to approach and ask you to head back to the trail. 
 
 ---
 
@@ -949,7 +953,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Price: $
 - Location: 20.955616833959816, -100.78669506054344
 - Google Maps: https://maps.app.goo.gl/4eSkCaqgKPjyu2y8A
-[Write-up coming soon] 
+This designer collective has converted a big warehouse into arguably San Miguel's most happening event space. It is, however, a very long drive outside of town down some bumpy rural roads. But if you're able to arrange a pilgrimage, check their IG for upcoming events. Bands, DJs, ping pong, art exhibitions.
 
 ---
 
@@ -959,17 +963,17 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Price: $
 - Location: 20.903158758053152, -100.7502278098621
 - Google Maps: https://maps.app.goo.gl/dNDwzx1Abjezoy2JA
-[Write-up coming soon] 
+Mexican cemeteries are bursting with unregulated personality and inspiration. A beautiful one in centro is almost always locked up, but this one is accessible to the public and easy to get lost in for an hour or two. Just treat a visit with the same kind of respectful manner you might with visiting a cathedral, not everybody is fond of tourists entering these sacred spaces. 
 
 ---
 
-# Quesadillas Del Refugio
+# Fried Quesadillas Del Refugio
 
 - Category: Deep Cuts
 - Price: $
 - Location: 20.911147640223444, -100.75124227099624
 - Google Maps: https://maps.app.goo.gl/yyTdNtqYacvidoUa6
-[Write-up coming soon] 
+The owner runs her solitary table in front of her house in the evenings, calmly hand pressing tortillas and adding your choice of fillings before deep-frying them in the oil jacuzzi. The place has a quiet reverence to it, very different than other street food experiences in town. Wait times can be long and the quesadillas will come out scalding hot before you pile on your toppings, but this is a special meal. 
 
 ---
 
@@ -978,7 +982,8 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.9195899, -100.7451357
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Trapo+Galería+San+Miguel+de+Allende
-[Write-up coming soon]
+- Instagram: https://www.instagram.com/trapogaleria/
+One of the few 'gallery' galleries in a town full of spaces selling art, they host a rotation of proper art exhibitions from artists local and abroad, the approach is spiritually different from what you might see in La Fábrica Aurora. Run by a hip couple, you can also grab a bite at their restaurant that shares the space. Check IG for latest info on exhibitions. 
 
 ---
 
@@ -988,7 +993,7 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Price: $
 - Location: 20.9685281, -100.7710741
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Gorditas+Don+Ciro+San+Miguel+de+Allende
-[Write-up coming soon]
+If you've got wheels, these gorditas are some of the best in town. Or rather, outside town. Don't sleep on their volcanes either, which is another great corn-based platform for guisados and other toppings.
 
 ---
 
@@ -997,13 +1002,13 @@ The hidden side of San Miguel — swimming holes, canyon runs, midnight beer spo
 - Category: Deep Cuts
 - Location: 20.909646127379443, -100.75245736878199
 - Google Maps: https://maps.app.goo.gl/MceCEmLPo9cssuoK9
-[Write-up coming soon]
+In a move to appease the large community of bar and restaurant owners, retail sales of alcohol get cut off surprisingly early in town. So if you didn't know or didn't plan well, your only chance is charming a store into selling you a sixer, which can be easier on the outskirts of town. Just be extra courteous and discreet, make it extra easy on them to sneak them out in a backpack or something.
 
 ---
 
-# Aldea Park
+# Campos de Fútbol Mexiquito
 
 - Category: Deep Cuts
-- Location: 20.911635303541967, -100.74902890736936
-- Google Maps: https://maps.app.goo.gl/sdb6z1dzkd5EzK6y5
-[Write-up coming soon]
+- Location: 20.925078793627378, -100.7475965896033
+- Google Maps: https://maps.app.goo.gl/hJGNB4CdfRY1oTs77
+You can catch locals playing soccer here across a number of fields on Saturday mornings, as their families cheer them on from the sidelines, sharing snacks and refrescos. Shade is limited, and the UV rays can be a lot higher up at this altitude. Nearby sleepy Mexiquito neighborhood is less visited, but worth a stroll to hunt for details.
