@@ -863,7 +863,7 @@ const cardLabels = ['Cards A', 'Cards B', 'Cards C', 'Cards D'];
 let cardThemeIdx = 0;
 
 function cycleCardTheme() {
-  document.body.classList.remove(cardThemes[cardThemeIdx]);
+  if (cardThemes[cardThemeIdx]) document.body.classList.remove(cardThemes[cardThemeIdx]);
   cardThemeIdx = (cardThemeIdx + 1) % cardThemes.length;
   if (cardThemes[cardThemeIdx]) document.body.classList.add(cardThemes[cardThemeIdx]);
   document.getElementById('cardThemeToggle').textContent = cardLabels[cardThemeIdx];
