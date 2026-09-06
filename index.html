@@ -671,6 +671,36 @@
     text-decoration: none;
     white-space: nowrap;
   }
+  /* Card theme: Turquoise */
+  body.card-turquoise .card {
+    background: rgba(0, 55, 60, 0.62);
+    border-color: rgba(100, 220, 220, 0.12);
+  }
+  body.card-turquoise .card-expand-btn,
+  body.card-turquoise .card-action-links a { color: #7FD8D0; }
+  body.card-turquoise .card-body .card-cat { color: #9CE0D8; }
+
+  /* Card theme: Plum */
+  body.card-plum .card {
+    background: rgba(50, 18, 48, 0.62);
+    border-color: rgba(200, 130, 190, 0.12);
+  }
+  body.card-plum .card-expand-btn,
+  body.card-plum .card-action-links a { color: #D4A0CC; }
+  body.card-plum .card-body .card-cat { color: #DDB8D7; }
+
+  /* Card theme: Light */
+  body.card-light .card {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: var(--text);
+  }
+  body.card-light .card h3 { color: #1A1A1A; }
+  body.card-light .card-body .card-desc { color: #444; }
+  body.card-light .card-body .card-cat { color: #777; }
+  body.card-light .card-expand-btn,
+  body.card-light .card-action-links a { color: var(--progress); }
+
   /* =================== MOBILE RESPONSIVE =================== */
   @media (max-width: 768px) {
     body { overflow: auto; height: auto; }
@@ -738,6 +768,7 @@
     <div class="top-bar">
       <span class="updated" id="updatedText"></span>
       <div style="display:flex;gap:0.4rem">
+        <button class="dark-toggle" id="cardThemeToggle" onclick="cycleCardTheme()">Cards</button>
         <button class="dark-toggle" id="tagToggle" onclick="toggleTags()">Tags</button>
         <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">Dark</button>
       </div>
@@ -826,6 +857,18 @@ function toggleTags() {
   document.getElementById('tagToggle').textContent = isTag ? 'Pills' : 'Tags';
   try { localStorage.setItem('vg-tags', isTag ? '1' : '0'); } catch(e) {}
 }
+
+const cardThemes = ['', 'card-turquoise', 'card-plum', 'card-light'];
+const cardLabels = ['Cards', 'Teal', 'Plum', 'Light'];
+let cardThemeIdx = 0;
+
+function cycleCardTheme() {
+  document.body.classList.remove(cardThemes[cardThemeIdx]);
+  cardThemeIdx = (cardThemeIdx + 1) % cardThemes.length;
+  if (cardThemes[cardThemeIdx]) document.body.classList.add(cardThemes[cardThemeIdx]);
+  document.getElementById('cardThemeToggle').textContent = cardLabels[cardThemeIdx];
+  try { localStorage.setItem('vg-card-theme', cardThemeIdx); } catch(e) {}
+}
 try {
   if (localStorage.getItem('vg-dark') === '1') {
     document.body.classList.add('dark');
@@ -834,6 +877,12 @@ try {
   if (localStorage.getItem('vg-tags') === '1') {
     document.body.classList.add('tag-filters');
     document.getElementById('tagToggle').textContent = 'Pills';
+  }
+  const savedTheme = parseInt(localStorage.getItem('vg-card-theme') || '0');
+  if (savedTheme > 0 && savedTheme < cardThemes.length) {
+    cardThemeIdx = savedTheme;
+    document.body.classList.add(cardThemes[cardThemeIdx]);
+    document.getElementById('cardThemeToggle').textContent = cardLabels[cardThemeIdx];
   }
 } catch(e) {}
 
