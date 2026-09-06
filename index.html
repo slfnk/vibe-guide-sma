@@ -461,6 +461,21 @@
     margin: 0 auto;
   }
 
+  /* =================== VIEW TRANSITION =================== */
+  .view-fade {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9999;
+    background: var(--bg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-out;
+  }
+  .view-fade.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
   /* =================== LOCATE ME =================== */
   .locate-btn {
     position: absolute;
@@ -810,6 +825,9 @@
 
 <!-- Mobile card carousel -->
 <div class="card-carousel" id="cardCarousel"></div>
+
+<!-- View transition overlay -->
+<div class="view-fade" id="viewFade"></div>
 
 <!-- Mobile bottom toggle -->
 <div class="mobile-toggle" id="mobileToggle">
@@ -1454,50 +1472,60 @@ updateFilter();
 // MOBILE VIEW TOGGLE
 // ============================================
 window.setView = function(mode) {
-  // Preserve persistent classes, only swap view-* and dark
-  const persist = [];
-  if (document.body.classList.contains('dark')) persist.push('dark');
-  if (document.body.classList.contains('tag-filters')) persist.push('tag-filters');
-  cardThemes.forEach(t => { if (t && document.body.classList.contains(t)) persist.push(t); });
-  document.body.className = persist.join(' ') + ' view-' + mode;
-  document.getElementById('btnList').classList.toggle('active', mode === 'list');
-  document.getElementById('btnMap').classList.toggle('active', mode === 'map');
-  if (mode === 'map') {
-    setTimeout(() => {
+  const fade = document.getElementById('viewFade');
+  const currentMode = document.body.classList.contains('view-map') ? 'map' : 'list';
+  if (currentMode === mode) return;
+
+  // Fade in
+  fade.classList.add('active');
+
+  setTimeout(() => {
+    // Swap view behind the overlay
+    const persist = [];
+    if (document.body.classList.contains('dark')) persist.push('dark');
+    if (document.body.classList.contains('tag-filters')) persist.push('tag-filters');
+    cardThemes.forEach(t => { if (t && document.body.classList.contains(t)) persist.push(t); });
+    document.body.className = persist.join(' ') + ' view-' + mode;
+
+    document.getElementById('btnList').classList.toggle('active', mode === 'list');
+    document.getElementById('btnMap').classList.toggle('active', mode === 'map');
+
+    if (mode === 'map') {
       map.invalidateSize();
       if (activeIndex >= 0) {
-        // Fly map to active pin
         const isMobile = window.innerWidth <= 768;
         if (isMobile) {
           const targetZoom = 16;
           const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
           targetPoint.y += window.innerHeight * 0.18;
           const offsetLatLng = map.unproject(targetPoint, targetZoom);
-          map.flyTo(offsetLatLng, targetZoom, { duration: 0.5 });
+          map.setView(offsetLatLng, targetZoom, { animate: false });
         } else {
-          map.flyTo([places[activeIndex].lat, places[activeIndex].lng], 16, { duration: 0.5 });
+          map.setView([places[activeIndex].lat, places[activeIndex].lng], 16, { animate: false });
         }
-        // Sync carousel to active card
         const card = document.getElementById('card-' + activeIndex);
         if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
       }
-    }, 100);
-  }
-  if (mode === 'list' && activeIndex >= 0) {
-    const savedIdx = activeIndex;
-    acquireLock('view-switch', 600);
-    setTimeout(() => {
+    }
+
+    if (mode === 'list' && activeIndex >= 0) {
+      const savedIdx = activeIndex;
+      acquireLock('view-switch', 600);
       activeIndex = savedIdx;
       const el = document.getElementById('entry-' + places[savedIdx].slug);
       if (el) {
         el.scrollIntoView({ behavior: 'auto', block: 'center' });
-        // Re-apply active styling
         document.querySelectorAll('.entry.active').forEach(e => e.classList.remove('active'));
         el.classList.add('active');
         el.style.setProperty('--c-active', catColor(places[savedIdx].category));
       }
-    }, 50);
-  }
+    }
+
+    // Fade out
+    requestAnimationFrame(() => {
+      fade.classList.remove('active');
+    });
+  }, 150);
 };
 
 // ============================================
