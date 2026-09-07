@@ -120,19 +120,92 @@
     color: var(--progress);
     margin-bottom: 0.6rem;
   }
-  .dark-toggle {
-    font-family: var(--sans);
-    font-size: 0.58rem;
-    font-weight: 600;
+  /* =================== SETTINGS GEAR =================== */
+  .settings-wrap { position: relative; }
+  .settings-btn {
     background: none;
     border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 0.18rem 0.5rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
     cursor: pointer;
-    color: var(--text-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s;
+    color: var(--text-3);
   }
-  .dark-toggle:hover { border-color: var(--text-3); }
+  .settings-btn:hover { border-color: var(--text-3); color: var(--text); }
+  .settings-btn svg { width: 15px; height: 15px; }
+
+  .settings-popover {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 210px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.15s, transform 0.15s;
+  }
+  .settings-popover.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  body.dark .settings-popover { box-shadow: 0 6px 24px rgba(0,0,0,0.5); }
+
+  .settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.73rem;
+    color: var(--text-2);
+    user-select: none;
+  }
+  .settings-label { font-weight: 500; }
+  .settings-cycle {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+  .settings-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-3);
+    font-size: 0.85rem;
+    padding: 0.1rem 0.3rem;
+    line-height: 1;
+    transition: color 0.12s;
+    font-family: var(--sans);
+  }
+  .settings-arrow:hover { color: var(--text); }
+  .settings-value {
+    font-weight: 600;
+    color: var(--text);
+    min-width: 54px;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* =================== LAYOUT SWAP =================== */
+  body.layout-swapped .layout { flex-direction: row-reverse; }
+  @media (max-width: 768px) {
+    body.layout-swapped .layout { flex-direction: column; }
+  }
+
+  /* =================== PIN FADE (All filter) =================== */
+  body.filter-all .pin { opacity: 0.9; }
+  body.filter-all .pin.active { opacity: 1; }
 
   /* =================== EDITORIAL INTRO =================== */
   .intro-section {
@@ -604,7 +677,7 @@
     border-radius: 50%;
     border: 2.5px solid #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    transition: transform 0.25s, box-shadow 0.25s;
+    transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
     cursor: pointer;
   }
   .pin.active {
@@ -891,11 +964,14 @@
 
     <div class="top-bar">
       <a href="#" class="guiides-brand">⛺︎ made with <strong>GUIIDES</strong> ⛺︎</a>
-      <div style="display:flex;gap:0.35rem">
-        <button class="dark-toggle" id="pinToggle" onclick="togglePins()">● Pins</button>
-        <button class="dark-toggle" id="cardThemeToggle" onclick="cycleCardTheme()">Cards A</button>
-        <button class="dark-toggle" id="tagToggle" onclick="toggleTags()">Tags</button>
-        <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">Dark</button>
+      <div class="settings-wrap">
+        <button class="settings-btn" id="settingsBtn" title="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </button>
+        <div class="settings-popover" id="settingsPopover"></div>
       </div>
     </div>
 
@@ -963,15 +1039,103 @@
 
 <script>
 // ============================================
-// DARK MODE
+// SETTINGS SYSTEM
 // ============================================
-function toggleDark() {
-  document.body.classList.toggle('dark');
-  const isDark = document.body.classList.contains('dark');
-  document.getElementById('darkToggle').textContent = isDark ? 'Light' : 'Dark';
-  if (window._swapTiles) window._swapTiles(isDark);
-  try { localStorage.setItem('vg-dark', isDark ? '1' : '0'); } catch(e) {}
+const cardThemes = ['', 'card-turquoise', 'card-plum', 'card-light'];
+let cardThemeIdx = 0;
+
+const settingsConfig = [
+  {
+    key: 'theme', label: 'Theme', options: ['Light', 'Dark'],
+    get: () => document.body.classList.contains('dark') ? 1 : 0,
+    set: (idx) => {
+      document.body.classList.toggle('dark', idx === 1);
+      if (window._swapTiles) window._swapTiles(idx === 1);
+      try { localStorage.setItem('vg-dark', idx === 1 ? '1' : '0'); } catch(e) {}
+    }
+  },
+  {
+    key: 'pins', label: 'Pins', options: ['Circle', 'Diamond'],
+    get: () => document.body.classList.contains('diamond-pins') ? 1 : 0,
+    set: (idx) => {
+      document.body.classList.toggle('diamond-pins', idx === 1);
+      try { localStorage.setItem('vg-pins', idx === 1 ? '1' : '0'); } catch(e) {}
+    }
+  },
+  {
+    key: 'cards', label: 'Cards', options: ['A', 'B', 'C', 'D'],
+    get: () => cardThemeIdx,
+    set: (idx) => {
+      if (cardThemes[cardThemeIdx]) document.body.classList.remove(cardThemes[cardThemeIdx]);
+      cardThemeIdx = idx;
+      if (cardThemes[cardThemeIdx]) document.body.classList.add(cardThemes[cardThemeIdx]);
+      try { localStorage.setItem('vg-card-theme', cardThemeIdx); } catch(e) {}
+    }
+  },
+  {
+    key: 'filters', label: 'Filters', options: ['Pills', 'Tags'],
+    get: () => document.body.classList.contains('tag-filters') ? 1 : 0,
+    set: (idx) => {
+      document.body.classList.toggle('tag-filters', idx === 1);
+      try { localStorage.setItem('vg-tags', idx === 1 ? '1' : '0'); } catch(e) {}
+    }
+  },
+  {
+    key: 'layout', label: 'Layout', options: ['Text Left', 'Text Right'],
+    get: () => document.body.classList.contains('layout-swapped') ? 1 : 0,
+    set: (idx) => {
+      document.body.classList.toggle('layout-swapped', idx === 1);
+      try { localStorage.setItem('vg-layout', idx === 1 ? '1' : '0'); } catch(e) {}
+      setTimeout(() => { if (window._map) window._map.invalidateSize(); }, 200);
+    }
+  }
+];
+
+function cycleSetting(key, dir) {
+  const cfg = settingsConfig.find(s => s.key === key);
+  if (!cfg) return;
+  let cur = cfg.get();
+  cur = (cur + dir + cfg.options.length) % cfg.options.length;
+  cfg.set(cur);
+  const val = document.getElementById('sv-' + key);
+  if (val) val.textContent = cfg.options[cur];
 }
+
+// Build settings popover
+(function buildSettings() {
+  const pop = document.getElementById('settingsPopover');
+  settingsConfig.forEach(cfg => {
+    const row = document.createElement('div');
+    row.className = 'settings-row';
+    row.innerHTML =
+      '<span class="settings-label">' + cfg.label + '</span>' +
+      '<div class="settings-cycle">' +
+      '<button class="settings-arrow" data-key="' + cfg.key + '" data-dir="-1">‹</button>' +
+      '<span class="settings-value" id="sv-' + cfg.key + '">' + cfg.options[cfg.get()] + '</span>' +
+      '<button class="settings-arrow" data-key="' + cfg.key + '" data-dir="1">›</button>' +
+      '</div>';
+    pop.appendChild(row);
+  });
+  // Arrow click delegation
+  pop.addEventListener('click', e => {
+    const arrow = e.target.closest('.settings-arrow');
+    if (arrow) cycleSetting(arrow.dataset.key, parseInt(arrow.dataset.dir));
+  });
+  // Toggle open/close
+  document.getElementById('settingsBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Refresh displayed values
+    settingsConfig.forEach(cfg => {
+      const val = document.getElementById('sv-' + cfg.key);
+      if (val) val.textContent = cfg.options[cfg.get()];
+    });
+    pop.classList.toggle('open');
+  });
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!pop.contains(e.target)) pop.classList.remove('open');
+  });
+})();
 
 function toggleIntro() {
   const body = document.getElementById('introBody');
@@ -981,49 +1145,16 @@ function toggleIntro() {
   label.textContent = body.classList.contains('collapsed') ? 'Read more' : 'Less';
 }
 
-function toggleTags() {
-  document.body.classList.toggle('tag-filters');
-  const isTag = document.body.classList.contains('tag-filters');
-  document.getElementById('tagToggle').textContent = isTag ? 'Pills' : 'Tags';
-  try { localStorage.setItem('vg-tags', isTag ? '1' : '0'); } catch(e) {}
-}
-
-function togglePins() {
-  document.body.classList.toggle('diamond-pins');
-  const isDiamond = document.body.classList.contains('diamond-pins');
-  document.getElementById('pinToggle').textContent = isDiamond ? '◆ Pins' : '● Pins';
-  try { localStorage.setItem('vg-pins', isDiamond ? '1' : '0'); } catch(e) {}
-}
-
-const cardThemes = ['', 'card-turquoise', 'card-plum', 'card-light'];
-const cardLabels = ['Cards A', 'Cards B', 'Cards C', 'Cards D'];
-let cardThemeIdx = 0;
-
-function cycleCardTheme() {
-  if (cardThemes[cardThemeIdx]) document.body.classList.remove(cardThemes[cardThemeIdx]);
-  cardThemeIdx = (cardThemeIdx + 1) % cardThemes.length;
-  if (cardThemes[cardThemeIdx]) document.body.classList.add(cardThemes[cardThemeIdx]);
-  document.getElementById('cardThemeToggle').textContent = cardLabels[cardThemeIdx];
-  try { localStorage.setItem('vg-card-theme', cardThemeIdx); } catch(e) {}
-}
+// Restore persisted settings
 try {
-  if (localStorage.getItem('vg-dark') === '1') {
-    document.body.classList.add('dark');
-    document.getElementById('darkToggle').textContent = 'Light';
-  }
-  if (localStorage.getItem('vg-tags') === '1') {
-    document.body.classList.add('tag-filters');
-    document.getElementById('tagToggle').textContent = 'Pills';
-  }
-  if (localStorage.getItem('vg-pins') === '1') {
-    document.body.classList.add('diamond-pins');
-    document.getElementById('pinToggle').textContent = '◆ Pins';
-  }
+  if (localStorage.getItem('vg-dark') === '1') document.body.classList.add('dark');
+  if (localStorage.getItem('vg-tags') === '1') document.body.classList.add('tag-filters');
+  if (localStorage.getItem('vg-pins') === '1') document.body.classList.add('diamond-pins');
+  if (localStorage.getItem('vg-layout') === '1') document.body.classList.add('layout-swapped');
   const savedTheme = parseInt(localStorage.getItem('vg-card-theme') || '0');
   if (savedTheme > 0 && savedTheme < cardThemes.length) {
     cardThemeIdx = savedTheme;
     document.body.classList.add(cardThemes[cardThemeIdx]);
-    document.getElementById('cardThemeToggle').textContent = cardLabels[cardThemeIdx];
   }
 } catch(e) {}
 
@@ -1244,6 +1375,13 @@ window.toggleHeart = function(btn) {
 
   const savedBtn = document.getElementById('filterSaved');
   if (savedBtn) savedBtn.style.display = savedSlugs.size > 0 ? '' : 'none';
+
+  // If all hearts removed while in Saved filter, kick back to All
+  if (activeFilter === '__saved' && savedSlugs.size === 0) {
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allBtn) syncFilterBars(allBtn);
+    return;
+  }
   if (activeFilter === '__saved') updateFilter();
 };
 
@@ -1424,6 +1562,7 @@ places.forEach((p, i) => {
 // ============================================
 const map = L.map('map', { zoomControl: true, scrollWheelZoom: true })
   .setView([20.9160, -100.7440], 15);
+window._map = map;
 
 const tileUrls = {
   light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_2thp_1_6ffbb574555fa573f30768f0',
@@ -1576,6 +1715,7 @@ carousel.addEventListener('scroll', () => {
 const filterCount = document.getElementById('filterCount');
 
 function updateFilter() {
+  document.body.classList.toggle('filter-all', activeFilter === 'all');
   let visible = 0;
 
   places.forEach((p, i) => {
@@ -1669,6 +1809,8 @@ window.setView = function(mode) {
     if (document.body.classList.contains('dark')) persist.push('dark');
     if (document.body.classList.contains('tag-filters')) persist.push('tag-filters');
     if (document.body.classList.contains('diamond-pins')) persist.push('diamond-pins');
+    if (document.body.classList.contains('layout-swapped')) persist.push('layout-swapped');
+    if (document.body.classList.contains('filter-all')) persist.push('filter-all');
     cardThemes.forEach(t => { if (t && document.body.classList.contains(t)) persist.push(t); });
     document.body.className = persist.join(' ') + ' view-' + mode;
 
