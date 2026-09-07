@@ -4,10 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>City Vibe Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
   /* =================== THEME VARIABLES =================== */
   :root {
@@ -21,6 +25,8 @@
     --progress: #2AAA8A;
     --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --card-blur: 12px;
+    --card-alpha: 0.55;
   }
 
   /* =================== DARK THEME =================== */
@@ -776,9 +782,9 @@
     scroll-snap-align: center;
     flex: 0 0 82vw;
     max-width: 420px;
-    background: rgba(28, 28, 30, 0.55);
-    -webkit-backdrop-filter: blur(20px) saturate(1.4);
-    backdrop-filter: blur(20px) saturate(1.4);
+    background: rgba(28, 28, 30, var(--card-alpha));
+    -webkit-backdrop-filter: blur(var(--card-blur)) saturate(1.4);
+    backdrop-filter: blur(var(--card-blur)) saturate(1.4);
     color: #fff;
     border-radius: 14px;
     padding: 1rem 1.1rem;
@@ -866,7 +872,7 @@
   }
   /* Card theme: Turquoise */
   body.card-turquoise .card {
-    background: rgba(0, 55, 60, 0.62);
+    background: rgba(0, 55, 60, var(--card-alpha));
     border-color: rgba(100, 220, 220, 0.12);
   }
   body.card-turquoise .card-expand-btn,
@@ -875,7 +881,7 @@
 
   /* Card theme: Plum */
   body.card-plum .card {
-    background: rgba(50, 18, 48, 0.62);
+    background: rgba(50, 18, 48, var(--card-alpha));
     border-color: rgba(200, 130, 190, 0.12);
   }
   body.card-plum .card-expand-btn,
@@ -884,7 +890,7 @@
 
   /* Card theme: Light */
   body.card-light .card {
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, var(--card-alpha));
     border-color: rgba(0, 0, 0, 0.08);
     color: var(--text);
   }
@@ -893,6 +899,22 @@
   body.card-light .card-body .card-cat { color: #777; }
   body.card-light .card-expand-btn,
   body.card-light .card-action-links a { color: var(--progress); }
+
+  /* =================== MAP FILTER BAR (all viewports) =================== */
+  .map-filter-bar {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 45;
+    background: var(--bg);
+    padding: 0.6rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    gap: 0.4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    align-items: center;
+  }
+  .map-filter-bar::-webkit-scrollbar { display: none; }
 
   /* =================== DESKTOP MAP VIEW =================== */
   body.view-map .col-left { display: none; }
@@ -933,27 +955,69 @@
     .filter-bar { padding: 0.55rem 1rem; top: 0; gap: 0.35rem; }
     .filter-btn { font-size: 0.65rem; padding: 0.3rem 0.7rem; }
 
-    /* Map-view filter bar */
-    .map-filter-bar {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 45;
-      background: var(--bg);
-      padding: 0.55rem 1rem;
-      border-bottom: 1px solid var(--border);
-      gap: 0.35rem;
-      overflow-x: auto;
-      scrollbar-width: none;
-      align-items: center;
-    }
-    .map-filter-bar::-webkit-scrollbar { display: none; }
+    .map-filter-bar { padding: 0.55rem 1rem; gap: 0.35rem; }
 
     body.view-list .col-right { display: none; }
     body.view-list .col-left { display: block; }
     body.view-list .card-carousel { display: none; }
     body.view-list .map-filter-bar { display: none; }
   }
+
+  /* =================== SETTINGS SLIDERS =================== */
+  .settings-slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .settings-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 72px;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  .settings-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--progress);
+    cursor: pointer;
+    border: 2px solid var(--bg);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  }
+  .settings-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--progress);
+    cursor: pointer;
+    border: 2px solid var(--bg);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  }
+  .settings-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0.25rem 0.9rem;
+  }
+
+  /* =================== DESIGN TESTING CLASSES =================== */
+  /* Text size */
+  body.text-compact .entry .desc { font-size: 0.85rem; line-height: 1.6; }
+  body.text-compact .entry h2 { font-size: 1.15rem; }
+  body.text-compact .intro-body p { font-size: 0.9rem; line-height: 1.65; }
+  body.text-compact .card-body .card-desc { font-size: 0.72rem; }
+
+  body.text-large .entry .desc { font-size: 1.08rem; line-height: 1.85; }
+  body.text-large .entry h2 { font-size: 1.45rem; }
+  body.text-large .intro-body p { font-size: 1.1rem; line-height: 1.9; }
+  body.text-large .card-body .card-desc { font-size: 0.85rem; }
+
+  /* Hide thumbnails */
+  body.hide-thumbs .entry-thumb-wrap { display: none; }
 </style>
 </head>
 <body class="view-list">
@@ -1042,11 +1106,12 @@
 // SETTINGS SYSTEM
 // ============================================
 const cardThemes = ['', 'card-turquoise', 'card-plum', 'card-light'];
+const cardLabels = ['Dark Glass', 'Turquoise', 'Plum', 'Light'];
 let cardThemeIdx = 0;
 
 const settingsConfig = [
   {
-    key: 'theme', label: 'Theme', options: ['Light', 'Dark'],
+    key: 'theme', label: 'Theme', type: 'cycle', options: ['Light', 'Dark'],
     get: () => document.body.classList.contains('dark') ? 1 : 0,
     set: (idx) => {
       document.body.classList.toggle('dark', idx === 1);
@@ -1055,15 +1120,25 @@ const settingsConfig = [
     }
   },
   {
-    key: 'pins', label: 'Pins', options: ['Circle', 'Diamond'],
+    key: 'layout', label: 'Layout', type: 'cycle', options: ['Text Left', 'Text Right'],
+    get: () => document.body.classList.contains('layout-swapped') ? 1 : 0,
+    set: (idx) => {
+      document.body.classList.toggle('layout-swapped', idx === 1);
+      try { localStorage.setItem('vg-layout', idx === 1 ? '1' : '0'); } catch(e) {}
+      setTimeout(() => { if (window._map) window._map.invalidateSize(); }, 200);
+    }
+  },
+  {
+    key: 'pins', label: 'Pin Shape', type: 'cycle', options: ['Circle', 'Diamond'],
     get: () => document.body.classList.contains('diamond-pins') ? 1 : 0,
     set: (idx) => {
       document.body.classList.toggle('diamond-pins', idx === 1);
       try { localStorage.setItem('vg-pins', idx === 1 ? '1' : '0'); } catch(e) {}
     }
   },
+  { key: '_div1', type: 'divider' },
   {
-    key: 'cards', label: 'Cards', options: ['A', 'B', 'C', 'D'],
+    key: 'cards', label: 'Cards', type: 'cycle', options: cardLabels,
     get: () => cardThemeIdx,
     set: (idx) => {
       if (cardThemes[cardThemeIdx]) document.body.classList.remove(cardThemes[cardThemeIdx]);
@@ -1073,7 +1148,24 @@ const settingsConfig = [
     }
   },
   {
-    key: 'filters', label: 'Filters', options: ['Pills', 'Tags'],
+    key: 'blur', label: 'Card Blur', type: 'slider', min: 0, max: 30, step: 1, unit: 'px',
+    get: () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-blur')) || 12,
+    set: (val) => {
+      document.documentElement.style.setProperty('--card-blur', val + 'px');
+      try { localStorage.setItem('vg-blur', val); } catch(e) {}
+    }
+  },
+  {
+    key: 'opacity', label: 'Card Opacity', type: 'slider', min: 10, max: 100, step: 5, unit: '%',
+    get: () => Math.round((parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--card-alpha')) || 0.55) * 100),
+    set: (val) => {
+      document.documentElement.style.setProperty('--card-alpha', val / 100);
+      try { localStorage.setItem('vg-opacity', val); } catch(e) {}
+    }
+  },
+  { key: '_div2', type: 'divider' },
+  {
+    key: 'filters', label: 'Filters', type: 'cycle', options: ['Pills', 'Tags'],
     get: () => document.body.classList.contains('tag-filters') ? 1 : 0,
     set: (idx) => {
       document.body.classList.toggle('tag-filters', idx === 1);
@@ -1081,12 +1173,21 @@ const settingsConfig = [
     }
   },
   {
-    key: 'layout', label: 'Layout', options: ['Text Left', 'Text Right'],
-    get: () => document.body.classList.contains('layout-swapped') ? 1 : 0,
+    key: 'textsize', label: 'Text Size', type: 'cycle', options: ['Normal', 'Compact', 'Large'],
+    get: () => document.body.classList.contains('text-compact') ? 1 : document.body.classList.contains('text-large') ? 2 : 0,
     set: (idx) => {
-      document.body.classList.toggle('layout-swapped', idx === 1);
-      try { localStorage.setItem('vg-layout', idx === 1 ? '1' : '0'); } catch(e) {}
-      setTimeout(() => { if (window._map) window._map.invalidateSize(); }, 200);
+      document.body.classList.remove('text-compact', 'text-large');
+      if (idx === 1) document.body.classList.add('text-compact');
+      if (idx === 2) document.body.classList.add('text-large');
+      try { localStorage.setItem('vg-textsize', idx); } catch(e) {}
+    }
+  },
+  {
+    key: 'thumbs', label: 'Thumbnails', type: 'cycle', options: ['Show', 'Hide'],
+    get: () => document.body.classList.contains('hide-thumbs') ? 1 : 0,
+    set: (idx) => {
+      document.body.classList.toggle('hide-thumbs', idx === 1);
+      try { localStorage.setItem('vg-thumbs', idx === 1 ? '1' : '0'); } catch(e) {}
     }
   }
 ];
@@ -1105,33 +1206,65 @@ function cycleSetting(key, dir) {
 (function buildSettings() {
   const pop = document.getElementById('settingsPopover');
   settingsConfig.forEach(cfg => {
+    if (cfg.type === 'divider') {
+      const d = document.createElement('div');
+      d.className = 'settings-divider';
+      pop.appendChild(d);
+      return;
+    }
     const row = document.createElement('div');
     row.className = 'settings-row';
-    row.innerHTML =
-      '<span class="settings-label">' + cfg.label + '</span>' +
-      '<div class="settings-cycle">' +
-      '<button class="settings-arrow" data-key="' + cfg.key + '" data-dir="-1">‹</button>' +
-      '<span class="settings-value" id="sv-' + cfg.key + '">' + cfg.options[cfg.get()] + '</span>' +
-      '<button class="settings-arrow" data-key="' + cfg.key + '" data-dir="1">›</button>' +
-      '</div>';
-    pop.appendChild(row);
+    if (cfg.type === 'slider') {
+      const curVal = cfg.get();
+      row.innerHTML =
+        '<span class="settings-label">' + cfg.label + '</span>' +
+        '<div class="settings-slider-wrap">' +
+        '<input type="range" class="settings-slider" id="ss-' + cfg.key + '" ' +
+        'min="' + cfg.min + '" max="' + cfg.max + '" step="' + cfg.step + '" value="' + curVal + '">' +
+        '<span class="settings-value" id="sv-' + cfg.key + '">' + curVal + cfg.unit + '</span>' +
+        '</div>';
+      pop.appendChild(row);
+      setTimeout(() => {
+        const slider = document.getElementById('ss-' + cfg.key);
+        if (slider) slider.addEventListener('input', () => {
+          const v = parseInt(slider.value);
+          cfg.set(v);
+          const lbl = document.getElementById('sv-' + cfg.key);
+          if (lbl) lbl.textContent = v + cfg.unit;
+        });
+      }, 0);
+    } else {
+      row.innerHTML =
+        '<span class="settings-label">' + cfg.label + '</span>' +
+        '<div class="settings-cycle">' +
+        '<button class="settings-arrow" data-key="' + cfg.key + '" data-dir="-1">‹</button>' +
+        '<span class="settings-value" id="sv-' + cfg.key + '">' + cfg.options[cfg.get()] + '</span>' +
+        '<button class="settings-arrow" data-key="' + cfg.key + '" data-dir="1">›</button>' +
+        '</div>';
+      pop.appendChild(row);
+    }
   });
-  // Arrow click delegation
   pop.addEventListener('click', e => {
     const arrow = e.target.closest('.settings-arrow');
     if (arrow) cycleSetting(arrow.dataset.key, parseInt(arrow.dataset.dir));
   });
-  // Toggle open/close
   document.getElementById('settingsBtn').addEventListener('click', (e) => {
     e.stopPropagation();
-    // Refresh displayed values
     settingsConfig.forEach(cfg => {
+      if (cfg.type === 'divider') return;
       const val = document.getElementById('sv-' + cfg.key);
-      if (val) val.textContent = cfg.options[cfg.get()];
+      if (!val) return;
+      if (cfg.type === 'slider') {
+        const cv = cfg.get();
+        val.textContent = cv + cfg.unit;
+        const sl = document.getElementById('ss-' + cfg.key);
+        if (sl) sl.value = cv;
+      } else {
+        val.textContent = cfg.options[cfg.get()];
+      }
     });
     pop.classList.toggle('open');
   });
-  // Close on outside click
   document.addEventListener('click', (e) => {
     if (!pop.contains(e.target)) pop.classList.remove('open');
   });
@@ -1151,11 +1284,19 @@ try {
   if (localStorage.getItem('vg-tags') === '1') document.body.classList.add('tag-filters');
   if (localStorage.getItem('vg-pins') === '1') document.body.classList.add('diamond-pins');
   if (localStorage.getItem('vg-layout') === '1') document.body.classList.add('layout-swapped');
+  if (localStorage.getItem('vg-thumbs') === '1') document.body.classList.add('hide-thumbs');
+  const ts = parseInt(localStorage.getItem('vg-textsize') || '0');
+  if (ts === 1) document.body.classList.add('text-compact');
+  if (ts === 2) document.body.classList.add('text-large');
   const savedTheme = parseInt(localStorage.getItem('vg-card-theme') || '0');
   if (savedTheme > 0 && savedTheme < cardThemes.length) {
     cardThemeIdx = savedTheme;
     document.body.classList.add(cardThemes[cardThemeIdx]);
   }
+  const savedBlur = localStorage.getItem('vg-blur');
+  if (savedBlur !== null) document.documentElement.style.setProperty('--card-blur', savedBlur + 'px');
+  const savedOpacity = localStorage.getItem('vg-opacity');
+  if (savedOpacity !== null) document.documentElement.style.setProperty('--card-alpha', parseInt(savedOpacity) / 100);
 } catch(e) {}
 
 // ============================================
@@ -1569,14 +1710,24 @@ const tileUrls = {
   dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_2thp_1_6ffbb574555fa573f30768f0'
 };
 const tileAttr = '&copy; <a href="https://openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>';
-let tileLayer = L.tileLayer(
-  document.body.classList.contains('dark') ? tileUrls.dark : tileUrls.light,
-  { attribution: tileAttr, maxZoom: 19 }
-).addTo(map);
+
+// Defer tile loading on mobile — no tile HTTP requests until user opens map view
+let tileLayer = null;
+let tilesLoaded = false;
+function ensureTiles() {
+  if (tilesLoaded) return;
+  tilesLoaded = true;
+  tileLayer = L.tileLayer(
+    document.body.classList.contains('dark') ? tileUrls.dark : tileUrls.light,
+    { attribution: tileAttr, maxZoom: 19 }
+  ).addTo(map);
+}
+if (window.innerWidth > 768) ensureTiles(); // Desktop: load immediately (split pane visible)
 
 window._swapTiles = function(isDark) {
-  map.removeLayer(tileLayer);
+  if (tileLayer) map.removeLayer(tileLayer);
   tileLayer = L.tileLayer(isDark ? tileUrls.dark : tileUrls.light, { attribution: tileAttr, maxZoom: 19 }).addTo(map);
+  tilesLoaded = true;
 };
 
 const markerLayer = L.layerGroup().addTo(map);
@@ -1811,6 +1962,9 @@ window.setView = function(mode) {
     if (document.body.classList.contains('diamond-pins')) persist.push('diamond-pins');
     if (document.body.classList.contains('layout-swapped')) persist.push('layout-swapped');
     if (document.body.classList.contains('filter-all')) persist.push('filter-all');
+    if (document.body.classList.contains('text-compact')) persist.push('text-compact');
+    if (document.body.classList.contains('text-large')) persist.push('text-large');
+    if (document.body.classList.contains('hide-thumbs')) persist.push('hide-thumbs');
     cardThemes.forEach(t => { if (t && document.body.classList.contains(t)) persist.push(t); });
     document.body.className = persist.join(' ') + ' view-' + mode;
 
@@ -1818,6 +1972,7 @@ window.setView = function(mode) {
     document.getElementById('btnMap').classList.toggle('active', mode === 'map');
 
     if (mode === 'map') {
+      ensureTiles();
       map.invalidateSize();
       if (activeIndex >= 0) {
         const isMobile = window.innerWidth <= 768;
