@@ -99,6 +99,19 @@
     text-transform: uppercase;
     color: var(--progress);
   }
+  .guiides-brand {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    color: #2AAA8A;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+  .guiides-brand strong {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .guiides-brand:hover { color: #1D8A6E; }
   .dark-toggle {
     font-family: var(--sans);
     font-size: 0.7rem;
@@ -186,8 +199,8 @@
     height: 9rem;
     background: linear-gradient(
       rgba(var(--bg-rgb, 247,244,239), 0) 0%,
-      rgba(var(--bg-rgb, 247,244,239), 0.4) 35%,
-      rgba(var(--bg-rgb, 247,244,239), 0.8) 65%,
+      rgba(var(--bg-rgb, 247,244,239), 0.15) 45%,
+      rgba(var(--bg-rgb, 247,244,239), 0.65) 75%,
       rgba(var(--bg-rgb, 247,244,239), 1) 100%
     );
     pointer-events: none;
@@ -216,6 +229,8 @@
     cursor: pointer;
     padding: 0;
     transition: color 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
   .intro-toggle:hover { color: var(--text); }
   .intro-toggle svg {
@@ -229,8 +244,8 @@
   }
   .intro-toggle-wrap {
     text-align: center;
-    padding: 0 2.5rem 0.8rem;
-    margin-top: -5rem;
+    padding: 0 2.5rem 1rem;
+    margin-top: -4rem;
     position: relative;
     z-index: 2;
     border-bottom: 1px solid var(--border);
@@ -296,16 +311,23 @@
     padding: 1.75rem 2.5rem;
     border-bottom: 1px solid var(--border);
     position: relative;
-    transition: background 0.2s;
+    transition: background 0.2s, box-shadow 0.2s;
+    max-width: 680px;
+    margin: 0 auto;
   }
   .entry:hover { background: var(--hover); cursor: pointer; }
-  .entry.active { background: var(--hover); }
+  .entry.active {
+    background: var(--hover);
+    box-shadow: 0 0 0 1.5px var(--border);
+    border-radius: 4px;
+  }
   .entry.active::before {
     content: '';
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 3px;
     background: var(--c-active, var(--progress));
+    border-radius: 4px 0 0 4px;
   }
   .entry.hidden { display: none; }
 
@@ -467,6 +489,15 @@
     100% { transform: scale(1); }
   }
   .entry-heart.pop { animation: heartPop 0.3s ease-out; }
+  .card-heart {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    color: rgba(255,255,255,0.3);
+    font-size: 1rem;
+  }
+  .card-heart:hover { color: rgba(255,255,255,0.5); }
+  .card-heart.hearted { color: #E25555; }
 
   .saved-toast {
     position: fixed;
@@ -488,6 +519,16 @@
     pointer-events: none;
   }
   .saved-toast.show { opacity: 1; }
+
+  .entry-heart.card-heart {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.3);
+  }
+  .entry-heart.card-heart.hearted { color: #E25555; }
+  .card { position: relative; }
 
   /* =================== SECTION BREAKS =================== */
   .section-break {
@@ -602,8 +643,7 @@
     display: flex;
     position: fixed;
     bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 1.25rem;
     z-index: 50;
     background: var(--text);
     border-radius: 999px;
@@ -839,7 +879,7 @@
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
     <div class="top-bar">
-      <span class="updated" id="updatedText"></span>
+      <a href="#" class="guiides-brand">⛺︎ made with <strong>GUIIDES</strong> ⛺︎</a>
       <div style="display:flex;gap:0.4rem">
         <button class="dark-toggle" id="cardThemeToggle" onclick="cycleCardTheme()">Cards A</button>
         <button class="dark-toggle" id="tagToggle" onclick="toggleTags()">Tags</button>
@@ -1165,7 +1205,6 @@ window.toggleHeart = function(btn) {
     savedSlugs.delete(slug);
   } else {
     savedSlugs.add(slug);
-    // Show info toast on first ever heart
     if (!hasShownSavedToast) {
       hasShownSavedToast = true;
       const toast = document.getElementById('savedToast');
@@ -1175,10 +1214,13 @@ window.toggleHeart = function(btn) {
   }
   try { localStorage.setItem('vg-saved', JSON.stringify([...savedSlugs])); } catch(e) {}
 
-  // Update Saved filter count
+  // Sync all heart buttons for this slug
+  document.querySelectorAll('.entry-heart[data-slug="' + slug + '"]').forEach(h => {
+    h.classList.toggle('hearted', savedSlugs.has(slug));
+  });
+
   const savedBtn = document.getElementById('filterSaved');
   if (savedBtn) savedBtn.style.display = savedSlugs.size > 0 ? '' : 'none';
-  // If currently viewing Saved filter, re-apply
   if (activeFilter === '__saved') updateFilter();
 };
 
@@ -1192,6 +1234,19 @@ usedCats.forEach(cat => {
   btn.className = 'filter-btn';
   btn.dataset.filter = cat;
   btn.textContent = CATEGORIES[cat]?.label || cat;
+  const hoverCol = CATEGORIES[cat]?.color || '#888';
+  btn.addEventListener('mouseenter', () => {
+    if (!btn.classList.contains('active')) {
+      btn.style.background = hoverCol + '22';
+      btn.style.borderColor = hoverCol + '44';
+    }
+  });
+  btn.addEventListener('mouseleave', () => {
+    if (!btn.classList.contains('active')) {
+      btn.style.background = '';
+      btn.style.borderColor = '';
+    }
+  });
   filterBar.insertBefore(btn, document.getElementById('filterCount'));
 });
 
@@ -1319,6 +1374,7 @@ places.forEach((p, i) => {
     ? '<img class="card-thumb-float" src="' + p.image + '" alt="' + p.name + '"/>'
     : '';
   card.innerHTML =
+    '<button class="entry-heart card-heart' + (isHearted ? ' hearted' : '') + '" data-slug="' + p.slug + '" onclick="toggleHeart(this)">♥</button>' +
     '<div class="card-body">' +
     thumb +
     '<div class="card-cat">' + p.category + (p.price ? ' &middot; ' + p.price : '') + '</div>' +
