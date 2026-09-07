@@ -651,7 +651,9 @@
   .card.expanded .card-desc {
     display: block;
     -webkit-line-clamp: unset;
-    overflow: visible;
+    overflow-y: auto;
+    max-height: 35vh;
+    -webkit-overflow-scrolling: touch;
   }
   .card-action-row {
     display: flex;
