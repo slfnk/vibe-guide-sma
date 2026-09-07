@@ -122,12 +122,12 @@
   }
   .dark-toggle {
     font-family: var(--sans);
-    font-size: 0.7rem;
+    font-size: 0.58rem;
     font-weight: 600;
     background: none;
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 0.25rem 0.65rem;
+    padding: 0.18rem 0.5rem;
     cursor: pointer;
     color: var(--text-2);
     transition: all 0.2s;
@@ -232,7 +232,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-  .intro-toggle:hover { color: var(--text); }
+  .intro-toggle:hover { opacity: 0.7; }
   .intro-toggle svg {
     width: 22px;
     height: 12px;
@@ -612,6 +612,15 @@
     box-shadow: 0 3px 14px rgba(0,0,0,0.35);
     z-index: 1000 !important;
   }
+  /* Marker shape: diamond variant */
+  body.diamond-pins .pin {
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+  body.diamond-pins .pin.active {
+    transform: rotate(45deg) scale(1.5);
+  }
+
   .pin-label {
     position: absolute;
     bottom: calc(100% + 6px);
@@ -643,6 +652,13 @@
     border-radius: 999px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  @media (max-width: 768px) {
+    .mobile-toggle {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .mobile-toggle button {
     font-family: var(--sans);
@@ -686,6 +702,7 @@
   .card {
     scroll-snap-align: center;
     flex: 0 0 82vw;
+    max-width: 420px;
     background: rgba(28, 28, 30, 0.55);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
     backdrop-filter: blur(20px) saturate(1.4);
@@ -874,7 +891,9 @@
 
     <div class="top-bar">
       <a href="#" class="guiides-brand">⛺︎ made with <strong>GUIIDES</strong> ⛺︎</a>
-      <div style="display:flex;gap:0.4rem">
+      <a href="#" class="guiides-brand">sponsored by HOSTELWORLD</a>
+      <div style="display:flex;gap:0.35rem">
+        <button class="dark-toggle" id="pinToggle" onclick="togglePins()">● Pins</button>
         <button class="dark-toggle" id="cardThemeToggle" onclick="cycleCardTheme()">Cards A</button>
         <button class="dark-toggle" id="tagToggle" onclick="toggleTags()">Tags</button>
         <button class="dark-toggle" id="darkToggle" onclick="toggleDark()">Dark</button>
@@ -970,6 +989,13 @@ function toggleTags() {
   try { localStorage.setItem('vg-tags', isTag ? '1' : '0'); } catch(e) {}
 }
 
+function togglePins() {
+  document.body.classList.toggle('diamond-pins');
+  const isDiamond = document.body.classList.contains('diamond-pins');
+  document.getElementById('pinToggle').textContent = isDiamond ? '◆ Pins' : '● Pins';
+  try { localStorage.setItem('vg-pins', isDiamond ? '1' : '0'); } catch(e) {}
+}
+
 const cardThemes = ['', 'card-turquoise', 'card-plum', 'card-light'];
 const cardLabels = ['Cards A', 'Cards B', 'Cards C', 'Cards D'];
 let cardThemeIdx = 0;
@@ -989,6 +1015,10 @@ try {
   if (localStorage.getItem('vg-tags') === '1') {
     document.body.classList.add('tag-filters');
     document.getElementById('tagToggle').textContent = 'Pills';
+  }
+  if (localStorage.getItem('vg-pins') === '1') {
+    document.body.classList.add('diamond-pins');
+    document.getElementById('pinToggle').textContent = '◆ Pins';
   }
   const savedTheme = parseInt(localStorage.getItem('vg-card-theme') || '0');
   if (savedTheme > 0 && savedTheme < cardThemes.length) {
@@ -1639,6 +1669,7 @@ window.setView = function(mode) {
     const persist = [];
     if (document.body.classList.contains('dark')) persist.push('dark');
     if (document.body.classList.contains('tag-filters')) persist.push('tag-filters');
+    if (document.body.classList.contains('diamond-pins')) persist.push('diamond-pins');
     cardThemes.forEach(t => { if (t && document.body.classList.contains(t)) persist.push(t); });
     document.body.className = persist.join(' ') + ' view-' + mode;
 
