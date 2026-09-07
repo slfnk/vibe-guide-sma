@@ -102,7 +102,7 @@
   .guiides-brand {
     font-family: var(--sans);
     font-size: 0.62rem;
-    color: #2AAA8A;
+    color: var(--progress);
     text-decoration: none;
     letter-spacing: 0.04em;
     font-weight: 500;
@@ -111,7 +111,15 @@
     font-weight: 700;
     letter-spacing: 0.08em;
   }
-  .guiides-brand:hover { color: #1D8A6E; }
+  .guiides-brand:hover { color: #B84835; }
+  .intro-section .updated-inline {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #2AAA8A;
+    margin-bottom: 0.6rem;
+  }
   .dark-toggle {
     font-family: var(--sans);
     font-size: 0.7rem;
@@ -154,14 +162,6 @@
   .intro-section .byline strong {
     color: var(--text);
     font-weight: 600;
-  }
-  .intro-section .updated-inline {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    color: var(--progress);
-    margin-bottom: 0.6rem;
   }
 
   .intro-body {
@@ -644,7 +644,7 @@
     position: fixed;
     bottom: 1.25rem;
     right: 1.25rem;
-    z-index: 50;
+    z-index: 9999;
     background: var(--text);
     border-radius: 999px;
     overflow: hidden;
@@ -1258,9 +1258,10 @@ function syncFilterBars(clickedBtn) {
     const isActive = b.dataset.filter === activeFilter;
     b.classList.toggle('active', isActive);
     if (isActive) {
-      const col = b.dataset.filter === 'all'
-        ? 'var(--text)'
-        : (CATEGORIES[b.dataset.filter]?.color || '#888');
+      let col;
+      if (b.dataset.filter === 'all') col = 'var(--text)';
+      else if (b.dataset.filter === '__saved') col = '#E25555';
+      else col = CATEGORIES[b.dataset.filter]?.color || '#888';
       b.style.background = col;
       b.style.borderColor = col;
     } else {
@@ -1492,10 +1493,7 @@ function setActive(index, source) {
     }
   }
 
-  // Update hash only on intentional actions, not passive scroll
-  if (source !== 'scroll') {
-    history.replaceState(null, '', '#' + places[index].slug);
-  }
+  // Hash is NOT set in the URL — only used when copying share links
 }
 
 // ============================================
