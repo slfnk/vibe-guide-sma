@@ -681,7 +681,8 @@ The standard circuit for live music n DJs n parties n stuff.
 - Price: $$
 - Location: 20.911915800000003, -100.7452022
 - Google Maps: https://www.google.com/maps/search/?api=1&query=Amapola+San+Miguel+de+Allende
-[Write-up coming soon]
+Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. The first two words are the truncation of dolorem ipsum. More at Wikipedia
+Ab alias totam rerum facilis quidem accusamus. Molestiae similique magnam voluptatem. Maiores sint laborum soluta fugit rerum voluptas voluptatibus non. Quia odit pariatur aut eius fugiat illo eveniet rerum. Mollitia voluptas est consequatur. Autem vero est necessitatibus voluptatem sint nam. Sit nihil officiis harum at. Et sed quae illo aut dolorem odit error incidunt. Sequi sapiente consequuntur excepturi. Minus quae ea enim qui quisquam iusto quam. Quidem qui saepe eos itaque. Suscipit omnis sed non. Suscipit quis architecto possimus occaecati. Culpa temporibus atque eum ipsam vitae atque. Minima expedita alias fuga et id culpa totam. Aut qui minus sed voluptas illo cumque. Eveniet quo eveniet ut aperiam explicabo cumque maiores. Praesentium non ex aspernatur qui a eum perspiciatis repellendus. Autem animi minus tenetur vitae nobis doloremque. Molestiae amet dignissimos odit unde et perferendis reiciendis dolore. Nihil quos reiciendis ratione nostrum et et et quidem. Reprehenderit commodi et delectus. Et voluptas est unde et sit possimus cum. Et consequatur laborum vitae hic dolorum. Perferendis quis velit alias quas ducimus nihil beatae. Sunt similique totam et sed enim a id voluptates.
  
 ---
  
