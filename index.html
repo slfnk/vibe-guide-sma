@@ -25,8 +25,9 @@
     --progress: #2AAA8A;
     --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    --card-blur: 12px;
-    --card-alpha: 0.55;
+    --card-blur: 3px;
+    --card-alpha: 0.85;
+    --pin-size: 16px;
   }
 
   /* =================== DARK THEME =================== */
@@ -128,20 +129,40 @@
   }
   /* =================== SETTINGS GEAR =================== */
   .settings-wrap { position: relative; }
-  .settings-btn {
+  .topbar-icons { display: flex; align-items: center; gap: 0.15rem; }
+  .topbar-icon {
     background: none;
-    border: 1px solid var(--border);
-    border-radius: 50%;
+    border: none;
     width: 28px;
     height: 28px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: color 0.2s;
     color: var(--text-3);
+    position: relative;
   }
-  .settings-btn:hover { border-color: var(--text-3); color: var(--text); }
+  .topbar-icon:hover { color: var(--text); }
+  .topbar-icon svg { width: 15px; height: 15px; }
+  .topbar-icon .copied-tip {
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.58rem;
+    font-weight: 600;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .topbar-icon .copied-tip.show { opacity: 1; }
+  .settings-btn { position: relative; }
   .settings-btn svg { width: 15px; height: 15px; }
 
   .settings-popover {
@@ -210,8 +231,32 @@
   }
 
   /* =================== PIN FADE (All filter) =================== */
-  body.filter-all .pin { opacity: 0.9; }
-  body.filter-all .pin.active { opacity: 1; }
+  body.filter-all .pin { filter: saturate(0.45) brightness(0.82); }
+  body.filter-all .pin.active { filter: none; }
+
+  /* =================== READER LIKES =================== */
+  .reader-likes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-3);
+  }
+  .like-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--border);
+    transition: color 0.2s, transform 0.2s;
+    padding: 0;
+    line-height: 1;
+  }
+  .like-btn:hover { color: #E25555; }
+  .like-btn.liked { color: #E25555; }
+  .like-btn.pop { animation: heartPop 0.3s ease-out; }
 
   /* =================== EDITORIAL INTRO =================== */
   .intro-section {
@@ -678,12 +723,12 @@
   /* =================== MAP PINS =================== */
   .pin-wrap { position: relative; }
   .pin {
-    width: 16px;
-    height: 16px;
+    width: var(--pin-size);
+    height: var(--pin-size);
     border-radius: 50%;
     border: 2.5px solid #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
+    transition: transform 0.25s, box-shadow 0.25s, filter 0.3s;
     cursor: pointer;
   }
   .pin.active {
@@ -698,6 +743,13 @@
   }
   body.diamond-pins .pin.active {
     transform: rotate(45deg) scale(1.5);
+  }
+  /* Marker shape: square variant */
+  body.square-pins .pin {
+    border-radius: 2px;
+  }
+  body.square-pins .pin.active {
+    transform: scale(1.5);
   }
 
   .pin-label {
@@ -1020,7 +1072,7 @@
   body.hide-thumbs .entry-thumb-wrap { display: none; }
 </style>
 </head>
-<body class="view-list">
+<body class="view-list diamond-pins tag-filters text-compact">
 
 <div class="layout">
   <div class="col-left" id="colLeft">
@@ -1028,14 +1080,23 @@
 
     <div class="top-bar">
       <a href="#" class="guiides-brand">⛺︎ made with <strong>GUIIDES</strong> ⛺︎</a>
-      <div class="settings-wrap">
-        <button class="settings-btn" id="settingsBtn" title="Settings">
+      <div class="topbar-icons">
+        <button class="topbar-icon" id="copyPageLink" title="Copy page link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
           </svg>
+          <span class="copied-tip" id="pageCopiedTip">Copied!</span>
         </button>
-        <div class="settings-popover" id="settingsPopover"></div>
+        <div class="settings-wrap">
+          <button class="topbar-icon settings-btn" id="settingsBtn" title="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </button>
+          <div class="settings-popover" id="settingsPopover"></div>
+        </div>
       </div>
     </div>
 
@@ -1120,7 +1181,7 @@ const settingsConfig = [
     }
   },
   {
-    key: 'layout', label: 'Layout', type: 'cycle', options: ['Text Left', 'Text Right'],
+    key: 'layout', label: 'Map Position', type: 'cycle', options: ['Map Right', 'Map Left'],
     get: () => document.body.classList.contains('layout-swapped') ? 1 : 0,
     set: (idx) => {
       document.body.classList.toggle('layout-swapped', idx === 1);
@@ -1128,15 +1189,26 @@ const settingsConfig = [
       setTimeout(() => { if (window._map) window._map.invalidateSize(); }, 200);
     }
   },
+  { key: '_d0', type: 'divider' },
   {
-    key: 'pins', label: 'Pin Shape', type: 'cycle', options: ['Circle', 'Diamond'],
-    get: () => document.body.classList.contains('diamond-pins') ? 1 : 0,
+    key: 'pinshape', label: 'Pin Shape', type: 'cycle', options: ['Circle', 'Diamond', 'Square'],
+    get: () => document.body.classList.contains('diamond-pins') ? 1 : document.body.classList.contains('square-pins') ? 2 : 0,
     set: (idx) => {
-      document.body.classList.toggle('diamond-pins', idx === 1);
-      try { localStorage.setItem('vg-pins', idx === 1 ? '1' : '0'); } catch(e) {}
+      document.body.classList.remove('diamond-pins', 'square-pins');
+      if (idx === 1) document.body.classList.add('diamond-pins');
+      if (idx === 2) document.body.classList.add('square-pins');
+      try { localStorage.setItem('vg-pin-shape', idx); } catch(e) {}
     }
   },
-  { key: '_div1', type: 'divider' },
+  {
+    key: 'pinsize', label: 'Pin Size', type: 'slider', min: 8, max: 28, step: 2, unit: 'px',
+    get: () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--pin-size')) || 16,
+    set: (val) => {
+      document.documentElement.style.setProperty('--pin-size', val + 'px');
+      try { localStorage.setItem('vg-pinsize', val); } catch(e) {}
+    }
+  },
+  { key: '_d1', type: 'divider' },
   {
     key: 'cards', label: 'Cards', type: 'cycle', options: cardLabels,
     get: () => cardThemeIdx,
@@ -1149,7 +1221,7 @@ const settingsConfig = [
   },
   {
     key: 'blur', label: 'Card Blur', type: 'slider', min: 0, max: 30, step: 1, unit: 'px',
-    get: () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-blur')) || 12,
+    get: () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-blur')) || 3,
     set: (val) => {
       document.documentElement.style.setProperty('--card-blur', val + 'px');
       try { localStorage.setItem('vg-blur', val); } catch(e) {}
@@ -1157,13 +1229,13 @@ const settingsConfig = [
   },
   {
     key: 'opacity', label: 'Card Opacity', type: 'slider', min: 10, max: 100, step: 5, unit: '%',
-    get: () => Math.round((parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--card-alpha')) || 0.55) * 100),
+    get: () => Math.round((parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--card-alpha')) || 0.85) * 100),
     set: (val) => {
       document.documentElement.style.setProperty('--card-alpha', val / 100);
       try { localStorage.setItem('vg-opacity', val); } catch(e) {}
     }
   },
-  { key: '_div2', type: 'divider' },
+  { key: '_d2', type: 'divider' },
   {
     key: 'filters', label: 'Filters', type: 'cycle', options: ['Pills', 'Tags'],
     get: () => document.body.classList.contains('tag-filters') ? 1 : 0,
@@ -1246,7 +1318,7 @@ function cycleSetting(key, dir) {
   });
   pop.addEventListener('click', e => {
     const arrow = e.target.closest('.settings-arrow');
-    if (arrow) cycleSetting(arrow.dataset.key, parseInt(arrow.dataset.dir));
+    if (arrow) { e.stopPropagation(); cycleSetting(arrow.dataset.key, parseInt(arrow.dataset.dir)); }
   });
   document.getElementById('settingsBtn').addEventListener('click', (e) => {
     e.stopPropagation();
@@ -1270,6 +1342,44 @@ function cycleSetting(key, dir) {
   });
 })();
 
+// ============================================
+// COPY PAGE LINK
+// ============================================
+document.getElementById('copyPageLink').addEventListener('click', function() {
+  const url = location.origin + location.pathname;
+  navigator.clipboard.writeText(url).then(function() {
+    const tip = document.getElementById('pageCopiedTip');
+    tip.classList.add('show');
+    setTimeout(function() { tip.classList.remove('show'); }, 1500);
+  });
+});
+
+// ============================================
+// READER LIKES (visual concept, cookie-stored)
+// ============================================
+const BASE_LIKES = 3386;
+let userLiked = false;
+try { userLiked = localStorage.getItem('vg-liked') === '1'; } catch(e) {}
+
+function updateLikeDisplay() {
+  const el = document.getElementById('likeCount');
+  const btn = document.getElementById('likeBtn');
+  if (!el) return;
+  el.textContent = (BASE_LIKES + (userLiked ? 1 : 0)).toLocaleString();
+  if (btn) btn.classList.toggle('liked', userLiked);
+}
+
+window.toggleLike = function() {
+  userLiked = !userLiked;
+  try { localStorage.setItem('vg-liked', userLiked ? '1' : '0'); } catch(e) {}
+  const btn = document.getElementById('likeBtn');
+  if (btn) { btn.classList.add('pop'); setTimeout(() => btn.classList.remove('pop'), 300); }
+  updateLikeDisplay();
+};
+
+// ============================================
+// MISC
+// ============================================
 function toggleIntro() {
   const body = document.getElementById('introBody');
   const btn = document.getElementById('introToggle');
@@ -1278,16 +1388,27 @@ function toggleIntro() {
   label.textContent = body.classList.contains('collapsed') ? 'Read more' : 'Less';
 }
 
-// Restore persisted settings
+// Restore persisted settings — bidirectional (respects HTML defaults)
 try {
-  if (localStorage.getItem('vg-dark') === '1') document.body.classList.add('dark');
-  if (localStorage.getItem('vg-tags') === '1') document.body.classList.add('tag-filters');
-  if (localStorage.getItem('vg-pins') === '1') document.body.classList.add('diamond-pins');
-  if (localStorage.getItem('vg-layout') === '1') document.body.classList.add('layout-swapped');
-  if (localStorage.getItem('vg-thumbs') === '1') document.body.classList.add('hide-thumbs');
-  const ts = parseInt(localStorage.getItem('vg-textsize') || '0');
-  if (ts === 1) document.body.classList.add('text-compact');
-  if (ts === 2) document.body.classList.add('text-large');
+  const bp = (key, cls) => { const v = localStorage.getItem(key); if (v !== null) document.body.classList.toggle(cls, v === '1'); };
+  bp('vg-dark', 'dark');
+  bp('vg-tags', 'tag-filters');
+  bp('vg-layout', 'layout-swapped');
+  bp('vg-thumbs', 'hide-thumbs');
+  // Pin shape (3-way)
+  const ps = localStorage.getItem('vg-pin-shape');
+  if (ps !== null) {
+    document.body.classList.remove('diamond-pins', 'square-pins');
+    if (ps === '1') document.body.classList.add('diamond-pins');
+    if (ps === '2') document.body.classList.add('square-pins');
+  }
+  // Text size (3-way)
+  const ts = localStorage.getItem('vg-textsize');
+  if (ts !== null) {
+    document.body.classList.remove('text-compact', 'text-large');
+    if (ts === '1') document.body.classList.add('text-compact');
+    if (ts === '2') document.body.classList.add('text-large');
+  }
   const savedTheme = parseInt(localStorage.getItem('vg-card-theme') || '0');
   if (savedTheme > 0 && savedTheme < cardThemes.length) {
     cardThemeIdx = savedTheme;
@@ -1297,6 +1418,8 @@ try {
   if (savedBlur !== null) document.documentElement.style.setProperty('--card-blur', savedBlur + 'px');
   const savedOpacity = localStorage.getItem('vg-opacity');
   if (savedOpacity !== null) document.documentElement.style.setProperty('--card-alpha', parseInt(savedOpacity) / 100);
+  const savedPinSize = localStorage.getItem('vg-pinsize');
+  if (savedPinSize !== null) document.documentElement.style.setProperty('--pin-size', savedPinSize + 'px');
 } catch(e) {}
 
 // ============================================
@@ -1446,9 +1569,14 @@ introSection.innerHTML =
   '<p class="updated-inline">' + 'Updated ' + guide.updated + '</p>' +
   '<h1>' + guide.title + '</h1>' +
   '<p class="deck">' + guide.deck + '</p>' +
-  '<p class="byline">By <strong>' + guide.byline + '</strong></p>';
+  '<p class="byline">By <strong>' + guide.byline + '</strong></p>' +
+  '<div class="reader-likes">' +
+  '<button class="like-btn" id="likeBtn" onclick="toggleLike()">♥</button>' +
+  '<span>Liked by <strong id="likeCount"></strong> readers</span>' +
+  '</div>';
 
 document.title = guide.title;
+updateLikeDisplay();
 
 document.getElementById('introBody').innerHTML = guide.intro.map((p, i) =>
   '<p' + (i === 0 ? ' class="drop-cap"' : '') + '>' + p + '</p>'
@@ -1514,8 +1642,10 @@ window.toggleHeart = function(btn) {
     h.classList.toggle('hearted', savedSlugs.has(slug));
   });
 
-  const savedBtn = document.getElementById('filterSaved');
-  if (savedBtn) savedBtn.style.display = savedSlugs.size > 0 ? '' : 'none';
+  // Sync saved filter button visibility across both filter bars
+  document.querySelectorAll('.filter-btn[data-filter="__saved"]').forEach(b => {
+    b.style.display = savedSlugs.size > 0 ? '' : 'none';
+  });
 
   // If all hearts removed while in Saved filter, kick back to All
   if (activeFilter === '__saved' && savedSlugs.size === 0) {
@@ -1613,10 +1743,9 @@ try {
   if (saved.length > 0) hasShownSavedToast = true;
 } catch(e) {}
 
-// Show Saved filter if items exist
+// Show Saved filter if items exist (both filter bars)
 if (savedSlugs.size > 0) {
-  const sb = document.getElementById('filterSaved');
-  if (sb) sb.style.display = '';
+  document.querySelectorAll('.filter-btn[data-filter="__saved"]').forEach(b => b.style.display = '');
 }
 
 places.forEach((p, i) => {
@@ -1960,6 +2089,7 @@ window.setView = function(mode) {
     if (document.body.classList.contains('dark')) persist.push('dark');
     if (document.body.classList.contains('tag-filters')) persist.push('tag-filters');
     if (document.body.classList.contains('diamond-pins')) persist.push('diamond-pins');
+    if (document.body.classList.contains('square-pins')) persist.push('square-pins');
     if (document.body.classList.contains('layout-swapped')) persist.push('layout-swapped');
     if (document.body.classList.contains('filter-all')) persist.push('filter-all');
     if (document.body.classList.contains('text-compact')) persist.push('text-compact');
