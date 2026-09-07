@@ -212,7 +212,7 @@
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.04em;
-    color: var(--text-3);
+    color: var(--progress);
     cursor: pointer;
     padding: 0;
     transition: color 0.2s;
@@ -229,8 +229,14 @@
   }
   .intro-toggle-wrap {
     text-align: center;
-    padding: 0.2rem 2.5rem 1.5rem;
+    padding: 0 2.5rem 0.8rem;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 2;
     border-bottom: 1px solid var(--border);
+  }
+  .intro-body:not(.collapsed) + .intro-toggle-wrap {
+    margin-top: 0;
   }
 
   /* =================== FILTER BAR =================== */
@@ -437,6 +443,52 @@
   }
   .entry-links svg { width: 12px; height: 12px; }
 
+  /* =================== HEART FAVORITES =================== */
+  .entry-heart {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: var(--border);
+    transition: color 0.2s, transform 0.2s;
+    z-index: 3;
+    padding: 0.2rem;
+  }
+  .entry-heart:hover { color: var(--text-3); }
+  .entry-heart.hearted { color: #E25555; }
+  .entry-heart.hearted:hover { color: #C94444; }
+  @keyframes heartPop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+  .entry-heart.pop { animation: heartPop 0.3s ease-out; }
+
+  .saved-toast {
+    position: fixed;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: var(--bg);
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    max-width: 320px;
+    text-align: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .saved-toast.show { opacity: 1; }
+
   /* =================== SECTION BREAKS =================== */
   .section-break {
     padding: 2rem 2.5rem 1.5rem;
@@ -547,7 +599,7 @@
 
   /* =================== MOBILE =================== */
   .mobile-toggle {
-    display: none;
+    display: flex;
     position: fixed;
     bottom: 1.25rem;
     left: 50%;
@@ -718,6 +770,18 @@
   body.card-light .card-expand-btn,
   body.card-light .card-action-links a { color: var(--progress); }
 
+  /* =================== DESKTOP MAP VIEW =================== */
+  body.view-map .col-left { display: none; }
+  body.view-map .col-right { width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 5; }
+  body.view-map .card-carousel { display: flex; }
+  body.view-map { overflow: hidden; height: 100vh; }
+  body.view-map .map-filter-bar { display: flex; }
+  body.view-map .leaflet-top { top: 45px !important; }
+  body.view-map .locate-btn { top: 3.5rem; }
+
+  body.view-list .card-carousel { display: none; }
+  body.view-list .map-filter-bar { display: none; }
+
   /* =================== MOBILE RESPONSIVE =================== */
   @media (max-width: 768px) {
     body { overflow: auto; height: auto; }
@@ -731,7 +795,7 @@
       overflow-y: visible; position: relative;
       z-index: 10; background: var(--bg);
     }
-    .mobile-toggle { display: flex; }
+    .mobile-toggle { } /* inherits display:flex from base */
     .progress-bar { display: none; }
     .top-bar { padding: 0.4rem 1.25rem; }
     .intro-section { padding: 1.5rem 1.5rem 1rem; }
@@ -760,14 +824,6 @@
       align-items: center;
     }
     .map-filter-bar::-webkit-scrollbar { display: none; }
-    body.view-map .map-filter-bar { display: flex; }
-    /* Push zoom controls below filter bar */
-    body.view-map .leaflet-top { top: 45px !important; }
-
-    body.view-map .col-left { display: none; }
-    body.view-map .col-right { display: block; }
-    body.view-map .card-carousel { display: flex; }
-    body.view-map { overflow: hidden; height: 100vh; }
 
     body.view-list .col-right { display: none; }
     body.view-list .col-left { display: block; }
@@ -804,6 +860,7 @@
 
     <div class="filter-bar" id="filterBar">
       <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="__saved" id="filterSaved" style="display:none">♥ Saved</button>
       <span class="filter-count" id="filterCount"></span>
     </div>
 
@@ -830,6 +887,7 @@
 
 <!-- View transition overlay -->
 <div class="view-fade" id="viewFade"></div>
+<div class="saved-toast" id="savedToast">You can like spots to save them to your browser. Clearing cookies or using a private session will reset your saved spots.</div>
 
 <!-- Mobile bottom toggle -->
 <div class="mobile-toggle" id="mobileToggle">
@@ -1097,6 +1155,33 @@ window.copyShareLink = function(slug, btn) {
   });
 };
 
+window.toggleHeart = function(btn) {
+  const slug = btn.dataset.slug;
+  btn.classList.toggle('hearted');
+  btn.classList.add('pop');
+  setTimeout(() => btn.classList.remove('pop'), 300);
+
+  if (savedSlugs.has(slug)) {
+    savedSlugs.delete(slug);
+  } else {
+    savedSlugs.add(slug);
+    // Show info toast on first ever heart
+    if (!hasShownSavedToast) {
+      hasShownSavedToast = true;
+      const toast = document.getElementById('savedToast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+    }
+  }
+  try { localStorage.setItem('vg-saved', JSON.stringify([...savedSlugs])); } catch(e) {}
+
+  // Update Saved filter count
+  const savedBtn = document.getElementById('filterSaved');
+  if (savedBtn) savedBtn.style.display = savedSlugs.size > 0 ? '' : 'none';
+  // If currently viewing Saved filter, re-apply
+  if (activeFilter === '__saved') updateFilter();
+};
+
 // ============================================
 // FILTER BUTTONS
 // ============================================
@@ -1161,6 +1246,21 @@ filterBar.querySelector('.filter-btn.active').style.borderColor = 'var(--text)';
 const entriesEl = document.getElementById('entries');
 const carousel = document.getElementById('cardCarousel');
 
+// Load saved favorites from localStorage
+let savedSlugs = new Set();
+let hasShownSavedToast = false;
+try {
+  const saved = JSON.parse(localStorage.getItem('vg-saved') || '[]');
+  savedSlugs = new Set(saved);
+  if (saved.length > 0) hasShownSavedToast = true;
+} catch(e) {}
+
+// Show Saved filter if items exist
+if (savedSlugs.size > 0) {
+  const sb = document.getElementById('filterSaved');
+  if (sb) sb.style.display = '';
+}
+
 places.forEach((p, i) => {
   const col = catColor(p.category);
 
@@ -1189,7 +1289,9 @@ places.forEach((p, i) => {
       ? '<div class="entry-thumb-wrap"><div class="entry-thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div></div>'
       : '');
 
+  const isHearted = savedSlugs.has(p.slug);
   entry.innerHTML =
+    '<button class="entry-heart' + (isHearted ? ' hearted' : '') + '" data-slug="' + p.slug + '" onclick="toggleHeart(this)">♥</button>' +
     '<div class="entry-head"><span class="entry-tag" style="background:' + col + '">' + p.category + '</span>' + price + '</div>' +
     '<div class="entry-title-row"><h2>' + p.name + '</h2>' +
     '<button class="share-link" onclick="copyShareLink(\'' + p.slug + '\',this)" title="Copy link">' +
@@ -1400,7 +1502,10 @@ function updateFilter() {
   let visible = 0;
 
   places.forEach((p, i) => {
-    const show = activeFilter === 'all' || p.category === activeFilter;
+    let show;
+    if (activeFilter === 'all') show = true;
+    else if (activeFilter === '__saved') show = savedSlugs.has(p.slug);
+    else show = p.category === activeFilter;
 
     // List entries
     document.getElementById('entry-' + p.slug).classList.toggle('hidden', !show);
@@ -1542,16 +1647,10 @@ function handleHash() {
       return;
     }
   }
-  // Default to ~50% entry so the featured view starts mid-list
-  const visibleEntries = document.querySelectorAll('.entry:not(.hidden)');
-  if (visibleEntries.length) {
-    const midEl = visibleEntries[Math.floor(visibleEntries.length / 2)];
-    setTimeout(() => {
-      const idx = parseInt(midEl.dataset.index);
-      setActive(idx, 'scroll');
-      midEl.scrollIntoView({ behavior: 'auto', block: 'center' });
-    }, 300);
-  }
+  // No hash — start at top, let user scroll naturally
+  window.scrollTo(0, 0);
+  const colLeft = document.getElementById('colLeft');
+  if (colLeft) colLeft.scrollTop = 0;
 }
 
 handleHash();
@@ -1608,4 +1707,3 @@ window.locateUser = function() {
 </script>
 </body>
 </html>
-
