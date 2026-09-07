@@ -18,7 +18,7 @@
     --text-3: #8A8A8A;
     --border: #E0DDD8;
     --hover: #F3F1ED;
-    --progress: #D95B43;
+    --progress: #2AAA8A;
     --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   }
@@ -102,7 +102,7 @@
   .guiides-brand {
     font-family: var(--sans);
     font-size: 0.62rem;
-    color: var(--progress);
+    color: #D95B43;
     text-decoration: none;
     letter-spacing: 0.04em;
     font-weight: 500;
@@ -117,7 +117,7 @@
     font-weight: 600;
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: #2AAA8A;
+    color: var(--progress);
     margin-bottom: 0.6rem;
   }
   .dark-toggle {
@@ -199,18 +199,18 @@
     height: 9rem;
     background: linear-gradient(
       rgba(var(--bg-rgb, 247,244,239), 0) 0%,
-      rgba(var(--bg-rgb, 247,244,239), 0.15) 45%,
-      rgba(var(--bg-rgb, 247,244,239), 0.65) 75%,
-      rgba(var(--bg-rgb, 247,244,239), 1) 100%
+      rgba(var(--bg-rgb, 247,244,239), 0.5) 30%,
+      rgba(var(--bg-rgb, 247,244,239), 0.85) 55%,
+      rgba(var(--bg-rgb, 247,244,239), 1) 75%
     );
     pointer-events: none;
   }
   body.dark .intro-body.collapsed::after {
     background: linear-gradient(
       rgba(30, 30, 30, 0) 0%,
-      rgba(30, 30, 30, 0.4) 35%,
-      rgba(30, 30, 30, 0.8) 65%,
-      rgba(30, 30, 30, 1) 100%
+      rgba(30, 30, 30, 0.5) 30%,
+      rgba(30, 30, 30, 0.85) 55%,
+      rgba(30, 30, 30, 1) 75%
     );
   }
   .intro-toggle {
@@ -311,16 +311,10 @@
     padding: 1.75rem 2.5rem;
     border-bottom: 1px solid var(--border);
     position: relative;
-    transition: background 0.2s, box-shadow 0.2s;
-    max-width: 680px;
-    margin: 0 auto;
+    transition: background 0.2s;
   }
   .entry:hover { background: var(--hover); cursor: pointer; }
-  .entry.active {
-    background: var(--hover);
-    box-shadow: 0 0 0 1.5px var(--border);
-    border-radius: 4px;
-  }
+  .entry.active { background: var(--hover); }
   .entry.active::before {
     content: '';
     position: absolute;
@@ -1589,12 +1583,12 @@ function updateFilter() {
   observer.disconnect();
   document.querySelectorAll('.entry:not(.hidden)').forEach(el => observer.observe(el));
 
-  // Scroll behavior: category filter → scroll to its section break at top;
-  // "All" → scroll to 50% of entries
+  // Scroll behavior — skip on initial load (page starts at top)
+  if (!filterInitialized) return;
+
   const visibleEntries = document.querySelectorAll('.entry:not(.hidden)');
 
   if (activeFilter !== 'all') {
-    // Find the matching section break and scroll it to top
     const sb = document.querySelector('.section-break[data-cat="' + activeFilter + '"]');
     if (sb) setTimeout(() => sb.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
   }
@@ -1604,7 +1598,6 @@ function updateFilter() {
     const midIdx = parseInt(midEl.dataset.index);
     activeIndex = midIdx;
 
-    // Clear old active states, apply new
     document.querySelectorAll('.entry.active').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
     midEl.classList.add('active');
@@ -1612,7 +1605,6 @@ function updateFilter() {
     const pin = document.getElementById('pin-' + midIdx);
     if (pin) pin.classList.add('active');
 
-    // Only auto-scroll to mid-entry for "All" filter
     if (activeFilter === 'all') {
       setTimeout(() => midEl.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
     }
@@ -1627,7 +1619,9 @@ function updateFilter() {
   }
 }
 
+let filterInitialized = false;
 updateFilter();
+filterInitialized = true;
 
 // ============================================
 // MOBILE VIEW TOGGLE
@@ -1680,6 +1674,11 @@ window.setView = function(mode) {
         el.classList.add('active');
         el.style.setProperty('--c-active', catColor(places[savedIdx].category));
       }
+      // Re-center desktop split-pane map on active pin
+      setTimeout(() => {
+        map.invalidateSize();
+        map.setView([places[savedIdx].lat, places[savedIdx].lng], 16, { animate: false });
+      }, 200);
     }
 
     // Fade out
