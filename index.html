@@ -50,7 +50,7 @@
   body.dark .filter-btn:hover { background: #333; }
   body.dark .entry-links a { border-color: #444; color: var(--text-2); }
   body.dark .entry-links a:hover { background: var(--text); color: var(--bg); }
-  body.dark .pin-label { background: rgba(30,30,30,0.92); color: #ddd; }
+  body.dark .pin-label { background: rgba(28, 28, 30, 0.92); color: #fff; }
 
   /* =================== BASE =================== */
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -166,9 +166,9 @@
   .settings-btn svg { width: 15px; height: 15px; }
 
   .settings-popover {
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 0;
+    position: fixed;
+    top: 36px;
+    right: 0.75rem;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -772,15 +772,15 @@
     bottom: calc(100% + 6px);
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255,255,255,0.92);
-    color: #1A1A1A;
+    background: rgba(28, 28, 30, 0.88);
+    color: #fff;
     font-family: var(--sans);
     font-size: 0.65rem;
     font-weight: 600;
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     white-space: nowrap;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.2s;
@@ -947,7 +947,7 @@
   body.card-turquoise .card-body .card-cat { color: #9CE0D8; }
   body.card-turquoise .pin-label {
     background: rgba(0, 55, 60, 0.92);
-    color: #9CE0D8;
+    color: #fff;
     box-shadow: 0 1px 6px rgba(0,0,0,0.25);
   }
 
@@ -961,7 +961,7 @@
   body.card-plum .card-body .card-cat { color: #DDB8D7; }
   body.card-plum .pin-label {
     background: rgba(50, 18, 48, 0.92);
-    color: #DDB8D7;
+    color: #fff;
     box-shadow: 0 1px 6px rgba(0,0,0,0.25);
   }
 
@@ -1410,7 +1410,7 @@ document.getElementById('copyPageLink').addEventListener('click', function() {
 // ============================================
 // READER LIKES (visual concept, cookie-stored)
 // ============================================
-const BASE_LIKES = 3386;
+const BASE_LIKES = 117;
 let userLiked = false;
 try { userLiked = localStorage.getItem('vg-liked') === '1'; } catch(e) {}
 
@@ -1784,6 +1784,19 @@ filterBar.querySelectorAll('.filter-btn').forEach(btn => {
   }
   mapFilterBar.appendChild(clone);
 });
+// Add gear icon to map filter bar (right end)
+const mapGear = document.createElement('button');
+mapGear.className = 'topbar-icon';
+mapGear.title = 'Settings';
+mapGear.style.cssText = 'margin-left:auto;flex-shrink:0;';
+mapGear.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
+mapGear.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const pop = document.getElementById('settingsPopover');
+  pop.classList.toggle('open');
+});
+mapFilterBar.appendChild(mapGear);
+
 mapFilterBar.addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
   if (btn) syncFilterBars(btn);
@@ -2170,21 +2183,31 @@ window.setView = function(mode) {
 
     if (mode === 'map') {
       ensureTiles();
-      map.invalidateSize();
-      if (activeIndex >= 0) {
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-          const targetZoom = 16;
-          const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
-          targetPoint.y += window.innerHeight * 0.18;
-          const offsetLatLng = map.unproject(targetPoint, targetZoom);
-          map.setView(offsetLatLng, targetZoom, { animate: false });
-        } else {
-          map.setView([places[activeIndex].lat, places[activeIndex].lng], 16, { animate: false });
+      // Defer map setup to next frame so browser reflows the full-size container first
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        if (activeIndex >= 0) {
+          const isMobile = window.innerWidth <= 768;
+          if (isMobile) {
+            const targetZoom = 16;
+            const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
+            targetPoint.y += window.innerHeight * 0.18;
+            const offsetLatLng = map.unproject(targetPoint, targetZoom);
+            map.setView(offsetLatLng, targetZoom, { animate: false });
+          } else {
+            map.setView([places[activeIndex].lat, places[activeIndex].lng], 16, { animate: false });
+          }
+          const card = document.getElementById('card-' + activeIndex);
+          if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+          // Highlight active pin
+          document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
+          const pin = document.getElementById('pin-' + activeIndex);
+          if (pin) pin.classList.add('active');
         }
-        const card = document.getElementById('card-' + activeIndex);
-        if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
-      }
+        // Hold overlay slightly longer to let tiles start loading
+        setTimeout(() => { fade.classList.remove('active'); }, 80);
+      });
+      return; // skip the default fade-out below
     }
 
     if (mode === 'list' && activeIndex >= 0) {
