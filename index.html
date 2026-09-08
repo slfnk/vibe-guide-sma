@@ -147,7 +147,7 @@
   .topbar-icon svg { width: 15px; height: 15px; }
   .topbar-icon .copied-tip {
     position: absolute;
-    bottom: calc(100% + 4px);
+    top: calc(100% + 4px);
     left: 50%;
     transform: translateX(-50%);
     background: var(--text);
@@ -231,28 +231,29 @@
   }
 
   /* =================== PIN FADE (All filter) =================== */
-  body.filter-all .pin { filter: saturate(0.45) brightness(0.82); }
+  body.filter-all .pin { filter: saturate(0.7) brightness(0.9); }
   body.filter-all .pin.active { filter: none; }
 
   /* =================== READER LIKES =================== */
   .reader-likes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-    margin-top: 0.75rem;
-    font-size: 0.75rem;
+    display: inline;
+    font-size: 0.82rem;
     color: var(--text-3);
+  }
+  .reader-likes .like-sep {
+    color: var(--border);
+    margin: 0 0.3rem;
   }
   .like-btn {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--border);
     transition: color 0.2s, transform 0.2s;
     padding: 0;
     line-height: 1;
+    vertical-align: baseline;
   }
   .like-btn:hover { color: #E25555; }
   .like-btn.liked { color: #E25555; }
@@ -1189,6 +1190,20 @@ const settingsConfig = [
       setTimeout(() => { if (window._map) window._map.invalidateSize(); }, 200);
     }
   },
+  {
+    key: 'accent', label: 'Accent', type: 'cycle',
+    options: ['Teal', 'Coral', 'Gold', 'Indigo', 'Rose', 'Slate'],
+    _colors: ['#2AAA8A', '#D95B43', '#C4A035', '#4A6FA5', '#C96B8B', '#6B8291'],
+    get: function() {
+      const cur = getComputedStyle(document.documentElement).getPropertyValue('--progress').trim();
+      const idx = this._colors.indexOf(cur);
+      return idx >= 0 ? idx : 0;
+    },
+    set: function(idx) {
+      document.documentElement.style.setProperty('--progress', this._colors[idx]);
+      try { localStorage.setItem('vg-accent', idx); } catch(e) {}
+    }
+  },
   { key: '_d0', type: 'divider' },
   {
     key: 'pinshape', label: 'Pin Shape', type: 'cycle', options: ['Circle', 'Diamond', 'Square'],
@@ -1357,7 +1372,7 @@ document.getElementById('copyPageLink').addEventListener('click', function() {
 // ============================================
 // READER LIKES (visual concept, cookie-stored)
 // ============================================
-const BASE_LIKES = 117;
+const BASE_LIKES = 3386;
 let userLiked = false;
 try { userLiked = localStorage.getItem('vg-liked') === '1'; } catch(e) {}
 
@@ -1420,6 +1435,12 @@ try {
   if (savedOpacity !== null) document.documentElement.style.setProperty('--card-alpha', parseInt(savedOpacity) / 100);
   const savedPinSize = localStorage.getItem('vg-pinsize');
   if (savedPinSize !== null) document.documentElement.style.setProperty('--pin-size', savedPinSize + 'px');
+  const savedAccent = localStorage.getItem('vg-accent');
+  if (savedAccent !== null) {
+    const accentColors = ['#2AAA8A', '#D95B43', '#C4A035', '#4A6FA5', '#C96B8B', '#6B8291'];
+    const ai = parseInt(savedAccent);
+    if (ai >= 0 && ai < accentColors.length) document.documentElement.style.setProperty('--progress', accentColors[ai]);
+  }
 } catch(e) {}
 
 // ============================================
@@ -1569,11 +1590,10 @@ introSection.innerHTML =
   '<p class="updated-inline">' + 'Updated ' + guide.updated + '</p>' +
   '<h1>' + guide.title + '</h1>' +
   '<p class="deck">' + guide.deck + '</p>' +
-  '<p class="byline">By <strong>' + guide.byline + '</strong></p>' +
-  '<div class="reader-likes">' +
-  '<button class="like-btn" id="likeBtn" onclick="toggleLike()">♥</button>' +
-  '<span>Liked by <strong id="likeCount"></strong> readers</span>' +
-  '</div>';
+  '<p class="byline">By <strong>' + guide.byline + '</strong>' +
+  '<span class="reader-likes"><span class="like-sep">·</span>' +
+  '<button class="like-btn" id="likeBtn" onclick="toggleLike()">♥</button> ' +
+  'Liked by <strong id="likeCount"></strong> readers</span></p>';
 
 document.title = guide.title;
 updateLikeDisplay();
