@@ -25,7 +25,7 @@
     --progress: #2AAA8A;
     --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    --card-blur: 3px;
+    --card-blur: 0px;
     --card-alpha: 0.85;
     --pin-size: 16px;
   }
@@ -1124,7 +1124,6 @@
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
             </svg>
           </button>
-          <div class="settings-popover" id="settingsPopover"></div>
         </div>
       </div>
     </div>
@@ -1190,6 +1189,9 @@
     Map
   </button>
 </div>
+
+<!-- Settings popover (body-level so it's visible in all views) -->
+<div class="settings-popover" id="settingsPopover"></div>
 
 <script>
 // ============================================
@@ -1264,7 +1266,7 @@ const settingsConfig = [
   },
   {
     key: 'blur', label: 'Card Blur', type: 'slider', min: 0, max: 30, step: 1, unit: 'px',
-    get: () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-blur')) || 3,
+    get: () => parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-blur')) || 0,
     set: (val) => {
       document.documentElement.style.setProperty('--card-blur', val + 'px');
       try { localStorage.setItem('vg-blur', val); } catch(e) {}
@@ -2183,31 +2185,31 @@ window.setView = function(mode) {
 
     if (mode === 'map') {
       ensureTiles();
-      // Defer map setup to next frame so browser reflows the full-size container first
-      requestAnimationFrame(() => {
-        map.invalidateSize();
-        if (activeIndex >= 0) {
-          const isMobile = window.innerWidth <= 768;
-          if (isMobile) {
-            const targetZoom = 16;
-            const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
-            targetPoint.y += window.innerHeight * 0.18;
-            const offsetLatLng = map.unproject(targetPoint, targetZoom);
-            map.setView(offsetLatLng, targetZoom, { animate: false });
-          } else {
-            map.setView([places[activeIndex].lat, places[activeIndex].lng], 16, { animate: false });
-          }
-          const card = document.getElementById('card-' + activeIndex);
-          if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
-          // Highlight active pin
-          document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
-          const pin = document.getElementById('pin-' + activeIndex);
-          if (pin) pin.classList.add('active');
+      // Force synchronous reflow so map container has correct dimensions
+      // before Leaflet calculates tile positions and pin coordinates
+      void document.querySelector('.col-right').offsetHeight;
+      map.invalidateSize();
+      if (activeIndex >= 0) {
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+          const targetZoom = 16;
+          const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
+          targetPoint.y += window.innerHeight * 0.18;
+          const offsetLatLng = map.unproject(targetPoint, targetZoom);
+          map.setView(offsetLatLng, targetZoom, { animate: false });
+        } else {
+          map.setView([places[activeIndex].lat, places[activeIndex].lng], 16, { animate: false });
         }
-        // Hold overlay slightly longer to let tiles start loading
-        setTimeout(() => { fade.classList.remove('active'); }, 80);
-      });
-      return; // skip the default fade-out below
+        const card = document.getElementById('card-' + activeIndex);
+        if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+        // Highlight active pin + label
+        document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
+        const pin = document.getElementById('pin-' + activeIndex);
+        if (pin) pin.classList.add('active');
+      }
+      // Hold overlay to let tiles load into the correct viewport
+      setTimeout(() => { fade.classList.remove('active'); }, 180);
+      return;
     }
 
     if (mode === 'list' && activeIndex >= 0) {
