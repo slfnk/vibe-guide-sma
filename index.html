@@ -465,6 +465,17 @@
     border-radius: 2px;
     color: #fff;
   }
+  /* Category label: text only */
+  body.tag-text .entry-tag {
+    background: transparent !important;
+    color: var(--tag-color);
+    padding: 0;
+  }
+  /* Category label: pill */
+  body.tag-pill .entry-tag {
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+  }
   .entry-price {
     font-size: 0.75rem;
     font-weight: 500;
@@ -729,7 +740,10 @@
     border-radius: 50%;
     border: 2.5px solid #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    transition: transform 0.25s, box-shadow 0.25s, filter 0.3s;
+    transition: box-shadow 0.25s, filter 0.3s;
+  }
+  @media (min-width: 769px) {
+    .pin { transition: transform 0.25s, box-shadow 0.25s, filter 0.3s; }
     cursor: pointer;
   }
   .pin.active {
@@ -931,6 +945,11 @@
   body.card-turquoise .card-expand-btn,
   body.card-turquoise .card-action-links a { color: #7FD8D0; }
   body.card-turquoise .card-body .card-cat { color: #9CE0D8; }
+  body.card-turquoise .pin-label {
+    background: rgba(0, 55, 60, 0.92);
+    color: #9CE0D8;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  }
 
   /* Card theme: Plum */
   body.card-plum .card {
@@ -940,6 +959,11 @@
   body.card-plum .card-expand-btn,
   body.card-plum .card-action-links a { color: #D4A0CC; }
   body.card-plum .card-body .card-cat { color: #DDB8D7; }
+  body.card-plum .pin-label {
+    background: rgba(50, 18, 48, 0.92);
+    color: #DDB8D7;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  }
 
   /* Card theme: Light */
   body.card-light .card {
@@ -952,6 +976,10 @@
   body.card-light .card-body .card-cat { color: #777; }
   body.card-light .card-expand-btn,
   body.card-light .card-action-links a { color: var(--progress); }
+  body.card-light .pin-label {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+  }
 
   /* =================== MAP FILTER BAR (all viewports) =================== */
   .map-filter-bar {
@@ -1270,6 +1298,16 @@ const settingsConfig = [
     }
   },
   {
+    key: 'catlabel', label: 'Category Labels', type: 'cycle', options: ['Box', 'Text', 'Pill'],
+    get: () => document.body.classList.contains('tag-text') ? 1 : document.body.classList.contains('tag-pill') ? 2 : 0,
+    set: (idx) => {
+      document.body.classList.remove('tag-text', 'tag-pill');
+      if (idx === 1) document.body.classList.add('tag-text');
+      if (idx === 2) document.body.classList.add('tag-pill');
+      try { localStorage.setItem('vg-catlabel', idx); } catch(e) {}
+    }
+  },
+  {
     key: 'thumbs', label: 'Thumbnails', type: 'cycle', options: ['Show', 'Hide'],
     get: () => document.body.classList.contains('hide-thumbs') ? 1 : 0,
     set: (idx) => {
@@ -1372,7 +1410,7 @@ document.getElementById('copyPageLink').addEventListener('click', function() {
 // ============================================
 // READER LIKES (visual concept, cookie-stored)
 // ============================================
-const BASE_LIKES = 129;
+const BASE_LIKES = 3386;
 let userLiked = false;
 try { userLiked = localStorage.getItem('vg-liked') === '1'; } catch(e) {}
 
@@ -1423,6 +1461,13 @@ try {
     document.body.classList.remove('text-compact', 'text-large');
     if (ts === '1') document.body.classList.add('text-compact');
     if (ts === '2') document.body.classList.add('text-large');
+  }
+  // Category label style (3-way)
+  const cl = localStorage.getItem('vg-catlabel');
+  if (cl !== null) {
+    document.body.classList.remove('tag-text', 'tag-pill');
+    if (cl === '1') document.body.classList.add('tag-text');
+    if (cl === '2') document.body.classList.add('tag-pill');
   }
   const savedTheme = parseInt(localStorage.getItem('vg-card-theme') || '0');
   if (savedTheme > 0 && savedTheme < cardThemes.length) {
@@ -1799,7 +1844,7 @@ places.forEach((p, i) => {
   const isHearted = savedSlugs.has(p.slug);
   entry.innerHTML =
     '<button class="entry-heart' + (isHearted ? ' hearted' : '') + '" data-slug="' + p.slug + '" onclick="toggleHeart(this)">♥</button>' +
-    '<div class="entry-head"><span class="entry-tag" style="background:' + col + '">' + p.category + '</span>' + price + '</div>' +
+    '<div class="entry-head"><span class="entry-tag" style="background:' + col + ';--tag-color:' + col + '">' + p.category + '</span>' + price + '</div>' +
     '<div class="entry-title-row"><h2>' + p.name + '</h2>' +
     '<button class="share-link" onclick="copyShareLink(\'' + p.slug + '\',this)" title="Copy link">' +
     I.share + '<span class="copied-tip">Copied!</span></button></div>' +
@@ -2115,6 +2160,8 @@ window.setView = function(mode) {
     if (document.body.classList.contains('text-compact')) persist.push('text-compact');
     if (document.body.classList.contains('text-large')) persist.push('text-large');
     if (document.body.classList.contains('hide-thumbs')) persist.push('hide-thumbs');
+    if (document.body.classList.contains('tag-text')) persist.push('tag-text');
+    if (document.body.classList.contains('tag-pill')) persist.push('tag-pill');
     cardThemes.forEach(t => { if (t && document.body.classList.contains(t)) persist.push(t); });
     document.body.className = persist.join(' ') + ' view-' + mode;
 
