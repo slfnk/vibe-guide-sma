@@ -2186,29 +2186,44 @@ window.setView = function(mode) {
     if (mode === 'map') {
       ensureTiles();
       // Force synchronous reflow so map container has correct dimensions
-      // before Leaflet calculates tile positions and pin coordinates
-      void document.querySelector('.col-right').offsetHeight;
+      const colRight = document.querySelector('.col-right');
+      void colRight.offsetHeight;
       map.invalidateSize();
-      if (activeIndex >= 0) {
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-          const targetZoom = 16;
-          const targetPoint = map.project([places[activeIndex].lat, places[activeIndex].lng], targetZoom);
-          targetPoint.y += window.innerHeight * 0.18;
-          const offsetLatLng = map.unproject(targetPoint, targetZoom);
-          map.setView(offsetLatLng, targetZoom, { animate: false });
-        } else {
-          map.setView([places[activeIndex].lat, places[activeIndex].lng], 16, { animate: false });
+
+      // Leaflet may need one more tick after invalidateSize on first reveal
+      // from display:none — schedule a second pass to be safe
+      const centerOnPin = () => {
+        map.invalidateSize();
+        if (activeIndex >= 0) {
+          const p = places[activeIndex];
+          const isMobile = window.innerWidth <= 768;
+          if (isMobile) {
+            const targetZoom = 16;
+            const targetPoint = map.project([p.lat, p.lng], targetZoom);
+            targetPoint.y += window.innerHeight * 0.18;
+            const offsetLatLng = map.unproject(targetPoint, targetZoom);
+            map.setView(offsetLatLng, targetZoom, { animate: false });
+          } else {
+            map.setView([p.lat, p.lng], 16, { animate: false });
+          }
+          const card = document.getElementById('card-' + activeIndex);
+          if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
+          // Highlight active pin + label
+          document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
+          const pin = document.getElementById('pin-' + activeIndex);
+          if (pin) pin.classList.add('active');
         }
-        const card = document.getElementById('card-' + activeIndex);
-        if (card) card.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'center' });
-        // Highlight active pin + label
-        document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
-        const pin = document.getElementById('pin-' + activeIndex);
-        if (pin) pin.classList.add('active');
-      }
-      // Hold overlay to let tiles load into the correct viewport
-      setTimeout(() => { fade.classList.remove('active'); }, 180);
+      };
+
+      // First attempt immediately after reflow
+      centerOnPin();
+      // Second attempt after a real frame — catches cases where Leaflet's
+      // internal pixel origin hasn't settled after the first invalidateSize
+      requestAnimationFrame(() => {
+        centerOnPin();
+        // Fade out after second pass
+        setTimeout(() => { fade.classList.remove('active'); }, 100);
+      });
       return;
     }
 
