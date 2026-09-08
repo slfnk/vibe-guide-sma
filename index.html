@@ -22,7 +22,7 @@
     --text-3: #8A8A8A;
     --border: #E0DDD8;
     --hover: #F3F1ED;
-    --progress: #2AAA8A;
+    --progress: #6B8291;
     --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --card-blur: 0px;
@@ -167,19 +167,19 @@
 
   .settings-popover {
     position: fixed;
-    top: 36px;
-    right: 0.75rem;
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 0.5rem 0;
     min-width: 210px;
     box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-    z-index: 100;
+    z-index: 9998;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-4px);
     transition: opacity 0.15s, transform 0.15s;
+    max-height: 80vh;
+    overflow-y: auto;
   }
   .settings-popover.open {
     opacity: 1;
@@ -598,8 +598,8 @@
   /* =================== HEART FAVORITES =================== */
   .entry-heart {
     position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
+    top: 0.4rem;
+    right: 0.4rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -608,7 +608,9 @@
     color: var(--border);
     transition: color 0.2s, transform 0.2s;
     z-index: 3;
-    padding: 0.2rem;
+    padding: 0.6rem;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .entry-heart:hover { color: var(--text-3); }
   .entry-heart.hearted { color: #E25555; }
@@ -765,6 +767,13 @@
   }
   body.square-pins .pin.active {
     transform: scale(1.5);
+  }
+  /* Force circle pins on mobile for performance */
+  @media (max-width: 768px) {
+    body.diamond-pins .pin { border-radius: 50%; transform: none; }
+    body.diamond-pins .pin.active { transform: scale(1.6); }
+    body.square-pins .pin { border-radius: 50%; }
+    body.square-pins .pin.active { transform: scale(1.6); }
   }
 
   .pin-label {
@@ -1226,8 +1235,15 @@ const settingsConfig = [
     _colors: ['#2AAA8A', '#D95B43', '#C4A035', '#4A6FA5', '#C96B8B', '#6B8291'],
     get: function() {
       const cur = getComputedStyle(document.documentElement).getPropertyValue('--progress').trim();
-      const idx = this._colors.indexOf(cur);
-      return idx >= 0 ? idx : 0;
+      let idx = this._colors.indexOf(cur);
+      if (idx < 0) {
+        // Try matching via canvas hex conversion for rgb() values
+        const ctx = document.createElement('canvas').getContext('2d');
+        ctx.fillStyle = cur;
+        const norm = ctx.fillStyle; // always returns #rrggbb
+        idx = this._colors.findIndex(c => { ctx.fillStyle = c; return ctx.fillStyle === norm; });
+      }
+      return idx >= 0 ? idx : 5; // default Slate
     },
     set: function(idx) {
       document.documentElement.style.setProperty('--progress', this._colors[idx]);
@@ -1375,8 +1391,8 @@ function cycleSetting(key, dir) {
     const arrow = e.target.closest('.settings-arrow');
     if (arrow) { e.stopPropagation(); cycleSetting(arrow.dataset.key, parseInt(arrow.dataset.dir)); }
   });
-  document.getElementById('settingsBtn').addEventListener('click', (e) => {
-    e.stopPropagation();
+  // Shared open function — positions popover below whichever gear was clicked
+  function openSettings(triggerBtn) {
     settingsConfig.forEach(cfg => {
       if (cfg.type === 'divider') return;
       const val = document.getElementById('sv-' + cfg.key);
@@ -1390,7 +1406,15 @@ function cycleSetting(key, dir) {
         val.textContent = cfg.options[cfg.get()];
       }
     });
+    const rect = triggerBtn.getBoundingClientRect();
+    pop.style.top = (rect.bottom + 6) + 'px';
+    pop.style.right = Math.max(8, window.innerWidth - rect.right) + 'px';
     pop.classList.toggle('open');
+  }
+  window._openSettings = openSettings;
+  document.getElementById('settingsBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    openSettings(e.currentTarget);
   });
   document.addEventListener('click', (e) => {
     if (!pop.contains(e.target)) pop.classList.remove('open');
@@ -1794,8 +1818,7 @@ mapGear.style.cssText = 'margin-left:auto;flex-shrink:0;';
 mapGear.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
 mapGear.addEventListener('click', (e) => {
   e.stopPropagation();
-  const pop = document.getElementById('settingsPopover');
-  pop.classList.toggle('open');
+  if (window._openSettings) window._openSettings(e.currentTarget);
 });
 mapFilterBar.appendChild(mapGear);
 
