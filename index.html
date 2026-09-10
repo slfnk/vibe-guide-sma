@@ -106,21 +106,6 @@
     text-transform: uppercase;
     color: var(--progress);
   }
-  .guiides-brand {
-    font-family: var(--sans);
-    font-size: 0.62rem;
-    color: #D95B43;
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    font-weight: 500;
-    display: inline-block;
-    transition: color 0.2s, transform 0.15s;
-  }
-  .guiides-brand strong {
-    font-weight: 700;
-    letter-spacing: 0.08em;
-  }
-  .guiides-brand:hover { color: #B84835; transform: scale(1.06); }
   .intro-section .updated-inline {
     font-size: 0.68rem;
     font-weight: 600;
@@ -231,35 +216,6 @@
   @media (max-width: 768px) {
     body.layout-swapped .layout { flex-direction: column; }
   }
-
-  /* =================== PIN FADE (All filter) =================== */
-  body.filter-all .pin { filter: saturate(0.7) brightness(0.9); }
-  body.filter-all .pin.active { filter: none; }
-
-  /* =================== READER LIKES =================== */
-  .reader-likes {
-    display: inline;
-    font-size: 0.82rem;
-    color: var(--text-3);
-  }
-  .reader-likes .like-sep {
-    color: var(--border);
-    margin: 0 0.3rem;
-  }
-  .like-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.82rem;
-    color: var(--border);
-    transition: color 0.2s, transform 0.2s;
-    padding: 0;
-    line-height: 1;
-    vertical-align: baseline;
-  }
-  .like-btn:hover { color: var(--progress); }
-  .like-btn.liked { color: var(--progress); }
-  .like-btn.pop { animation: bookmarkPop 0.3s ease-out; }
 
   /* =================== EDITORIAL INTRO =================== */
   .intro-section {
@@ -663,49 +619,6 @@
   .entry-heart.card-heart.hearted { color: var(--progress); }
   .card { position: relative; }
 
-  /* =================== READER NOTES =================== */
-  .entry-notes-trigger {
-    font-family: var(--sans);
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: var(--text-3);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.15rem 0;
-    display: none;
-    transition: color 0.2s;
-  }
-  .entry-notes-trigger:hover { color: var(--progress); }
-  .entry-notes-trigger svg { width: 11px; height: 11px; vertical-align: -1px; margin-right: 0.2rem; }
-  .entry-notes-box {
-    display: none;
-    margin-top: 0.5rem;
-    clear: both;
-  }
-  .entry-notes-box.open { display: block; }
-  .entry-notes-box textarea {
-    width: 100%;
-    min-height: 52px;
-    max-height: 140px;
-    font-family: var(--sans);
-    font-size: 0.8rem;
-    line-height: 1.5;
-    padding: 0.45rem 0.6rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background: var(--hover);
-    color: var(--text);
-    resize: vertical;
-    transition: border-color 0.2s;
-  }
-  .entry-notes-box textarea::placeholder { color: var(--text-3); }
-  .entry-notes-box textarea:focus {
-    outline: none;
-    border-color: var(--progress);
-  }
-  .entry-notes-has-note .entry-notes-trigger { color: var(--progress); }
-
   /* =================== SECTION BREAKS =================== */
   .section-break {
     padding: 2rem 2.5rem 1.5rem;
@@ -786,10 +699,10 @@
     border-radius: 50%;
     border: 2.5px solid #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    transition: box-shadow 0.25s, filter 0.3s;
+    transition: box-shadow 0.25s;
   }
   @media (min-width: 769px) {
-    .pin { transition: transform 0.25s, box-shadow 0.25s, filter 0.3s; }
+    .pin { transition: transform 0.25s, box-shadow 0.25s; }
     cursor: pointer;
   }
   .pin.active {
@@ -1161,7 +1074,7 @@
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
     <div class="top-bar">
-      <a href="#" class="guiides-brand">⛺︎ made with <strong>GUIIDES</strong> ⛺︎</a>
+      <div></div>
       <div class="topbar-icons">
         <button class="topbar-icon" id="copyPageLink" title="Copy page link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1221,7 +1134,7 @@
 
 <!-- View transition overlay -->
 <div class="view-fade" id="viewFade"></div>
-<div class="saved-toast" id="savedToast">Bookmark spots to save them for later. You can also add private notes to any saved spot. Clearing cookies will reset your saves.</div>
+<div class="saved-toast" id="savedToast">Bookmark spots to save them for later. Clearing cookies will reset your saves.</div>
 
 <!-- Mobile bottom toggle -->
 <div class="mobile-toggle" id="mobileToggle">
@@ -1478,29 +1391,6 @@ document.getElementById('copyPageLink').addEventListener('click', function() {
 });
 
 // ============================================
-// READER LIKES (visual concept, cookie-stored)
-// ============================================
-const BASE_LIKES = 117;
-let userLiked = false;
-try { userLiked = localStorage.getItem('vg-liked') === '1'; } catch(e) {}
-
-function updateLikeDisplay() {
-  const el = document.getElementById('likeCount');
-  const btn = document.getElementById('likeBtn');
-  if (!el) return;
-  el.textContent = (BASE_LIKES + (userLiked ? 1 : 0)).toLocaleString();
-  if (btn) btn.classList.toggle('liked', userLiked);
-}
-
-window.toggleLike = function() {
-  userLiked = !userLiked;
-  try { localStorage.setItem('vg-liked', userLiked ? '1' : '0'); } catch(e) {}
-  const btn = document.getElementById('likeBtn');
-  if (btn) { btn.classList.add('pop'); setTimeout(() => btn.classList.remove('pop'), 300); }
-  updateLikeDisplay();
-};
-
-// ============================================
 // MISC
 // ============================================
 function toggleIntro() {
@@ -1705,13 +1595,9 @@ introSection.innerHTML =
   '<p class="updated-inline">' + 'Updated ' + guide.updated + '</p>' +
   '<h1>' + guide.title + '</h1>' +
   '<p class="deck">' + guide.deck + '</p>' +
-  '<p class="byline">By <strong>' + guide.byline + '</strong>' +
-  '<span class="reader-likes"><span class="like-sep">·</span>' +
-  '<button class="like-btn" id="likeBtn" onclick="toggleLike()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px;vertical-align:-1px"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button> ' +
-  'Liked by <strong id="likeCount"></strong> readers</span></p>';
+  '<p class="byline">By <strong>' + guide.byline + '</strong></p>';
 
 document.title = guide.title;
-updateLikeDisplay();
 
 document.getElementById('introBody').innerHTML = guide.intro.map((p, i) =>
   '<p' + (i === 0 ? ' class="drop-cap"' : '') + '>' + p + '</p>'
@@ -1726,8 +1612,7 @@ const I = {
   fb: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>',
   share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
   bookmark: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
-  bookmarkFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>',
-  pencil: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>'
+  bookmarkFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>'
 };
 
 function linkRow(p) {
@@ -1754,42 +1639,6 @@ window.copyShareLink = function(slug, btn) {
     tip.classList.add('show');
     setTimeout(function() { tip.classList.remove('show'); }, 1500);
   });
-};
-
-// ============================================
-// READER NOTES (localStorage)
-// ============================================
-function getNoteForSlug(slug) {
-  try { return localStorage.getItem('vg-note-' + slug) || ''; } catch(e) { return ''; }
-}
-
-window.saveNote = function(textarea) {
-  const slug = textarea.closest('.entry-notes-box').dataset.slug;
-  const val = textarea.value.trim();
-  try {
-    if (val) localStorage.setItem('vg-note-' + slug, val);
-    else localStorage.removeItem('vg-note-' + slug);
-  } catch(e) {}
-  // Update trigger label
-  const entry = textarea.closest('.entry');
-  if (entry) {
-    const trigger = entry.querySelector('.entry-notes-trigger');
-    if (trigger) trigger.innerHTML = I.pencil + (val ? 'edit notes' : 'add notes');
-    entry.classList.toggle('entry-notes-has-note', !!val);
-  }
-};
-
-window.toggleNotes = function(btn) {
-  const entry = btn.closest('.entry');
-  if (!entry) return;
-  const box = entry.querySelector('.entry-notes-box');
-  if (box) {
-    box.classList.toggle('open');
-    if (box.classList.contains('open')) {
-      const ta = box.querySelector('textarea');
-      if (ta) setTimeout(() => ta.focus(), 50);
-    }
-  }
 };
 
 window.toggleHeart = function(btn) {
@@ -1819,18 +1668,6 @@ window.toggleHeart = function(btn) {
     h.classList.toggle('hearted', isSaved);
     h.innerHTML = isSaved ? I.bookmarkFill : I.bookmark;
   });
-
-  // Show/hide notes triggers for this slug
-  document.querySelectorAll('.entry-notes-trigger[data-slug="' + slug + '"]').forEach(t => {
-    t.style.display = isSaved ? 'inline-flex' : '';
-    if (!isSaved) t.style.display = 'none';
-  });
-  // Collapse notes box if unsaved
-  if (!isSaved) {
-    document.querySelectorAll('.entry-notes-box[data-slug="' + slug + '"]').forEach(b => {
-      b.classList.remove('open');
-    });
-  }
 
   // Sync saved filter button visibility across both filter bars
   document.querySelectorAll('.filter-btn[data-filter="__saved"]').forEach(b => {
@@ -1979,8 +1816,6 @@ places.forEach((p, i) => {
       : '');
 
   const isHearted = savedSlugs.has(p.slug);
-  const savedNote = getNoteForSlug(p.slug);
-  const hasNote = savedNote.length > 0;
   entry.innerHTML =
     '<button class="entry-heart' + (isHearted ? ' hearted' : '') + '" data-slug="' + p.slug + '" onclick="toggleHeart(this)">' + (isHearted ? I.bookmarkFill : I.bookmark) + '</button>' +
     '<div class="entry-head"><span class="entry-tag" style="background:' + col + ';--tag-color:' + col + '">' + p.category + '</span>' + price + '</div>' +
@@ -1990,10 +1825,7 @@ places.forEach((p, i) => {
     thumbHtml +
     '<p class="desc">' + p.description + '</p>' +
     '<div style="clear:both"></div>' +
-    linkRow(p) +
-    '<button class="entry-notes-trigger" data-slug="' + p.slug + '" onclick="toggleNotes(this)" style="' + (isHearted ? 'display:inline-flex;align-items:center' : '') + '">' + I.pencil + (hasNote ? 'edit notes' : 'add notes') + '</button>' +
-    '<div class="entry-notes-box' + (hasNote && isHearted ? ' open' : '') + '" data-slug="' + p.slug + '"><textarea placeholder="Your private notes…" oninput="saveNote(this)">' + savedNote + '</textarea></div>';
-  if (hasNote && isHearted) entry.classList.add('entry-notes-has-note');
+    linkRow(p);
 
   entriesEl.appendChild(entry);
 
@@ -2202,7 +2034,6 @@ carousel.addEventListener('scroll', () => {
 const filterCount = document.getElementById('filterCount');
 
 function updateFilter() {
-  document.body.classList.toggle('filter-all', activeFilter === 'all');
   let visible = 0;
 
   places.forEach((p, i) => {
@@ -2298,7 +2129,6 @@ window.setView = function(mode) {
     if (document.body.classList.contains('diamond-pins')) persist.push('diamond-pins');
     if (document.body.classList.contains('square-pins')) persist.push('square-pins');
     if (document.body.classList.contains('layout-swapped')) persist.push('layout-swapped');
-    if (document.body.classList.contains('filter-all')) persist.push('filter-all');
     if (document.body.classList.contains('text-compact')) persist.push('text-compact');
     if (document.body.classList.contains('text-large')) persist.push('text-large');
     if (document.body.classList.contains('hide-thumbs')) persist.push('hide-thumbs');
