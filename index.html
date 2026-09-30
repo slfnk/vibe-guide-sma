@@ -106,6 +106,21 @@
     text-transform: uppercase;
     color: var(--progress);
   }
+  .guiides-brand {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    color: #038f9e;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    display: inline-block;
+    transition: color 0.2s, transform 0.15s;
+  }
+  .guiides-brand strong {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .guiides-brand:hover { color: #026f7b; transform: scale(1.06); }
   .intro-section .updated-inline {
     font-size: 0.68rem;
     font-weight: 600;
@@ -1074,7 +1089,7 @@
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
     <div class="top-bar">
-      <div></div>
+      <a href="#" class="guiides-brand">⛺︎ made with <strong>GUIIDES</strong> ⛺︎</a>
       <div class="topbar-icons">
         <button class="topbar-icon" id="copyPageLink" title="Copy page link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
