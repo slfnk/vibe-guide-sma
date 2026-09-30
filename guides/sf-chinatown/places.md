@@ -1,7 +1,7 @@
 Guide: Staff Picks
 Title: Chinatown Staff Picks from On Waverly
 Subtitle: Where the folks behind the counter eat, sip, and shop
-Author: On Waverly staff
+Author: On Waverly Staff
 Updated: September 2026
 Center: 37.7952, -122.4068, 16
 
