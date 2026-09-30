@@ -28,6 +28,7 @@
     --card-blur: 0px;
     --card-alpha: 0.85;
     --pin-size: 16px;
+    --banner-width: 50;
   }
 
   /* =================== DARK THEME =================== */
@@ -265,8 +266,8 @@
   /* =================== BANNER DIVIDER =================== */
   /* Files are plain rectangles; the pointed shape comes from clip-path */
   .guide-banner {
-    width: 50%;
-    max-width: 320px;
+    width: calc(var(--banner-width) * 1%);
+    max-width: calc(var(--banner-width) * 6.4px);
     aspect-ratio: 1600 / 119;
     margin: 1.4rem auto 0;
     background-size: cover;
@@ -1337,6 +1338,15 @@ const settingsConfig = [
       document.body.classList.toggle('hide-thumbs', idx === 1);
       try { localStorage.setItem('vg-thumbs', idx === 1 ? '1' : '0'); } catch(e) {}
     }
+  },
+  { key: '_d3', type: 'divider' },
+  {
+    key: 'bannerwidth', label: 'Banner Width', type: 'slider', min: 20, max: 100, step: 5, unit: '%',
+    get: () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--banner-width')) || 50,
+    set: (val) => {
+      document.documentElement.style.setProperty('--banner-width', val);
+      try { localStorage.setItem('vg-bannerwidth', val); } catch(e) {}
+    }
   }
 ];
 
@@ -1486,6 +1496,8 @@ try {
   if (savedBlur !== null) document.documentElement.style.setProperty('--card-blur', savedBlur + 'px');
   const savedOpacity = localStorage.getItem('vg-opacity');
   if (savedOpacity !== null) document.documentElement.style.setProperty('--card-alpha', parseInt(savedOpacity) / 100);
+  const savedBannerWidth = localStorage.getItem('vg-bannerwidth');
+  if (savedBannerWidth !== null) document.documentElement.style.setProperty('--banner-width', savedBannerWidth);
   const savedPinSize = localStorage.getItem('vg-pinsize');
   if (savedPinSize !== null) document.documentElement.style.setProperty('--pin-size', savedPinSize + 'px');
   const savedAccent = localStorage.getItem('vg-accent');
@@ -1680,7 +1692,13 @@ function showGuideNotFound(err) {
 }
 
 loadGuideText()
-  .then(text => init(parsePlacesMd(text)))
+  .then(text => {
+    // Guard against a wrong file pasted into places.md (e.g. index.html)
+    if (/^\s*</.test(text) || !/^Title:/m.test(text)) {
+      throw new Error('guides/' + GUIDE_SLUG + '/places.md doesn\'t look like a guide file — it may contain HTML or be missing its Title: line.');
+    }
+    init(parsePlacesMd(text));
+  })
   .catch(showGuideNotFound);
 
 function init(data) {
