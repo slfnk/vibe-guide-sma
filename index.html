@@ -262,6 +262,23 @@
     font-weight: 600;
   }
 
+  /* =================== BANNER DIVIDER =================== */
+  /* Files are plain rectangles; the pointed shape comes from clip-path */
+  .guide-banner {
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 1600 / 119;
+    margin: 1.4rem auto 0;
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: polygon(0 50%, 14.6% 0, 84.6% 0, 100% 50%, 84.6% 100%, 14.6% 100%);
+    clip-path: polygon(0 50%, 14.6% 0, 84.6% 0, 100% 50%, 84.6% 100%, 14.6% 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  .guide-banner.loaded { opacity: 1; }
+  .guide-banner.failed { display: none; }
+
   .intro-body {
     padding: 1.5rem 2.5rem 1rem;
     text-align: left;
@@ -1596,6 +1613,38 @@ function parsePlacesMd(text) {
 // ============================================
 // LOAD + INIT
 // ============================================
+// ============================================
+// BANNER DIVIDER
+// Files live at banners/banner_1.webp … banner_N.webp
+// ============================================
+const BANNER_COUNT = 20;
+const BANNER_DAILY = false; // false = new banner every refresh (testing), true = one banner per day
+
+function pickBanner() {
+  if (BANNER_DAILY) {
+    // Local calendar day, so it flips at the reader's midnight
+    const d = new Date();
+    const dayNum = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5);
+    return (dayNum % BANNER_COUNT) + 1;
+  }
+  // Random, but never the same banner twice in a row
+  let last = null, n;
+  try { last = parseInt(localStorage.getItem('vg-last-banner'), 10); } catch(e) {}
+  do { n = Math.floor(Math.random() * BANNER_COUNT) + 1; } while (n === last && BANNER_COUNT > 1);
+  try { localStorage.setItem('vg-last-banner', n); } catch(e) {}
+  return n;
+}
+
+function loadBanner() {
+  const el = document.getElementById('guideBanner');
+  if (!el) return;
+  const src = 'banners/banner_' + pickBanner() + '.webp';
+  const img = new Image();
+  img.onload = () => { el.style.backgroundImage = 'url(' + src + ')'; el.classList.add('loaded'); };
+  img.onerror = () => el.classList.add('failed'); // missing file: hide instead of leaving a blank gap
+  img.src = src;
+}
+
 function loadGuideText() {
   return fetch('guides/' + GUIDE_SLUG + '/places.md').then(r => {
     if (r.ok) return r.text();
@@ -1660,9 +1709,11 @@ introSection.innerHTML =
   '<p class="updated-inline">' + 'Updated ' + guide.updated + '</p>' +
   '<h1>' + guide.title + '</h1>' +
   '<p class="deck">' + guide.deck + '</p>' +
-  '<p class="byline">By <strong>' + guide.byline + '</strong></p>';
+  '<p class="byline">By <strong>' + guide.byline + '</strong></p>' +
+  '<div class="guide-banner" id="guideBanner" role="presentation"></div>';
 
 document.title = guide.title;
+loadBanner();
 
 document.getElementById('introBody').innerHTML = guide.intro.map((p, i) =>
   '<p' + (i === 0 ? ' class="drop-cap"' : '') + '>' + p + '</p>'
