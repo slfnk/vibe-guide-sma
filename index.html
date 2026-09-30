@@ -1161,6 +1161,22 @@
 
 <script>
 // ============================================
+// GUIDE RESOLUTION (multi-guide)
+// ?g=slug loads guides/<slug>/places.md — no param loads the default guide
+// ============================================
+const DEFAULT_GUIDE = 'san-miguel';
+const GUIDE_SLUG = (function() {
+  const g = new URLSearchParams(location.search).get('g');
+  return (g && /^[a-z0-9-]+$/.test(g)) ? g : DEFAULT_GUIDE;
+})();
+// Canonical URL for this guide — clean for the default, ?g= for others
+function guideUrl() {
+  return location.origin + location.pathname + (GUIDE_SLUG === DEFAULT_GUIDE ? '' : '?g=' + GUIDE_SLUG);
+}
+// Per-guide localStorage keys (spot slugs can repeat across cities)
+function guideKey(k) { return k + ':' + GUIDE_SLUG; }
+
+// ============================================
 // SETTINGS SYSTEM
 // ============================================
 const cardThemes = ['', 'card-turquoise', 'card-plum', 'card-light'];
@@ -1382,7 +1398,7 @@ function cycleSetting(key, dir) {
 // COPY PAGE LINK
 // ============================================
 document.getElementById('copyPageLink').addEventListener('click', function() {
-  const url = location.origin + location.pathname;
+  const url = guideUrl();
   navigator.clipboard.writeText(url).then(function() {
     const tip = document.getElementById('pageCopiedTip');
     tip.classList.add('show');
@@ -1471,6 +1487,10 @@ function parsePlacesMd(text) {
         else if (key === 'Subtitle') guide.deck = val;
         else if (key === 'Author') guide.byline = val;
         else if (key === 'Updated') guide.updated = val;
+        else if (key === 'Center') {
+          const c = val.split(',').map(x => parseFloat(x.trim()));
+          if (!isNaN(c[0]) && !isNaN(c[1])) guide.center = { lat: c[0], lng: c[1], zoom: isNaN(c[2]) ? 15 : c[2] };
+        }
         else if (key === 'More Guides') {
           guide.moreGuides = [];
           const lr = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -1561,13 +1581,43 @@ function parsePlacesMd(text) {
 // ============================================
 // LOAD + INIT
 // ============================================
-fetch('places.md')
-  .then(r => r.text())
-  .then(text => init(parsePlacesMd(text)))
-  .catch(err => {
-    document.getElementById('introSection').innerHTML =
-      '<h1 style="color:#D95B43">Could not load places.md</h1><p>' + err.message + '</p>';
+function loadGuideText() {
+  return fetch('guides/' + GUIDE_SLUG + '/places.md').then(r => {
+    if (r.ok) return r.text();
+    // Transition fallback: default guide can still load from root places.md
+    if (GUIDE_SLUG === DEFAULT_GUIDE) {
+      return fetch('places.md').then(r2 => {
+        if (!r2.ok) throw new Error('places.md not found');
+        return r2.text();
+      });
+    }
+    throw new Error('No guide found at guides/' + GUIDE_SLUG + '/places.md');
   });
+}
+
+function showGuideNotFound(err) {
+  const el = document.getElementById('introSection');
+  el.innerHTML =
+    '<h1 style="color:#D95B43">Guide not found</h1>' +
+    '<p class="deck">' + err.message + '</p>' +
+    '<div id="guideList" class="byline"></div>';
+  // List available guides from the index, if it exists
+  fetch('guides/guides.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(idx => {
+      if (!idx || !idx.guides) return;
+      const base = location.origin + location.pathname;
+      document.getElementById('guideList').innerHTML = 'Available guides: ' +
+        idx.guides.filter(g => g.published !== false).map(g =>
+          '<a href="' + base + (g.slug === DEFAULT_GUIDE ? '' : '?g=' + g.slug) + '"><strong>' + g.title + '</strong></a>'
+        ).join(' &middot; ');
+    })
+    .catch(() => {});
+}
+
+loadGuideText()
+  .then(text => init(parsePlacesMd(text)))
+  .catch(showGuideNotFound);
 
 function init(data) {
 
@@ -1633,7 +1683,7 @@ function cardLinks(p) {
 
 // Copy share link to clipboard
 window.copyShareLink = function(slug, btn) {
-  const url = location.origin + location.pathname + '#' + slug;
+  const url = guideUrl() + '#' + slug;
   navigator.clipboard.writeText(url).then(function() {
     var tip = btn.querySelector('.copied-tip');
     tip.classList.add('show');
@@ -1659,7 +1709,7 @@ window.toggleHeart = function(btn) {
       setTimeout(() => toast.classList.remove('show'), 4000);
     }
   }
-  try { localStorage.setItem('vg-saved', JSON.stringify([...savedSlugs])); } catch(e) {}
+  try { localStorage.setItem(guideKey('vg-saved'), JSON.stringify([...savedSlugs])); } catch(e) {}
 
   const isSaved = savedSlugs.has(slug);
 
@@ -1777,7 +1827,13 @@ const carousel = document.getElementById('cardCarousel');
 let savedSlugs = new Set();
 let hasShownSavedToast = false;
 try {
-  const saved = JSON.parse(localStorage.getItem('vg-saved') || '[]');
+  let raw = localStorage.getItem(guideKey('vg-saved'));
+  // One-time migration: pre-multi-guide saves belong to the default guide
+  if (raw === null && GUIDE_SLUG === DEFAULT_GUIDE) {
+    raw = localStorage.getItem('vg-saved');
+    if (raw !== null) localStorage.setItem(guideKey('vg-saved'), raw);
+  }
+  const saved = JSON.parse(raw || '[]');
   savedSlugs = new Set(saved);
   if (saved.length > 0) hasShownSavedToast = true;
 } catch(e) {}
@@ -1869,8 +1925,30 @@ places.forEach((p, i) => {
 // ============================================
 // MAP
 // ============================================
-const map = L.map('map', { zoomControl: true, scrollWheelZoom: true })
-  .setView([20.9160, -100.7440], 15);
+const map = L.map('map', { zoomControl: true, scrollWheelZoom: true });
+
+// Initial view: explicit Center meta if set, otherwise fit all spots.
+// fitBounds needs a visible container, so on hidden (mobile list) maps it
+// uses a rough placeholder and re-applies when the map is first revealed.
+let initialViewApplied = false;
+function applyInitialView() {
+  if (guide.center) {
+    map.setView([guide.center.lat, guide.center.lng], guide.center.zoom, { animate: false });
+    initialViewApplied = true;
+  } else if (places.length) {
+    const bounds = L.latLngBounds(places.map(p => [p.lat, p.lng]));
+    if (map.getSize().x > 0) {
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15, animate: false });
+      initialViewApplied = true;
+    } else {
+      map.setView(bounds.getCenter(), 13, { animate: false });
+    }
+  } else {
+    map.setView([20, 0], 2, { animate: false });
+    initialViewApplied = true;
+  }
+}
+applyInitialView();
 window._map = map;
 
 const tileUrls = {
@@ -2169,6 +2247,8 @@ window.setView = function(mode) {
           document.querySelectorAll('.pin.active').forEach(el => el.classList.remove('active'));
           const pin = document.getElementById('pin-' + activeIndex);
           if (pin) pin.classList.add('active');
+        } else if (!initialViewApplied) {
+          applyInitialView();
         }
       };
 
